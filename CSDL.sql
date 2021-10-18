@@ -121,11 +121,12 @@ create table DAT
 	DonGia int,
 	TongTien int,
 	VAT int,
+	primary key(MaHD),
 	foreign key(MaHD) references DAT_CHITIET,
 	foreign key(MaKH) references KHACHHANG,
 	foreign key(MaNV) references NHANVIEN
 )
-GO
+GO 
 
 -- Insert data
 insert into LAIXE values('LX001', N'Nguyễn Quang Mạnh', '01638843209', N'K45/22 Hoàng Diệu, quận Hải Châu, Đà Nẵng')
