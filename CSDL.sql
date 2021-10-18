@@ -98,7 +98,7 @@ insert into KHACHHANG values ('KH015', N'Mai Ngọc Thịnh', '0983100365', N'12
 insert into KHACHHANG values ('KH016', N'Huỳnh Ngọc Lân', '0983100365', N'Thôn Thanh Quýt 2, Điện Bàn, Quảng Nam')
 insert into KHACHHANG values ('KH017', N'Đào Lê Thục Uyên', '0983100365', N'40 Hà Huy Tập, quận Thanh Khê, Đà Nẵng')
 insert into KHACHHANG values ('KH018', N'Trần Văn Quốc Khang', '0983100365', N'K12/11 Phan Thanh, quận Thanh Khê, Đà Nẵng')
-insert into KHACHHANG values ('KH019', N'Thái Đức Tiến', '0983100365', N'K23/25 Huỳnh Thúc Kháng, Tam Kỳ, Quảng Na')
+insert into KHACHHANG values ('KH019', N'Thái Đức Tiến', '0983100365', N'K23/25 Huỳnh Thúc Kháng, Tam Kỳ, Quảng Nam')
 insert into KHACHHANG values ('KH020', N'Nguyễn Ngọc Phương', '0983100365', N'452 Trưng Nữ Vương, quận Hải Châu, Đà Nẵng')
 
 insert into NHANVIEN values ('NV001', N'Trần Trọng Nghĩa', '0905236789', N'114 Phan Tứ, quận Ngũ Hành Sơn, Đà Nẵng')
