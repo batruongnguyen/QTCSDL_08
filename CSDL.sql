@@ -3,7 +3,17 @@
 create database VanChuyenKhach
 use VanChuyenKhach
 
--- Tao bang LAIXE
+go
+-- Tạo bảng TAIKHOAN
+create table TAIKHOAN 
+(
+	UserName varchar(50),
+	PassWord varchar(50),
+	TypeAcc varchar(10),
+	primary key(UserName)
+)
+go
+-- Tạo bảng LAIXE
 create table LAIXE
 (
 	MaLaiXe char(10),
@@ -13,35 +23,7 @@ create table LAIXE
 	primary key(MaLaiXe)
 )
 go
--- Tao bang DICHVU
-create table DICHVU
-(
-	MaDichVu char(10),
-	TenDichVu nvarchar(100),
-	primary key(MaDichVu)
-)
-go
--- Tao bang KHACHHANG
-create table KHACHHANG
-(
-	MaKH char(10),
-	TenKH nvarchar(50),
-	SDT_KH varchar(15),
-	DiaChiKH nvarchar(150),
-	primary key(MaKH)
-)
-go
--- Tao bang NHAN VIEN
-create table NHANVIEN
-(
-	MaNV char(10),
-	TenNV nvarchar(50),
-	SDT_NV varchar(15),
-	DiaChiNV nvarchar(150),
-	primary key(MaNV)
-)
-go
--- Tao bang XE
+-- Tạo bảng XE
 create table XE
 (
 	BienSoXe char(15),
@@ -49,7 +31,7 @@ create table XE
 	primary key(BienSoXe)
 )
 go
--- Tao bang TINHTRANG
+-- Tạo bảng TINHTRANG
 create table TINHTRANG
 (
 	MaTinhTrang char(10),
@@ -63,6 +45,82 @@ create table TINHTRANG
 	foreign key(BienSoXe) references XE
 )
 go
+-- Tạo bảng DICHVU
+create table DICHVU
+(
+	MaDichVu char(10),
+	TenDichVu nvarchar(100),
+	primary key(MaDichVu)
+)
+go
+-- Tạo bảng KHACHHANG
+create table KHACHHANG
+(
+	MaKH char(10),
+	TenKH nvarchar(50),
+	SDT_KH varchar(15),
+	DiaChiKH nvarchar(150),
+	primary key(MaKH)
+)
+go
+-- Tạo bảng QUANLY
+create table QUANLY
+(
+	MaNV char(10),
+	MaLaiXe char(10),
+	BienSoXe char(15),
+	MaTinhTrang char(10),
+	NgayBatDau date,
+	NgayKetThuc date,
+	TocDo int,
+	DiaDiem nvarchar(50),
+	primary key(MaNV),
+	foreign key(MaLaiXe) references LAIXE,
+	foreign key(BienSoXe) references XE,
+	foreign key(MaTinhTrang) references TINHTRANG
+)
+go
+-- Tạo bảng DAT_CHITIET
+create table DAT_CHITIET
+(
+	MaHD char(10),
+	MaDichVu char(10),
+	DonVi varchar(10),
+	SoLuong int,
+	ThanhTien int,
+	primary key(MaHD),
+	foreign key(MaDichVu) references DICHVU
+)
+go
+-- Tạo bảng NHAN VIEN
+create table NHANVIEN
+(
+	MaNV char(10),
+	TenNV nvarchar(50),
+	SDT_NV varchar(15),
+	DiaChiNV nvarchar(150),
+	primary key(MaNV),
+	foreign key(MaNV) references QUANLY
+)
+go
+-- Tạo bảng DAT
+create table DAT
+(
+	MaHD char(10),
+	MaKH char(10),
+	MaNV char(10),
+	KyHieuHD varchar(10),
+	MauSoHD varchar(10),
+	NgayDat date,
+	DonGia int,
+	TongTien int,
+	VAT int,
+	foreign key(MaHD) references DAT_CHITIET,
+	foreign key(MaKH) references KHACHHANG,
+	foreign key(MaNV) references NHANVIEN
+)
+go
+
 -- Insert data
 insert into LAIXE values('LX001', N'Nguyễn Quang Mạnh', '01638843209', N'K45/22 Hoàng Diệu, quận Hải Châu, Đà Nẵng')
 insert into LAIXE values('LX002', N'Huỳnh Tấn Dũng', '0962883220', N'132 Hùng Vương, quận Hải Châu, Đà Nẵng')
@@ -140,3 +198,7 @@ select * from DICHVU
 select * from NHANVIEN
 select * from XE
 select * from TINHTRANG
+select * from QUANLY
+select * from DAT
+select * from DAT_CHITIET
+select * from TAIKHOAN
