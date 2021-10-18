@@ -1,9 +1,15 @@
 ﻿--																XÂY DỰNG CƠ SỞ DỮ LIỆU 
 --																								NHÓM 08
+USE master;
+GO
+IF DB_ID (N'VanChuyenKhach') IS NOT NULL
+DROP DATABASE VanChuyenKhach
+GO
 create database VanChuyenKhach
+GO
 use VanChuyenKhach
 
-go
+GO
 -- Tạo bảng TAIKHOAN
 create table TAIKHOAN 
 (
@@ -12,7 +18,7 @@ create table TAIKHOAN
 	TypeAcc varchar(10),
 	primary key(UserName)
 )
-go
+GO
 -- Tạo bảng LAIXE
 create table LAIXE
 (
@@ -22,7 +28,7 @@ create table LAIXE
 	DiaChi_LX nvarchar(150),
 	primary key(MaLaiXe)
 )
-go
+GO
 -- Tạo bảng XE
 create table XE
 (
@@ -30,7 +36,7 @@ create table XE
 	SCN int,
 	primary key(BienSoXe)
 )
-go
+GO
 -- Tạo bảng TINHTRANG
 create table TINHTRANG
 (
@@ -44,7 +50,7 @@ create table TINHTRANG
 	primary key(MaTinhTrang),
 	foreign key(BienSoXe) references XE
 )
-go
+GO
 -- Tạo bảng DICHVU
 create table DICHVU
 (
@@ -52,7 +58,7 @@ create table DICHVU
 	TenDichVu nvarchar(100),
 	primary key(MaDichVu)
 )
-go
+GO
 -- Tạo bảng KHACHHANG
 create table KHACHHANG
 (
@@ -62,7 +68,7 @@ create table KHACHHANG
 	DiaChiKH nvarchar(150),
 	primary key(MaKH)
 )
-go
+GO
 -- Tạo bảng QUANLY
 create table QUANLY
 (
@@ -79,7 +85,7 @@ create table QUANLY
 	foreign key(BienSoXe) references XE,
 	foreign key(MaTinhTrang) references TINHTRANG
 )
-go
+GO
 -- Tạo bảng DAT_CHITIET
 create table DAT_CHITIET
 (
@@ -91,7 +97,7 @@ create table DAT_CHITIET
 	primary key(MaHD),
 	foreign key(MaDichVu) references DICHVU
 )
-go
+GO
 -- Tạo bảng NHAN VIEN
 create table NHANVIEN
 (
@@ -102,7 +108,7 @@ create table NHANVIEN
 	primary key(MaNV),
 	foreign key(MaNV) references QUANLY
 )
-go
+GO
 -- Tạo bảng DAT
 create table DAT
 (
@@ -119,7 +125,7 @@ create table DAT
 	foreign key(MaKH) references KHACHHANG,
 	foreign key(MaNV) references NHANVIEN
 )
-go
+GO
 
 -- Insert data
 insert into LAIXE values('LX001', N'Nguyễn Quang Mạnh', '01638843209', N'K45/22 Hoàng Diệu, quận Hải Châu, Đà Nẵng')
