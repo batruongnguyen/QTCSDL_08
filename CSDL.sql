@@ -199,6 +199,32 @@ insert into TINHTRANG values ('TT008', '43A178.55', N'Tắt', N'Tắt', '12W', N
 insert into TINHTRANG values ('TT009', '92B893.78', N'Tắt', N'Tắt', '18W', N'Đóng', '12:00')
 insert into TINHTRANG values ('TT010', '43A953.85', N'Tắt', N'Tắt', '10W', N'Đóng', '15:45')
 
+
+insert into TAIKHOAN values ( 'Anh','123456','1')
+insert into TAIKHOAN values ( 'Chau','67890','1')
+insert into TAIKHOAN values ( 'Hoai','112233','0')
+insert into TAIKHOAN values ( 'Truong','556677','0')
+
+insert into QUANLY values ('NV001', 'LX001','43A136.25','TT001','2021/10/19','2021/10/20','40',N'Ngô Quyền,Mẫn Thái, Sơn Trà, Đà Nẵng') 
+insert into QUANLY values ('NV002', 'LX002','43A569.32','TT002','2021/10/21','2021/10/25','40',N'Ngô Quyền, An Hải Bắc, Sơn Trà, Đà Nẵng') 
+insert into QUANLY values ('NV003', 'LX003','43A512.36','TT003','2021/10/18','2021/10/20','37',N'Trần Phú, Hải Châu, Đà Nẵng') 
+insert into QUANLY values ('NV004', 'LX006','92A126.33','TT006','2021/10/19','2021/10/21','41',N'Nguyễn Chí Thanh, Hải Châu, Đà Nẵng') 
+
+insert into DAT_CHITIET values( 'HD001','DV001','VND','1','4000000')
+insert into DAT_CHITIET values( 'HD002','DV002','VND','1','7000000')
+insert into DAT_CHITIET values( 'HD003','DV003','VND','1','16000000')
+insert into DAT_CHITIET values( 'HD004','DV001','VND','1','4000000')
+insert into DAT_CHITIET values( 'HD005','DV001','VND','1','4000000')
+
+insert into DAT values ('HD001','KH001','NV001','10001','MS01','2021/10/20','4000000','4400000','10')
+insert into DAT values ('HD002','KH002','NV002','10002','MS02','2021/10/21','7000000','7700000','10')
+insert into DAT values ('HD003','KH003','NV003','10003','MS03','2021/10/18','16000000','17600000','10')
+insert into DAT values ('HD004','KH004','NV004','10004','MS04','2021/10/19','4000000','4400000','10')
+insert into DAT values ('HD005','KH005','NV004','10005','MS05','2021/10/20','4000000','4400000','10')
+
+
+
+
 select * from KHACHHANG
 select * from LAIXE
 select * from DICHVU
