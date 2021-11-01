@@ -1,0 +1,10 @@
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.AssemblyReference.cache
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmGiaoDien.resources
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.Properties.Resources.resources
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.GenerateResource.cache
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.CoreCompileInputs.cache
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe.config
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.pdb
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.exe
+D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.pdb
