@@ -45,7 +45,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXe = new System.Windows.Forms.Button();
             this.btnDonThue = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,8 @@ namespace QuanLyChoThueXe_Nhom08
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
+            this.đăngXuấtToolStripMenuItem,
+            this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(881, 24);
@@ -207,17 +208,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // btnDangXuat
+            // thoátToolStripMenuItem
             // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangXuat.Location = new System.Drawing.Point(710, 483);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(135, 48);
-            this.btnDangXuat.TabIndex = 7;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // frmGiaoDien
             // 
@@ -227,7 +223,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.btnLaiXe);
             this.Controls.Add(this.btnKH);
             this.Controls.Add(this.btnThongKe);
-            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnNV);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnDonThue);
@@ -261,6 +256,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Button btnXe;
         private System.Windows.Forms.Button btnDonThue;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }

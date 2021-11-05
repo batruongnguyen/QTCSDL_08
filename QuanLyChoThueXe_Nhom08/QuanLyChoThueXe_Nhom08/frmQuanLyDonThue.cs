@@ -16,5 +16,10 @@ namespace QuanLyChoThueXe_Nhom08
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

@@ -95,6 +95,11 @@ namespace QuanLyChoThueXe_Nhom08
             add.ShowDialog();
         }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
 
     }
 }
