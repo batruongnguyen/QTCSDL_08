@@ -105,6 +105,9 @@
     <EmbeddedResource Include="frmGiaoDien.resx">
       <DependentUpon>frmGiaoDien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyDonThue.resx">
+      <DependentUpon>frmQuanLyDonThue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

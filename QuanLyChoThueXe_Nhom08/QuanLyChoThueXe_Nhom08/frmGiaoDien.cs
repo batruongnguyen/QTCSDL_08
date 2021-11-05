@@ -58,5 +58,43 @@ namespace QuanLyChoThueXe_Nhom08
             frmQuanLyTaiKhoan add = new frmQuanLyTaiKhoan();
             add.ShowDialog();
         }
+
+        private void btnKH_Click(object sender, EventArgs e)
+        {
+            frmQuanLyKH add = new frmQuanLyKH();
+            add.ShowDialog();
+        }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNV add = new frmQuanLyNV();
+            add.ShowDialog();
+        }
+
+        private void btnLaiXe_Click(object sender, EventArgs e)
+        {
+            frmQuanLyLaiXe add = new frmQuanLyLaiXe();
+            add.ShowDialog();
+        }
+
+        private void btnXe_Click(object sender, EventArgs e)
+        {
+            frmQuanLyXe add = new frmQuanLyXe();
+            add.ShowDialog();
+        }
+
+        private void btnDonThue_Click(object sender, EventArgs e)
+        {
+            frmQuanLyDonThue add = new frmQuanLyDonThue();
+            add.ShowDialog();
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKe add = new frmThongKe();
+            add.ShowDialog();
+        }
+
+
     }
 }

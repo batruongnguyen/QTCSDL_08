@@ -29,10 +29,17 @@ namespace QuanLyChoThueXe_Nhom08
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmQuanLyDonThue
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1019, 594);
+            this.Name = "frmQuanLyDonThue";
             this.Text = "frmQuanLyDonThue";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
