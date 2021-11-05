@@ -90,7 +90,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(653, 305);
+            this.label1.Location = new System.Drawing.Point(663, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(912, 301);
+            this.btnTimKiem.Location = new System.Drawing.Point(935, 301);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(106, 32);
             this.btnTimKiem.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.cbbMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaHD.FormattingEnabled = true;
-            this.cbbMaHD.Location = new System.Drawing.Point(727, 301);
+            this.cbbMaHD.Location = new System.Drawing.Point(748, 301);
             this.cbbMaHD.Name = "cbbMaHD";
             this.cbbMaHD.Size = new System.Drawing.Size(166, 32);
             this.cbbMaHD.TabIndex = 2;
@@ -440,6 +440,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmQuanLyDonThue";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyDonThue";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
