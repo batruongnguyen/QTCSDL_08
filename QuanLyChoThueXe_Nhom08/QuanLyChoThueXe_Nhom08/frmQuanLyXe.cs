@@ -31,5 +31,10 @@ namespace QuanLyChoThueXe_Nhom08
         {
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
