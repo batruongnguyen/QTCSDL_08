@@ -456,6 +456,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.label13.Size = new System.Drawing.Size(432, 48);
             this.label13.TabIndex = 4;
             this.label13.Text = "QUẢN LÝ ĐƠN THUÊ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // btnThoat
             // 
