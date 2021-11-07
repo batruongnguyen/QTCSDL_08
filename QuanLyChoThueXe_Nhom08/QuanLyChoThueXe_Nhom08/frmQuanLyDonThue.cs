@@ -21,5 +21,10 @@ namespace QuanLyChoThueXe_Nhom08
         {
             Application.Restart();
         }
+
+        private void frmQuanLyDonThue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
