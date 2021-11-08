@@ -27,11 +27,6 @@ namespace QuanLyChoThueXe_Nhom08
 
         }
 
-        private void frmQuanLyXe_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
