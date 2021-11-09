@@ -456,7 +456,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.label13.Size = new System.Drawing.Size(432, 48);
             this.label13.TabIndex = 4;
             this.label13.Text = "QUẢN LÝ ĐƠN THUÊ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // btnThoat
             // 
@@ -485,7 +484,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.Name = "frmQuanLyDonThue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyDonThue";
-            this.Load += new System.EventHandler(this.frmQuanLyDonThue_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonThue)).EndInit();
