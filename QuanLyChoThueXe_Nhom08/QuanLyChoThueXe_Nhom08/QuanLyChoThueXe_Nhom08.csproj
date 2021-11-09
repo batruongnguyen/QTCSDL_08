@@ -108,6 +108,9 @@
     <EmbeddedResource Include="frmQuanLyDonThue.resx">
       <DependentUpon>frmQuanLyDonThue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyKH.resx">
+      <DependentUpon>frmQuanLyKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,3 +24,17 @@ C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.exe
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.pdb
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe.config
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.pdb
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.AssemblyReference.cache
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmGiaoDien.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyDonThue.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyKH.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyXe.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmThongKe.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.Properties.Resources.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.GenerateResource.cache
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.CoreCompileInputs.cache
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.exe
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.pdb

@@ -16,5 +16,10 @@ namespace QuanLyChoThueXe_Nhom08
         {
             InitializeComponent();
         }
+
+        private void frmQuanLyKH_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
