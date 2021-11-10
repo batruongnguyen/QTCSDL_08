@@ -18,7 +18,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             InitializeComponent();
         }
-        SqlConnection cnn = new SqlConnection(@"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection cnn = new SqlConnection(@"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         private void ketnoicsdl()
         {
             cnn.Open();

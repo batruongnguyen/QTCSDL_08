@@ -143,10 +143,10 @@ insert into LAIXE values('LX008', N'Trần Văn Khải', '0976308098', N'Thôn T
 insert into LAIXE values('LX009', N'Nguyễn Huỳnh Quang', '0935637834', N'K38/16 Huỳnh Ngọc Huệ, quận Thanh Khê, Đà Nẵng')
 insert into LAIXE values('LX010', N'Huỳnh Thị Mai', '0983154896', N'K45/2 Hoàng Diệu, quận Hải Châu, Đà Nẵng')
 
-insert into DICHVU values('DV001', N'Dịch vụ cho thuê xe 4 chỗ')
-insert into DICHVU values('DV002', N'Dịch vụ cho thuê xe 7 chỗ')
-insert into DICHVU values('DV003', N'Dịch vụ cho thuê xe 16 chỗ')
-insert into DICHVU values('DV004', N'Dịch vụ cho thuê xe 19 chỗ')
+insert into DICHVU values('DV001', N'Dịch vụ xe 4 chỗ')
+insert into DICHVU values('DV002', N'Dịch vụ xe 7 chỗ')
+insert into DICHVU values('DV003', N'Dịch vụ xe 16 chỗ')
+insert into DICHVU values('DV004', N'Dịch vụ xe 21 chỗ')
 
 insert into KHACHHANG values ('KH001', N'Mai Văn Thuận', '0122423176', N'112 Nguyễn Thái Học, phường Phú Hội, Huế')
 insert into KHACHHANG values ('KH002', N'Trần Đức Tuấn', '0126546238', N'90 Trần Phú, Hải Châu, Đà Nẵng')

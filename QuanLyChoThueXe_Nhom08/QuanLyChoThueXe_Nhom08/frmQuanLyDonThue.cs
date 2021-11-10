@@ -13,7 +13,10 @@ namespace QuanLyChoThueXe_Nhom08
 {
     public partial class frmQuanLyDonThue : Form
     {
-        SqlConnection cmn = new SqlConnection(@"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection (@"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlCommand cmd;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
 
         public frmQuanLyDonThue()
         {
@@ -26,34 +29,48 @@ namespace QuanLyChoThueXe_Nhom08
             Application.Restart();
         }
 
-        public DataTable GetRecords(string sql)
+        void loadCbbMaKH()
         {
+            SqlDataAdapter da = new SqlDataAdapter("select * from KHACHHANG", con);
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(sql, cmn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            cmn.Open();
             da.Fill(dt);
-            cmn.Close();
-            return dt;
+            cbbKH.DisplayMember = "MaKH";
+            cbbKH.DataSource = dt;
         }
 
-        public void ExcuteDB(string sql)
+        void loadCbbMaNV()
         {
-            SqlCommand cmd = new SqlCommand(sql, cmn);
-            try
-            {
-                cmn.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo");
-            }
-            cmn.Close();
+            SqlDataAdapter da = new SqlDataAdapter("select * from NHANVIEN", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cbbNV.DisplayMember = "MaNV";
+            cbbNV.DataSource = dt;
         }
 
+        void loadCbbDV()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from DICHVU", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cbbDV.DisplayMember = "TenDichVu";
+            cbbDV.DataSource = dt;
+        }
 
+        void loadCbbBSX()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from XE", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cbbBienSoXe.DisplayMember = "BienSoXe";
+            cbbBienSoXe.DataSource = dt;
+        }
 
+        private void frmQuanLyDonThue_Load(object sender, EventArgs e)
+        {
+            loadCbbMaKH();
+            loadCbbMaNV();
+            loadCbbDV();
+            loadCbbBSX();
+        }
     }
 }

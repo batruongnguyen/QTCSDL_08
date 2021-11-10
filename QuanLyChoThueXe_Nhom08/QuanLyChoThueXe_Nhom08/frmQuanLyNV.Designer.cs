@@ -51,6 +51,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
@@ -170,7 +171,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(506, 100);
+            this.groupBox2.Location = new System.Drawing.Point(509, 93);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(495, 137);
             this.groupBox2.TabIndex = 10;
@@ -192,7 +193,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1028, 93);
+            this.label1.Size = new System.Drawing.Size(1110, 76);
             this.label1.TabIndex = 9;
             this.label1.Text = "QUẢN LÝ NHÂN VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,9 +211,9 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.groupBox3.Controls.Add(this.dgvNV);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(503, 258);
+            this.groupBox3.Location = new System.Drawing.Point(506, 251);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(498, 331);
+            this.groupBox3.Size = new System.Drawing.Size(503, 347);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách";
@@ -223,7 +224,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNV.Location = new System.Drawing.Point(3, 20);
             this.dgvNV.Name = "dgvNV";
-            this.dgvNV.Size = new System.Drawing.Size(492, 308);
+            this.dgvNV.Size = new System.Drawing.Size(497, 324);
             this.dgvNV.TabIndex = 0;
             this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
             // 
@@ -261,9 +262,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(32, 100);
+            this.groupBox1.Location = new System.Drawing.Point(35, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 243);
+            this.groupBox1.Size = new System.Drawing.Size(455, 257);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -271,18 +272,29 @@ namespace QuanLyChoThueXe_Nhom08
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyChoThueXe_Nhom08.Properties.Resources._6937_jpg_wh860;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 369);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 367);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(439, 220);
+            this.pictureBox1.Size = new System.Drawing.Size(455, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(1015, 561);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 34);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // frmQuanLyNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1110, 618);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -328,5 +340,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
