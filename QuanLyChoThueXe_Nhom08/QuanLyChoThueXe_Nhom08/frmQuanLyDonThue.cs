@@ -72,5 +72,26 @@ namespace QuanLyChoThueXe_Nhom08
             loadCbbDV();
             loadCbbBSX();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (cbbKH.SelectedItem == null || cbbNV.SelectedItem == null || cbbDV.SelectedItem == null || cbbBienSoXe.SelectedItem == null || txtKyHieuHD.Text == "" || txtMauSoHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
+            }
+            else
+            {
+                string MaKH = cbbKH.SelectedItem.ToString();
+                string MaNV = cbbNV.SelectedItem.ToString();
+                string TenDV = cbbDV.SelectedItem.ToString();
+                string BSX = cbbBienSoXe.SelectedItem.ToString();
+                string KyHieuHD = Convert.ToString(txtKyHieuHD);
+                string MauSoHD = Convert.ToString(txtMauSoHD);
+                string query = "Insert into DAT values ()
+                ExcuteDB(query);
+                loaddata();
+                MessageBox.Show("Đã thêm thành công!", "Thông báo");
+            }
+        }
     }
 }
