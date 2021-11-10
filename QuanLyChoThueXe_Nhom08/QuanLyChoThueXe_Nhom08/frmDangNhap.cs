@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace QuanLyChoThueXe_Nhom08
 {
@@ -21,5 +24,44 @@ namespace QuanLyChoThueXe_Nhom08
         {
 
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection();
+            try
+            {
+                conn.Open();
+                string tk = txtTaiKhoan.Text;
+                string mk = txtMatKhau.Text;
+                string sql = "select * from TAIKHOAN where Username='" + tk + "' and Password = '" + mk + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataReader dta = cmd.ExecuteReader();
+                if (dta.Read() == true)
+                {
+                    MessageBox.Show("Đăng nhập thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    frmGiaoDien frGD = new frmGiaoDien();
+                    frGD.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            
+           }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nỗi");
+            }
+            }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult tb = MessageBox.Show("Bạn có muốn thoát hay không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (tb == DialogResult.OK)
+                Application.Exit();
+        }
     }
 }
+
+    

@@ -82,6 +82,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
@@ -92,6 +93,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmDangNhap
             // 

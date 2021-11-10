@@ -47,9 +47,9 @@ namespace QuanLyChoThueXe_Nhom08
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(372, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(414, 70);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(329, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(359, 336);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -87,21 +87,21 @@ namespace QuanLyChoThueXe_Nhom08
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(144, 195);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 21);
+            this.comboBox1.Size = new System.Drawing.Size(192, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(144, 70);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(175, 20);
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(192, 20);
             this.txtTenTaiKhoan.TabIndex = 5;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(144, 125);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(175, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(192, 20);
             this.txtMatKhau.TabIndex = 6;
             // 
             // btnThem
@@ -117,7 +117,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(122, 276);
+            this.btnSua.Location = new System.Drawing.Point(144, 276);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
             this.btnSua.TabIndex = 8;
@@ -127,7 +127,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(244, 276);
+            this.btnXoa.Location = new System.Drawing.Point(261, 276);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 34);
             this.btnXoa.TabIndex = 9;
@@ -137,7 +137,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(17, 362);
+            this.btnThoat.Location = new System.Drawing.Point(17, 372);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 34);
             this.btnThoat.TabIndex = 10;
@@ -159,7 +159,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 406);
+            this.ClientSize = new System.Drawing.Size(826, 438);
             this.Controls.Add(this.QLTK);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
@@ -173,6 +173,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmQuanLyTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyTaiKhoan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
