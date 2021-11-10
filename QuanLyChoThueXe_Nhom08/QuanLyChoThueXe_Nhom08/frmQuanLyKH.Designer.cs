@@ -30,6 +30,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.txtDiaChiKH = new System.Windows.Forms.TextBox();
             this.txtSDT_KH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.txtDiaChiKH);
             this.groupBox1.Controls.Add(this.txtSDT_KH);
             this.groupBox1.Controls.Add(this.txtTenKH);
@@ -69,7 +70,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -80,6 +80,16 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(15, 197);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(92, 25);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "&Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtDiaChiKH
             // 
@@ -117,6 +127,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnXoa
             // 
@@ -126,15 +137,17 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(119, 197);
+            this.btnSua.Location = new System.Drawing.Point(120, 197);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 25);
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "&Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
             // 
@@ -144,15 +157,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.label2.Size = new System.Drawing.Size(109, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Mã khách hàng";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(13, 197);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(92, 25);
-            this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "&Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -200,6 +204,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.Size = new System.Drawing.Size(492, 308);
             this.dgvKH.TabIndex = 0;
+            this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick);
             // 
             // label1
             // 
@@ -235,6 +240,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnNhapLai.TabIndex = 11;
             this.btnNhapLai.Text = "&Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnTimKiem
             // 
@@ -244,6 +250,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "&Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -284,6 +291,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Name = "frmQuanLyKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyKH";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLyKH_FormClosing);
             this.Load += new System.EventHandler(this.frmQuanLyKH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -305,7 +313,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtDiaChiKH;
         private System.Windows.Forms.TextBox txtSDT_KH;
         private System.Windows.Forms.TextBox txtTenKH;
@@ -320,5 +327,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.DataGridView dgvKH;
         private System.Windows.Forms.Button btnNhapLai;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnThem;
     }
 }
