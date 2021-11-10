@@ -94,6 +94,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnXoa
             // 
@@ -103,6 +104,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -112,6 +114,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "&Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
             // 
@@ -130,6 +133,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "&Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnNhapLai
             // 
@@ -139,6 +143,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnNhapLai.TabIndex = 11;
             this.btnNhapLai.Text = "&NhapLai";
             this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnTimKiem
             // 
@@ -148,6 +153,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "&Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -219,6 +225,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvLX.Name = "dgvLX";
             this.dgvLX.Size = new System.Drawing.Size(492, 308);
             this.dgvLX.TabIndex = 0;
+            this.dgvLX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLX_CellContentClick);
             // 
             // label4
             // 
@@ -284,6 +291,8 @@ namespace QuanLyChoThueXe_Nhom08
             this.Name = "frmQuanLyLaiXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyLaiXe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLyLaiXe_FormClosing);
+            this.Load += new System.EventHandler(this.frmQuanLyLaiXe_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

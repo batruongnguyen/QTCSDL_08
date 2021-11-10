@@ -67,17 +67,17 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into KHACHHANG values ('" + txtMaKH.Text + "', N'" + txtTenKH.Text + "', '" + txtSDT_KH.Text + "',N'" + txtMaKH.Text + "')";
+            command.CommandText = "insert into KHACHHANG values ('" + txtMaKH.Text + "', N'" + txtTenKH.Text + "', '" + txtSDT_KH.Text + "',N'" + txtDiaChiKH.Text + "')";
 
             if (txtMaKH.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn phải nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMaKH.Focus();
                 return;
             }
             if (txtTenKH.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn phải nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTenKH.Focus();
                 return;
             }
@@ -173,10 +173,10 @@ namespace QuanLyChoThueXe_Nhom08
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            SqlConnection TK = new SqlConnection(str);
+            SqlConnection TKKH = new SqlConnection(str);
             try
             {
-                TK.Open();
+                TKKH.Open();
             }
             catch (Exception ex)
             {
@@ -188,11 +188,11 @@ namespace QuanLyChoThueXe_Nhom08
                 return;
             }
             string sQuery = "Select MaKH,TenKH, SDT_KH, DiaChiKH from KHACHHANG where MaKH like N'%" + txtTimKiem.Text + "%' or TenKH like '%" + txtTimKiem.Text + "%'or SDT_KH like '%" + txtTimKiem.Text + "%'or DiaChiKH like '%" + txtTimKiem.Text + "%'";
-            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TK);
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKKH);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "KHACHHANG");
             dgvKH.DataSource = ds.Tables["KHACHHANG"];
-            TK.Close();
+            TKKH.Close();
         }
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
