@@ -63,9 +63,39 @@ namespace QuanLyChoThueXe_Nhom08.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _159665849_1555051084_928_width660height440 {
+            get {
+                object obj = ResourceManager.GetObject("159665849-1555051084-928-width660height440", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6937_jpg_wh860 {
+            get {
+                object obj = ResourceManager.GetObject("6937.jpg_wh860", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dan_xe_caravan_passion_viet_nam_len_bao_nuoc_ngoai_0ef5d0 {
             get {
                 object obj = ResourceManager.GetObject("dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dan_xe_caravan_passion_viet_nam_len_bao_nuoc_ngoai_0ef5d01 {
+            get {
+                object obj = ResourceManager.GetObject("dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,3 +41,7 @@ E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\git
 C:\Users\Admin\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmDangNhap.resources
 C:\Users\Admin\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyKH.resources
 C:\Users\Admin\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyTaiKhoan.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmDangNhap.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyLaiXe.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyNV.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyTaiKhoan.resources

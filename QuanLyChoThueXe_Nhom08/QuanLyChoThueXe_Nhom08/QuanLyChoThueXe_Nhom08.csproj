@@ -114,6 +114,12 @@
     <EmbeddedResource Include="frmQuanLyKH.resx">
       <DependentUpon>frmQuanLyKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyLaiXe.resx">
+      <DependentUpon>frmQuanLyLaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyNV.resx">
+      <DependentUpon>frmQuanLyNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyTaiKhoan.resx">
       <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +154,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\159665849-1555051084-928-width660height440.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6937.jpg_wh860.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
