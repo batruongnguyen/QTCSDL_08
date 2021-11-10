@@ -29,7 +29,10 @@ namespace QuanLyChoThueXe_Nhom08
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvUser = new System.Windows.Forms.DataGridView();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PassWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,16 +44,47 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.QLTK = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgvUser
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(414, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(359, 336);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserName,
+            this.PassWord,
+            this.TypeAcc});
+            this.dtgvUser.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgvUser.Location = new System.Drawing.Point(432, 70);
+            this.dtgvUser.MultiSelect = false;
+            this.dtgvUser.Name = "dtgvUser";
+            this.dtgvUser.ReadOnly = true;
+            this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtgvUser.Size = new System.Drawing.Size(342, 336);
+            this.dtgvUser.TabIndex = 0;
+            this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Tên Tài Khoản";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // PassWord
+            // 
+            this.PassWord.DataPropertyName = "PassWord";
+            this.PassWord.HeaderText = "Mật Khẩu";
+            this.PassWord.Name = "PassWord";
+            this.PassWord.ReadOnly = true;
+            // 
+            // TypeAcc
+            // 
+            this.TypeAcc.DataPropertyName = "TypeAcc";
+            this.TypeAcc.HeaderText = "Loại Tài Khoản";
+            this.TypeAcc.Name = "TypeAcc";
+            this.TypeAcc.ReadOnly = true;
             // 
             // label1
             // 
@@ -171,11 +205,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvUser);
             this.Name = "frmQuanLyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyTaiKhoan";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmQuanLyTaiKhoan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,7 +218,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -195,5 +230,8 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label QLTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PassWord;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeAcc;
     }
 }
