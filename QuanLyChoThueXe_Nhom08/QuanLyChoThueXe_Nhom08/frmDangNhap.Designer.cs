@@ -107,6 +107,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDangNhap";
             this.ResumeLayout(false);
             this.PerformLayout();
