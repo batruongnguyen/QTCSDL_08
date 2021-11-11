@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -43,19 +43,10 @@ namespace QuanLyChoThueXe_Nhom08
             dgvLX.Columns[1].HeaderText = "Tên lái xe";
             dgvLX.Columns[2].HeaderText = "Số điện thoại";
             dgvLX.Columns[3].HeaderText = "Địa chỉ";
-            dgvLX.Columns[0].Width = 125;
-            dgvLX.Columns[1].Width = 220;
-            dgvLX.Columns[2].Width = 152;
-            dgvLX.Columns[3].Width = 480;
-        }
-
-        private void ResetValue()
-        {
-            txtMaLX.ReadOnly = false;
-            txtMaLX.Text = "";
-            txtTenLX.Text = "";
-            txtSDT_LX.Text = "";
-            txtDiaChiLX.Text = "";
+            dgvLX.Columns[0].Width = 75;
+            dgvLX.Columns[1].Width = 150;
+            dgvLX.Columns[2].Width = 100;
+            dgvLX.Columns[3].Width = 370;
         }
 
         private void dgvLX_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,13 +58,20 @@ namespace QuanLyChoThueXe_Nhom08
             txtTenLX.Text = dgvLX.Rows[i].Cells[1].Value.ToString();
             txtSDT_LX.Text = dgvLX.Rows[i].Cells[2].Value.ToString();
             txtDiaChiLX.Text = dgvLX.Rows[i].Cells[3].Value.ToString();
-
+        }
+        private void ResetValue()
+        {
+            txtMaLX.ReadOnly = false;
+            txtMaLX.Text = "";
+            txtTenLX.Text = "";
+            txtSDT_LX.Text = "";
+            txtDiaChiLX.Text = "";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "insert into LAIXE values ('" + txtMaLX.Text + "', N'" + txtTenLX.Text + "', '" + txtSDT_LX.Text + "',N'" + txtMaLX.Text + "')";
+            command.CommandText = "insert into LAIXE values ('" + txtMaLX.Text + "', N'" + txtTenLX.Text + "', '" + txtSDT_LX.Text + "',N'" + txtDiaChiLX.Text + "')";
 
             if (txtMaLX.Text.Trim().Length == 0)
             {
@@ -112,6 +110,7 @@ namespace QuanLyChoThueXe_Nhom08
                 }
                 loaddata();
             }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -140,6 +139,7 @@ namespace QuanLyChoThueXe_Nhom08
             loaddata();
         }
 
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             isThoat = false;
@@ -151,7 +151,8 @@ namespace QuanLyChoThueXe_Nhom08
                 f.Show();
             }
         }
-            private void frmQuanLyLaiXe_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void frmQuanLyLaiXe_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (isThoat)
                 Application.Exit();

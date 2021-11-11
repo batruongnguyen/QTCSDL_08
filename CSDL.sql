@@ -92,25 +92,12 @@ create table QUANLY
 	TocDo int,
 	DiaDiem nvarchar(50),
 	primary key(MaNV, MaQL),
-	foreign key(MaLaiXe) references LAIXE,
-	foreign key(BienSoXe) references XE,
-	foreign key(MaTinhTrang) references TINHTRANG,
-	foreign key(MaNV) references NHANVIEN,
+	foreign key(MaLaiXe) references LAIXE ON DELETE CASCADE ON UPDATE CASCADE,
+	foreign key(BienSoXe) references XE ON DELETE CASCADE ON UPDATE CASCADE,
+	foreign key(MaTinhTrang) references TINHTRANG ON DELETE CASCADE ON UPDATE CASCADE,
+	foreign key(MaNV) references NHANVIEN ON DELETE CASCADE ON UPDATE CASCADE,
 
 )
-GO
--- Tạo bảng DAT_CHITIET
-create table DAT_CHITIET
-(
-	MaHD varchar(10),
-	MaDichVu varchar(10),
-	DonVi varchar(10),
-	SoLuong int,
-	ThanhTien int,
-	primary key(MaHD),
-	foreign key(MaDichVu) references DICHVU
-)
-GO
 -- Tạo bảng DAT
 create table DAT
 (
@@ -121,15 +108,29 @@ create table DAT
 	MauSoHD varchar(10),
 	NgayDat date,
 	NgayTra date,
-	DonGia int,
-	TongTien int,
+	DonGia MONEY,
+	TongTien MONEY,
 	VAT int,
 	primary key(MaHD),
-	foreign key(MaHD) references DAT_CHITIET,
-	foreign key(MaKH) references KHACHHANG,
-	foreign key(MaNV) references NHANVIEN
+	foreign key(MaKH) references KHACHHANG ON DELETE CASCADE ON UPDATE CASCADE,
+	foreign key(MaNV) references NHANVIEN ON DELETE CASCADE ON UPDATE CASCADE
 )
 GO 
+GO
+-- Tạo bảng DAT_CHITIET
+create table DAT_CHITIET
+(
+	MaHD varchar(10),
+	MaDichVu varchar(10),
+	DonVi varchar(10),
+	SoLuong int,
+	ThanhTien MONEY,
+	primary key(MaHD),
+	foreign key(MaDichVu) references DICHVU ON DELETE CASCADE ON UPDATE CASCADE,
+	foreign key(MaHD) references DAT ON DELETE CASCADE ON UPDATE CASCADE
+)
+GO
+
 
 -- Insert data
 insert into LAIXE values('LX001', N'Nguyễn Quang Mạnh', '01638843209', N'K45/22 Hoàng Diệu, quận Hải Châu, Đà Nẵng')
@@ -212,19 +213,17 @@ insert into QUANLY values ('NV002', 'QL002', 'LX002','43A569.32','TT002','2021/1
 insert into QUANLY values ('NV003', 'QL003', 'LX003','43A512.36','TT003','2021/10/18','2021/10/20','37',N'Trần Phú, Hải Châu, Đà Nẵng') 
 insert into QUANLY values ('NV004', 'QL004', 'LX006','92A126.33','TT006','2021/10/19','2021/10/21','41',N'Nguyễn Chí Thanh, Hải Châu, Đà Nẵng') 
 
-insert into DAT_CHITIET values( 'HD001','DV001','VND','1','4000000')
-insert into DAT_CHITIET values( 'HD002','DV002','VND','1','7000000')
-insert into DAT_CHITIET values( 'HD003','DV003','VND','1','16000000')
-insert into DAT_CHITIET values( 'HD004','DV001','VND','1','4000000')
-insert into DAT_CHITIET values( 'HD005','DV001','VND','1','4000000')
-
 insert into DAT values ('HD001', 'KH001', 'NV001', '10001', 'MS01', '2021/10/20', '2021/10/21', '4000000', '4400000','10')
 insert into DAT values ('HD002', 'KH002', 'NV002', '10002', 'MS02', '2021/10/21', '2021/10/22', '7000000', '7700000','10')
 insert into DAT values ('HD003', 'KH003', 'NV003', '10003', 'MS03', '2021/10/18', '2021/10/22', '16000000', '17600000','10')
 insert into DAT values ('HD004', 'KH004', 'NV004', '10004', 'MS04', '2021/10/19', '2021/10/23', '4000000', '4400000','10')
 insert into DAT values ('HD005', 'KH005', 'NV004', '10005', 'MS05', '2021/10/20', '2021/10/24', '4000000', '4400000','10')
 
-
+insert into DAT_CHITIET values( 'HD001','DV001','VND','1','4000000')
+insert into DAT_CHITIET values( 'HD002','DV002','VND','1','7000000')
+insert into DAT_CHITIET values( 'HD003','DV003','VND','1','16000000')
+insert into DAT_CHITIET values( 'HD004','DV001','VND','1','4000000')
+insert into DAT_CHITIET values( 'HD005','DV001','VND','1','4000000')
 
 
 --select * from KHACHHANG
@@ -237,3 +236,17 @@ insert into DAT values ('HD005', 'KH005', 'NV004', '10005', 'MS05', '2021/10/20'
 --select * from DAT
 --select * from DAT_CHITIET
 --select * from TAIKHOAN
+
+GO
+create trigger TinhTongTien_DAT on DAT
+AFTER INSERT 
+AS
+	DECLARE @hd varchar(10) 
+	SELECT @hd = MaHD from inserted
+	BEGIN
+		UPDATE DAT
+		SET TongTien = DonGia + (DonGia*VAT/100)
+		WHERE MaHD = @hd
+	END
+
+

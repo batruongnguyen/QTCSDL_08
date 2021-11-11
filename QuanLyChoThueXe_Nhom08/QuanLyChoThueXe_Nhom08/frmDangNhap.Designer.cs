@@ -63,6 +63,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(231, 20);
             this.txtTaiKhoan.TabIndex = 2;
+            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // txtMatKhau
             // 
