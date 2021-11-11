@@ -31,5 +31,20 @@ namespace QuanLyChoThueXe_Nhom08
         {
 
         }
+
+        private void frmThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
