@@ -60,6 +60,11 @@ namespace QuanLyChoThueXe_Nhom08
             if (tb == DialogResult.OK)
                 Application.Exit();
         }
+
+        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

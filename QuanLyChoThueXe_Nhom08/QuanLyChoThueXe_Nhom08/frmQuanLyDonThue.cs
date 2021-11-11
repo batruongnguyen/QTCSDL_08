@@ -37,6 +37,8 @@ namespace QuanLyChoThueXe_Nhom08
             dgvHDCT.DataSource = GetRecords(HDCT);
 
         }
+
+
         public void ExcuteDB(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, con);
@@ -47,7 +49,7 @@ namespace QuanLyChoThueXe_Nhom08
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối dữ liệu!", "Thông báo");
+                MessageBox.Show(ex.Message, "Thông báo");
             }
             con.Close();
         }
@@ -94,16 +96,6 @@ namespace QuanLyChoThueXe_Nhom08
             cbbNV.DataSource = dt;
         }
 
-
-        void loadCbbBSX()
-        {
-            SqlDataAdapter da = new SqlDataAdapter("select * from XE", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            cbbBienSoXe.DisplayMember = "BienSoXe";
-            cbbBienSoXe.DataSource = dt;
-        }
-
         void loadcbbDV()
         {
             SqlDataAdapter da = new SqlDataAdapter("select * from DichVu", con);
@@ -117,34 +109,31 @@ namespace QuanLyChoThueXe_Nhom08
         {
             loadCbbMaKH();
             loadCbbMaNV();
-            loadCbbBSX();
             loadcbbDV();
             loaddataHD();
-            loaddataHDCT();
-            btnThanhToan.Enabled = false;
+            loaddataHDCT();        
             txtTenDV.Enabled = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (cbbKH.SelectedItem == null || cbbNV.SelectedItem == null || txtMaHD.Text == "" || cbbBienSoXe.SelectedItem == null || txtKyHieuHD.Text == "" || txtMauSoHD.Text == "")
+            if (cbbKH.SelectedItem == null || cbbNV.SelectedItem == null || txtMaHD.Text == ""  || txtKyHieuHD.Text == "" || txtMauSoHD.Text == "" || txtVAT.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
             {
-                string MaHD = Convert.ToString(txtMaHD);
-                string MaKH = cbbKH.SelectedItem.ToString();
-                string MaNV = cbbNV.SelectedItem.ToString();
-                string BSX = cbbBienSoXe.SelectedItem.ToString();
-                string KyHieuHD = Convert.ToString(txtKyHieuHD);
-                string MauSoHD = Convert.ToString(txtMauSoHD);
-                DateTime NgayDat = Convert.ToDateTime(dtNgayDat.Value);
-                DateTime NgayTra = Convert.ToDateTime(dtNgayTra.Value);
-                string query = "Insert into DAT values ('";
-                query = MaHD + "' , '" + MaKH + "' , N'" + MaNV
-                    + "' , '" + KyHieuHD + "' , '" + MauSoHD + "' ,' " + NgayDat.ToString("yyyy-MM-dd") + "' , '" + NgayTra.ToString("yyyy-MM-dd")
-                    + "', NULL, NULL, NULL)";
+                string MaHD = txtMaHD.Text;
+                string MaKH = cbbKH.Text;
+                string MaNV = cbbNV.Text;
+                string KyHieuHD = txtKyHieuHD.Text;
+                string MauSoHD = txtMauSoHD.Text;
+                string DonGia = txtDonGia.Text;
+                string NgayDat = dtNgayDat.Text;
+                string NgayTra = dtNgayTra.Text;
+                string VAT = txtVAT.Text;
+
+                string query = "insert into DAT values ('"+ MaHD+"', '"+MaKH+"', '"+MaNV+"', '"+KyHieuHD+"', '"+MauSoHD+"', '"+NgayDat+"', '"+ NgayTra + "', '"+DonGia+ "', NULL,'" + VAT + "')";
                 ExcuteDB(query);
                 loaddataHD();
                 MessageBox.Show("Đã thêm thành công!", "Thông báo");
@@ -155,9 +144,9 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtMaHD.Text = "";
-            cbbBienSoXe.Text = "";
-            cbbKH.Text = "";
-            cbbNV.Text = "";
+            loadCbbMaKH();
+            loadCbbMaNV();
+            loaddataHD();
             txtKyHieuHD.Text = "";
             txtMauSoHD.Text = "";
             dtNgayDat.Text = "";
@@ -165,7 +154,10 @@ namespace QuanLyChoThueXe_Nhom08
             txtDonGia.Text = "";
             txtTongTien.Text = "";
             txtVAT.Text = "";
-            cbbMaHD.Text = "";
+            txtTimKiem.Text = "";
+            txtMaHD.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
         private void cbbMaDV_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -187,6 +179,8 @@ namespace QuanLyChoThueXe_Nhom08
             txtDonVi.Text = "";
             txtThanhTien.Text = "";
             txtSoLuong.Text = "";
+            txtMaHDCT.Enabled = true;
+            loaddataHDCT();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -201,12 +195,13 @@ namespace QuanLyChoThueXe_Nhom08
                     {
                         if (dgvDonThue.CurrentCell != null)
                         {
-                            int MaHD = Convert.ToInt32(dgvDonThue.CurrentRow.Cells[0].Value);
-                            string query = "delete from DAT where MaHD = " + MaHD;
-                            ExcuteDB(query);
-                            loaddataHD();
+                            string MaHD = dgvDonThue.CurrentRow.Cells[0].Value.ToString();
+                            string query = "delete from DAT where MaHD = '" + MaHD+"'";
+                            ExcuteDB(query);  
                         }
                         MessageBox.Show("Xóa thành công!", "Thông báo");
+                        loaddataHD();
+                        loaddataHDCT();
                     }
                     catch (Exception ex)
                     {
@@ -225,80 +220,125 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void dgvDonThue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (txtTongTien.Text == "")
-            {
-                btnThanhToan.Enabled = false;
-            }
-            else
-            {
-                btnThanhToan.Enabled = true;
-            }
-
-            int i;
-            i = dgvDonThue.CurrentRow.Index;
+            txtMaHD.Enabled = false;
+            int i = dgvDonThue.CurrentRow.Index;
             txtMaHD.Text = dgvDonThue.Rows[i].Cells[0].Value.ToString();
             cbbKH.Text = dgvDonThue.Rows[i].Cells[1].Value.ToString();
             cbbNV.Text = dgvDonThue.Rows[i].Cells[2].Value.ToString();
-            cbbBienSoXe.Text = dgvDonThue.Rows[i].Cells[3].Value.ToString();
-            txtKyHieuHD.Text = dgvDonThue.Rows[i].Cells[4].Value.ToString();
-            txtMauSoHD.Text = dgvDonThue.Rows[i].Cells[5].Value.ToString();
-            dtNgayDat.Text = dgvDonThue.Rows[i].Cells[6].Value.ToString();
-            dtNgayTra.Text = dgvDonThue.Rows[i].Cells[7].Value.ToString();
-
-            //int MaHD = Convert.ToInt32(dgvDonThue.CurrentRow.Cells[0].Value);
-            //string query = "select * from DAT where MaHD = ' " + MaHD + "'";
-            //foreach (DataRow i in GetRecords(query).Rows)
-            //{
-            //    txtMaHD.Text = i["MaHD"].ToString();
-            //    cbbKH.Text = i["MaKH"].ToString();
-            //    cbbNV.Text = i["MaNV"].ToString();
-            //    cbbBienSoXe.Text = i["BienSoXe"].ToString();
-            //    txtKyHieuHD.Text = i["KyHieuHD"].ToString();
-            //    txtMauSoHD.Text = i["MauSoHD"].ToString();
-            //    dtNgayDat.Value = Convert.ToDateTime(i["NgayDat"].ToString());
-            //    dtNgayTra.Value = Convert.ToDateTime(i["NgayTra"].ToString());
+            txtKyHieuHD.Text = dgvDonThue.Rows[i].Cells[3].Value.ToString();
+            txtMauSoHD.Text = dgvDonThue.Rows[i].Cells[4].Value.ToString();
+            dtNgayDat.Text = dgvDonThue.Rows[i].Cells[5].Value.ToString();
+            dtNgayTra.Text = dgvDonThue.Rows[i].Cells[6].Value.ToString();
+            txtDonGia.Text = dgvDonThue.Rows[i].Cells[7].Value.ToString(); 
+            txtTongTien.Text = dgvDonThue.Rows[i].Cells[8].Value.ToString();
+            txtVAT.Text = dgvDonThue.Rows[i].Cells[9].Value.ToString();
         }
 
         private void btnThemCT_Click(object sender, EventArgs e)
         {
-            cmd = con.CreateCommand();
-            cmd.CommandText = "insert into DAT_CHITIET values ('" + txtMaHDCT.Text + "', '" + cbbMaDV.Text + "', '" + txtDonVi.Text + "', '" + txtSoLuong.Text + "', '" + txtThanhTien.Text + "')";
-
-            if (txtMaHDCT.Text == "" || cbbMaDV.Text == "" || txtDonVi.Text == "" || txtSoLuong.Text == "" || txtThanhTien.Text == "")
+            if (txtMaHDCT.Text == "" || cbbMaDV.SelectedItem == null || txtDonVi.Text == "" || txtSoLuong.Text == "" || txtThanhTien.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
             {
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Thêm thành công!", "Thống báo");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
-                }
+                string MaHD = txtMaHDCT.Text;
+                string MaDV = cbbMaDV.Text;
+                string DonVi = txtDonVi.Text;
+                string SoLuong = txtSoLuong.Text;
+                string ThanhTien = txtThanhTien.Text;
+
+                string query = "insert into DAT_CHITIET values ('" + MaHD + "', '" + MaDV + "', '" + DonVi + "', '" + SoLuong + "', '" + ThanhTien + "')";
+                ExcuteDB(query);
                 loaddataHDCT();
             }
         }
 
         private void btnSuaCT_Click(object sender, EventArgs e)
         {
-            cmd = con.CreateCommand();
-            cmd.CommandText = "Update DAT_CHITIET set MaHD = '" + txtMaHDCT.Text + "', MaDichVu = '" + cbbMaDV.Text + "', DonVi='" + txtDonVi.Text + "', SoLuong='" + txtSoLuong.Text + "', ThanhTien='" + txtThanhTien.Text + "'";
-
+            string querry = "Update DAT_CHITIET set MaDichVu = '" + cbbMaDV.Text + "', DonVi='" + txtDonVi.Text +
+                            "', SoLuong='" + txtSoLuong.Text + "', ThanhTien='" + txtThanhTien.Text + "' where MaHD = '" + txtMaHDCT.Text + "'";
             try
             {
-                cmd.ExecuteNonQuery();
+                ExcuteDB(querry);
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n" + ex.Message, "Thông báo");
             }
             loaddataHDCT();
-            
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string querry = "Update DAT set MaKH = '" + cbbKH.Text + "', maNV='" + cbbNV.Text +
+                "', kyHieuHD='" + txtKyHieuHD.Text + "', MauSoHD='" + txtMauSoHD.Text + "', NgayDat = '" 
+                + dtNgayDat.Text + "', NgayTra = '" + dtNgayTra.Text + "', VAT = '" + txtVAT.Text + "' where MaHD = '"+txtMaHD.Text+"'";
+            try
+            {
+                ExcuteDB(querry);
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n"+ex.Message, "Thông báo");
+            }
+            loaddataHD();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text != "" && txtTimKiem.Text.Length <= 10 && txtTimKiem.Text.Length > 0)
+            {
+                string query_DAT = "Select * from DAT where MaHD like '%" + txtTimKiem.Text + "%'";
+                string query_CT_DAT = "Select * from DAT_CHITIET where MaHD like '%" + txtTimKiem.Text + "%'";
+                dgvDonThue.DataSource = GetRecords(query_DAT);
+                dgvHDCT.DataSource = GetRecords(query_CT_DAT);
+            }
+        }
+
+
+
+        private void btnXoaCT_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+            if (flag == true)
+            {
+                var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                if (confirmResult == DialogResult.OK)
+                {
+                    try
+                    {
+                        if (dgvHDCT.CurrentCell != null)
+                        {
+                            string MaHD = dgvHDCT.CurrentRow.Cells[0].Value.ToString();
+                            string query = "delete from DAT_CHITIET where MaHD = '" + MaHD + "'";
+                            ExcuteDB(query);
+                        }
+                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                        loaddataHD();
+                        loaddataHDCT();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                    }
+                    loaddataHDCT();
+                }
+            }
+        }
+
+        private void dgvHDCT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaHDCT.Enabled = false;
+            int i = dgvHDCT.CurrentRow.Index;
+            txtMaHDCT.Text = dgvHDCT.Rows[i].Cells[0].Value.ToString();
+            cbbMaDV.Text = dgvHDCT.Rows[i].Cells[1].Value.ToString();
+            txtDonVi.Text = dgvHDCT.Rows[i].Cells[2].Value.ToString();
+            txtSoLuong.Text = dgvHDCT.Rows[i].Cells[3].Value.ToString();
+            txtThanhTien.Text = dgvHDCT.Rows[i].Cells[4].Value.ToString();
         }
     }
 }
