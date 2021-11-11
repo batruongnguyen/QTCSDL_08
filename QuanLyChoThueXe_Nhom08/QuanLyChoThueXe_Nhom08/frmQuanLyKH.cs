@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmQuanLyKH()
@@ -42,10 +42,10 @@ namespace QuanLyChoThueXe_Nhom08
             dgvKH.Columns[1].HeaderText = "Tên khách hàng";
             dgvKH.Columns[2].HeaderText = "Số điện thoại";
             dgvKH.Columns[3].HeaderText = "Địa chỉ";
-            dgvKH.Columns[0].Width = 75;
-            dgvKH.Columns[1].Width = 150;
-            dgvKH.Columns[2].Width = 100;
-            dgvKH.Columns[3].Width = 370;
+            dgvKH.Columns[0].Width = 135;
+            dgvKH.Columns[1].Width = 230;
+            dgvKH.Columns[2].Width = 152;
+            dgvKH.Columns[3].Width = 460;
         }
         private void dgvKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
