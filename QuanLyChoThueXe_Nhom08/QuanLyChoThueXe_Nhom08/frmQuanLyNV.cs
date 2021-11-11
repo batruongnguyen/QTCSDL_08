@@ -13,6 +13,7 @@ namespace QuanLyChoThueXe_Nhom08
 {
     public partial class frmQuanLyNV : Form
     {
+        bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
         string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
@@ -99,11 +100,24 @@ namespace QuanLyChoThueXe_Nhom08
             loaddata();
         }
 
-        private void frmQuanLyNV_FormClosing(object sender, FormClosingEventArgs e)
+
+
+        private void btnThoat_Click(object sender, EventArgs e)
         {
+            isThoat = false;
             DialogResult dlr = MessageBox.Show("Bạn muốn rời khỏi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No)
-                e.Cancel = true;
+            if (dlr == DialogResult.Yes)
+            {
+                this.Close();
+                frmGiaoDien f = new frmGiaoDien();
+                f.Show();
+            }
+        }
+
+        private void frmQuanLyNV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
         }
     }
 }

@@ -22,7 +22,7 @@ GO
 -- Tạo bảng LAIXE
 create table LAIXE
 (
-	MaLaiXe char(10),
+	MaLaiXe varchar(10),
 	TenLaiXe nvarchar(50),
 	SDT_LX varchar(15),
 	DiaChi_LX nvarchar(150),
@@ -32,7 +32,7 @@ GO
 -- Tạo bảng XE
 create table XE
 (
-	BienSoXe char(15),
+	BienSoXe varchar(15),
 	SCN int,
 	primary key(BienSoXe)
 )
@@ -40,8 +40,8 @@ GO
 -- Tạo bảng TINHTRANG
 create table TINHTRANG
 (
-	MaTinhTrang char(10),
-	BienSoXe char(15),
+	MaTinhTrang varchar(10),
+	BienSoXe varchar(15),
 	DongCo nvarchar(10),
 	MayLanh nvarchar(10),
 	NguonDien varchar(10),
@@ -54,7 +54,7 @@ GO
 -- Tạo bảng DICHVU
 create table DICHVU
 (
-	MaDichVu char(10),
+	MaDichVu varchar(10),
 	TenDichVu nvarchar(100),
 	primary key(MaDichVu)
 )
@@ -62,7 +62,7 @@ GO
 -- Tạo bảng KHACHHANG
 create table KHACHHANG
 (
-	MaKH char(10),
+	MaKH varchar(10),
 	TenKH nvarchar(50),
 	SDT_KH varchar(15),
 	DiaChiKH nvarchar(150),
@@ -72,7 +72,7 @@ GO
 -- Tạo bảng NHAN VIEN
 create table NHANVIEN
 (
-	MaNV char(10),
+	MaNV varchar(10),
 	TenNV nvarchar(50),
 	SDT_NV varchar(15),
 	DiaChiNV nvarchar(150),
@@ -82,11 +82,11 @@ GO
 -- Tạo bảng QUANLY
 create table QUANLY 
 (
-	MaNV char(10),
-	MaQL char(10),
-	MaLaiXe char(10),
-	BienSoXe char(15),
-	MaTinhTrang char(10),
+	MaNV varchar(10),
+	MaQL varchar(10),
+	MaLaiXe varchar(10),
+	BienSoXe varchar(15),
+	MaTinhTrang varchar(10),
 	NgayBatDau date,
 	NgayKetThuc date,
 	TocDo int,
@@ -102,8 +102,8 @@ GO
 -- Tạo bảng DAT_CHITIET
 create table DAT_CHITIET
 (
-	MaHD char(10),
-	MaDichVu char(10),
+	MaHD varchar(10),
+	MaDichVu varchar(10),
 	DonVi varchar(10),
 	SoLuong int,
 	ThanhTien int,
@@ -114,9 +114,9 @@ GO
 -- Tạo bảng DAT
 create table DAT
 (
-	MaHD char(10),
-	MaKH char(10),
-	MaNV char(10),
+	MaHD varchar(10),
+	MaKH varchar(10),
+	MaNV varchar(10),
 	KyHieuHD varchar(10),
 	MauSoHD varchar(10),
 	NgayDat date,

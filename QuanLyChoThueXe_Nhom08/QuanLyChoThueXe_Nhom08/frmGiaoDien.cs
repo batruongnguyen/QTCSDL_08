@@ -12,6 +12,7 @@ namespace QuanLyChoThueXe_Nhom08
 {
     public partial class frmGiaoDien : Form
     {
+        bool isThoat = true;
         public frmGiaoDien()
         {
             InitializeComponent();
@@ -20,86 +21,112 @@ namespace QuanLyChoThueXe_Nhom08
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyKH add = new frmQuanLyKH();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyNV add = new frmQuanLyNV();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void láiXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyLaiXe add = new frmQuanLyLaiXe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void xeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyXe add = new frmQuanLyXe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void đơnThuêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyDonThue add = new frmQuanLyDonThue();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKe add = new frmThongKe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyTaiKhoan add = new frmQuanLyTaiKhoan();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnKH_Click(object sender, EventArgs e)
         {
             frmQuanLyKH add = new frmQuanLyKH();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnNV_Click(object sender, EventArgs e)
         {
             frmQuanLyNV add = new frmQuanLyNV();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnLaiXe_Click(object sender, EventArgs e)
         {
             frmQuanLyLaiXe add = new frmQuanLyLaiXe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnXe_Click(object sender, EventArgs e)
         {
             frmQuanLyXe add = new frmQuanLyXe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnDonThue_Click(object sender, EventArgs e)
         {
             frmQuanLyDonThue add = new frmQuanLyDonThue();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             frmThongKe add = new frmThongKe();
-            add.ShowDialog();
+            add.Show();
+            this.Hide();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (isThoat)
+                Application.Exit();
         }
 
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isThoat = false;
+            this.Close();
+            frmDangNhap f = new frmDangNhap();
+            f.Show();
+        }
 
+        private void frmGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
+        }
     }
 }

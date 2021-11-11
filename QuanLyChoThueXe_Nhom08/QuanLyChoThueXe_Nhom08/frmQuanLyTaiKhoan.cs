@@ -13,6 +13,7 @@ namespace QuanLyChoThueXe_Nhom08
 {
     public partial class frmQuanLyTaiKhoan : Form
     {
+        bool isThoat = true;
         int index = -1;
         public frmQuanLyTaiKhoan()
         {
@@ -50,6 +51,24 @@ namespace QuanLyChoThueXe_Nhom08
 
                 txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
                 txtMatKhau.Text = dtgvUser.Rows[index].Cells[1].Value.ToString();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            isThoat = false;
+            DialogResult dlr = MessageBox.Show("Bạn muốn rời khỏi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                this.Close();
+                frmGiaoDien f = new frmGiaoDien();
+                f.Show();
+            }
+        }
+
+        private void frmQuanLyTaiKhoan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
         }
     }
     }

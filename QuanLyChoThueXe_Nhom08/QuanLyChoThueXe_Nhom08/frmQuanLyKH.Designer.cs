@@ -288,6 +288,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmQuanLyKH
             // 
@@ -303,7 +304,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Name = "frmQuanLyKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyKH";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLyKH_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyKH_FormClosed);
             this.Load += new System.EventHandler(this.frmQuanLyKH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
