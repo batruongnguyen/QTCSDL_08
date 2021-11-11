@@ -34,7 +34,19 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void frmThongKe_Load(object sender, EventArgs e)
         {
-
+            try { 
+            using (VanChuyenKhachEntities db = new VanChuyenKhachEntities())
+            {
+                db.Configuration.ProxyCreationEnabled = false;
+                cbbBienSoXe.DataSource = db.XEs.ToList();
+                cbbBienSoXe.ValueMember = "BienSoXe";
+                cbbBienSoXe.DisplayMember = "BienSoXe";
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -45,6 +57,32 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbbBienSoXe_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            XE obj = cbbBienSoXe.SelectedItem as XE;
+            if (obj != null)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                try
+                {
+                    using (VanChuyenKhachEntities db = new VanChuyenKhachEntities())
+                    {
+                        db.Configuration.ProxyCreationEnabled = false;
+                        var query = from o in db.TINHTRANGs
+                                    where o.BienSoXe == obj.BienSoXe
+                                    select o;
+                        dgvThongKe.DataSource = query.ToList();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                Cursor.Current = Cursors.Default;
+            }
         }
     }
 }

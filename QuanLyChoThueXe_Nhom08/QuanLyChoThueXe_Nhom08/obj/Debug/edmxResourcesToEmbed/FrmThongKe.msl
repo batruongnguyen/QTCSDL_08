@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VanChuyenKhachModelStoreContainer" CdmEntityContainer="VanChuyenKhachEntities">
+    <EntitySetMapping Name="TINHTRANGs">
+      <EntityTypeMapping TypeName="VanChuyenKhachModel.TINHTRANG">
+        <MappingFragment StoreEntitySet="TINHTRANG">
+          <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="DongCo" ColumnName="DongCo" />
+          <ScalarProperty Name="MayLanh" ColumnName="MayLanh" />
+          <ScalarProperty Name="NguonDien" ColumnName="NguonDien" />
+          <ScalarProperty Name="CuaXe" ColumnName="CuaXe" />
+          <ScalarProperty Name="ThoiGianCapNhap" ColumnName="ThoiGianCapNhap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XEs">
+      <EntityTypeMapping TypeName="VanChuyenKhachModel.XE">
+        <MappingFragment StoreEntitySet="XE">
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="SCN" ColumnName="SCN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

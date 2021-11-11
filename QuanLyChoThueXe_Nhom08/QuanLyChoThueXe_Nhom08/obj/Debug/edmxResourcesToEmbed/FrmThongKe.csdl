@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VanChuyenKhachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TINHTRANG">
+    <Key>
+      <PropertyRef Name="MaTinhTrang" />
+    </Key>
+    <Property Name="MaTinhTrang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BienSoXe" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DongCo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MayLanh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NguonDien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CuaXe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiGianCapNhap" Type="Time" Precision="7" />
+    <NavigationProperty Name="XE" Relationship="Self.FK__TINHTRANG__BienS__2A4B4B5E" FromRole="TINHTRANG" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="XE">
+    <Key>
+      <PropertyRef Name="BienSoXe" />
+    </Key>
+    <Property Name="BienSoXe" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SCN" Type="Int32" />
+    <NavigationProperty Name="TINHTRANGs" Relationship="Self.FK__TINHTRANG__BienS__2A4B4B5E" FromRole="XE" ToRole="TINHTRANG" />
+  </EntityType>
+  <Association Name="FK__TINHTRANG__BienS__2A4B4B5E">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="TINHTRANG" Type="Self.TINHTRANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="BienSoXe" />
+      </Principal>
+      <Dependent Role="TINHTRANG">
+        <PropertyRef Name="BienSoXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VanChuyenKhachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TINHTRANGs" EntityType="Self.TINHTRANG" />
+    <EntitySet Name="XEs" EntityType="Self.XE" />
+    <AssociationSet Name="FK__TINHTRANG__BienS__2A4B4B5E" Association="Self.FK__TINHTRANG__BienS__2A4B4B5E">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="TINHTRANG" EntitySet="TINHTRANGs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

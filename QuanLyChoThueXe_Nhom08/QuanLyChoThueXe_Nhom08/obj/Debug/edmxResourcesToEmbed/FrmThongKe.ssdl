@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VanChuyenKhachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TINHTRANG">
+    <Key>
+      <PropertyRef Name="MaTinhTrang" />
+    </Key>
+    <Property Name="MaTinhTrang" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BienSoXe" Type="varchar" MaxLength="15" />
+    <Property Name="DongCo" Type="nvarchar" MaxLength="10" />
+    <Property Name="MayLanh" Type="nvarchar" MaxLength="10" />
+    <Property Name="NguonDien" Type="varchar" MaxLength="10" />
+    <Property Name="CuaXe" Type="nvarchar" MaxLength="10" />
+    <Property Name="ThoiGianCapNhap" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="XE">
+    <Key>
+      <PropertyRef Name="BienSoXe" />
+    </Key>
+    <Property Name="BienSoXe" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="SCN" Type="int" />
+  </EntityType>
+  <Association Name="FK__TINHTRANG__BienS__2A4B4B5E">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="TINHTRANG" Type="Self.TINHTRANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="BienSoXe" />
+      </Principal>
+      <Dependent Role="TINHTRANG">
+        <PropertyRef Name="BienSoXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VanChuyenKhachModelStoreContainer">
+    <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TINHTRANG__BienS__2A4B4B5E" Association="Self.FK__TINHTRANG__BienS__2A4B4B5E">
+      <End Role="XE" EntitySet="XE" />
+      <End Role="TINHTRANG" EntitySet="TINHTRANG" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
