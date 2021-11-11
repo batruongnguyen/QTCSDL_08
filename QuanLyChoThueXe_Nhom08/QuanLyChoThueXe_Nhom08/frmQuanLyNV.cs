@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -44,10 +44,10 @@ namespace QuanLyChoThueXe_Nhom08
             dgvNV.Columns[1].HeaderText = "Tên nhân viên";
             dgvNV.Columns[2].HeaderText = "Số điện thoại";
             dgvNV.Columns[3].HeaderText = "Địa chỉ";
-            dgvNV.Columns[0].Width = 75;
-            dgvNV.Columns[1].Width = 150;
-            dgvNV.Columns[2].Width = 100;
-            dgvNV.Columns[3].Width = 370;
+            dgvNV.Columns[0].Width = 153;
+            dgvNV.Columns[1].Width = 235;
+            dgvNV.Columns[2].Width = 155;
+            dgvNV.Columns[3].Width = 451;
         }
 
         private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,17 +102,7 @@ namespace QuanLyChoThueXe_Nhom08
 
 
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            isThoat = false;
-            DialogResult dlr = MessageBox.Show("Bạn muốn rời khỏi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                this.Close();
-                frmGiaoDien f = new frmGiaoDien();
-                f.Show();
-            }
-        }
+
 
         private void frmQuanLyNV_FormClosed(object sender, FormClosedEventArgs e)
         {
