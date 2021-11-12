@@ -66,6 +66,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.TabIndex = 22;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnNhapLai
             // 
@@ -75,6 +76,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnNhapLai.TabIndex = 11;
             this.btnNhapLai.Text = "&Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnTimKiem
             // 
@@ -84,6 +86,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "&Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
@@ -93,6 +96,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "&Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtDiaChiLX
             // 
@@ -130,6 +134,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnXoa
             // 
@@ -139,6 +144,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // groupBox2
             // 
@@ -191,6 +197,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "&Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
             // 
@@ -238,6 +245,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvLX.Name = "dgvLX";
             this.dgvLX.Size = new System.Drawing.Size(1037, 234);
             this.dgvLX.TabIndex = 0;
+            this.dgvLX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLX_CellContentClick);
             // 
             // groupBox1
             // 
@@ -275,7 +283,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 648);
+            this.ClientSize = new System.Drawing.Size(1106, 651);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
