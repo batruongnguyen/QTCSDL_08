@@ -36,6 +36,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.láiXeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đơnThuêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìnhTrạngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,8 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnLaiXe = new System.Windows.Forms.Button();
             this.btnXe = new System.Windows.Forms.Button();
             this.btnDonThue = new System.Windows.Forms.Button();
-            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnTinhTrang = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +72,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.láiXeToolStripMenuItem,
             this.xeToolStripMenuItem,
             this.đơnThuêToolStripMenuItem,
+            this.tìnhTrạngToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -110,6 +113,13 @@ namespace QuanLyChoThueXe_Nhom08
             this.đơnThuêToolStripMenuItem.Text = "Đơn thuê";
             this.đơnThuêToolStripMenuItem.Click += new System.EventHandler(this.đơnThuêToolStripMenuItem_Click);
             // 
+            // tìnhTrạngToolStripMenuItem
+            // 
+            this.tìnhTrạngToolStripMenuItem.Name = "tìnhTrạngToolStripMenuItem";
+            this.tìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìnhTrạngToolStripMenuItem.Text = "Tình trạng";
+            this.tìnhTrạngToolStripMenuItem.Click += new System.EventHandler(this.tìnhTrạngToolStripMenuItem_Click);
+            // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
@@ -122,7 +132,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -203,27 +212,40 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnDonThue.UseVisualStyleBackColor = false;
             this.btnDonThue.Click += new System.EventHandler(this.btnDonThue_Click);
             // 
-            // btnThongKe
+            // btnTinhTrang
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThongKe.Location = new System.Drawing.Point(529, 346);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(151, 66);
-            this.btnThongKe.TabIndex = 6;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.btnTinhTrang.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinhTrang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTinhTrang.Location = new System.Drawing.Point(529, 346);
+            this.btnTinhTrang.Name = "btnTinhTrang";
+            this.btnTinhTrang.Size = new System.Drawing.Size(151, 66);
+            this.btnTinhTrang.TabIndex = 6;
+            this.btnTinhTrang.Text = "Tình trạng ";
+            this.btnTinhTrang.UseVisualStyleBackColor = false;
+            this.btnTinhTrang.Click += new System.EventHandler(this.btnTinhTrang_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(68, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(732, 38);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "PHẦN MỀM QUẢN LÝ VẬN CHUYỂN KHÁCH";
             // 
             // frmGiaoDien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(881, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLaiXe);
             this.Controls.Add(this.btnKH);
-            this.Controls.Add(this.btnThongKe);
+            this.Controls.Add(this.btnTinhTrang);
             this.Controls.Add(this.btnNV);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnDonThue);
@@ -258,7 +280,9 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Button btnLaiXe;
         private System.Windows.Forms.Button btnXe;
         private System.Windows.Forms.Button btnDonThue;
-        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnTinhTrang;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem tìnhTrạngToolStripMenuItem;
     }
 }

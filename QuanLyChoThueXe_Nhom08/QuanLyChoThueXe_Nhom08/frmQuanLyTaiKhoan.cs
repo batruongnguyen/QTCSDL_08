@@ -139,6 +139,11 @@ namespace QuanLyChoThueXe_Nhom08
             frm.ShowDialog();
             ketnoicsdl();
         }
+
+        private void cbLoaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     

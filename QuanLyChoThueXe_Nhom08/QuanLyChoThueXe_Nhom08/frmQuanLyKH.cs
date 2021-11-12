@@ -46,6 +46,10 @@ namespace QuanLyChoThueXe_Nhom08
             dgvKH.Columns[1].Width = 230;
             dgvKH.Columns[2].Width = 152;
             dgvKH.Columns[3].Width = 460;
+
+            this.dgvKH.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvKH.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
       
         private void ResetValue()

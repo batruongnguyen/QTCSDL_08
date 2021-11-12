@@ -13,6 +13,7 @@ namespace QuanLyChoThueXe_Nhom08
 {
     public partial class frmQuanLyXe : Form
     {
+        bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
         string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
@@ -123,6 +124,24 @@ namespace QuanLyChoThueXe_Nhom08
         private void txtBienSoXe_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            isThoat = false;
+            DialogResult dlr = MessageBox.Show("Bạn muốn rời khỏi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                this.Close();
+                frmGiaoDien f = new frmGiaoDien();
+                f.Show();
+            }
+        }
+
+        private void frmQuanLyXe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
         }
     }
 }

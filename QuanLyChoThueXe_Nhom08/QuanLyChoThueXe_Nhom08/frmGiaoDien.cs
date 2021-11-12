@@ -53,12 +53,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.Hide();
         }
 
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThongKe add = new frmThongKe();
-            add.Show();
-            this.Hide();
-        }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,12 +96,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Hide();
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            frmThongKe add = new frmThongKe();
-            add.Show();
-            this.Hide();
-        }
+
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -127,6 +116,20 @@ namespace QuanLyChoThueXe_Nhom08
         {
             if (isThoat)
                 Application.Exit();
+        }
+
+        private void btnTinhTrang_Click(object sender, EventArgs e)
+        {
+            frmTinhTrang add = new frmTinhTrang();
+            add.Show();
+            this.Hide();
+        }
+
+        private void tìnhTrạngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTinhTrang add = new frmTinhTrang();
+            add.Show();
+            this.Hide();
         }
     }
 }

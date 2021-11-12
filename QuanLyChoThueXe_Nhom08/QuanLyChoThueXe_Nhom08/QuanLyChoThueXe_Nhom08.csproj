@@ -124,6 +124,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmThongKe.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmTinhTrang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhTrang.Designer.cs">
+      <DependentUpon>frmTinhTrang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +149,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TINHTRANG.cs">
       <DependentUpon>FrmThongKe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanChuyenKhachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VanChuyenKhachDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="XE.cs">
       <DependentUpon>FrmThongKe.tt</DependentUpon>
@@ -208,6 +219,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VanChuyenKhachDataSet.xsc">
+      <DependentUpon>VanChuyenKhachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VanChuyenKhachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VanChuyenKhachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VanChuyenKhachDataSet.xss">
+      <DependentUpon>VanChuyenKhachDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
