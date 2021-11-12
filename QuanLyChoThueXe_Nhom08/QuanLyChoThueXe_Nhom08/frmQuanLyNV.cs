@@ -61,12 +61,18 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtMaNV.ReadOnly = true;
+            int i;
+            i = dgvNV.CurrentRow.Index;
+            txtMaNV.Text = dgvNV.Rows[i].Cells[0].Value.ToString();
+            txtTenNV.Text = dgvNV.Rows[i].Cells[1].Value.ToString();
+            txtSDT_NV.Text = dgvNV.Rows[i].Cells[2].Value.ToString();
+            txtDiaChiNV.Text = dgvNV.Rows[i].Cells[3].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -81,7 +87,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            ResetValue();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -91,12 +97,20 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
-
+            txtTimKiem.Text = "";
+            loaddata();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            isThoat = false;
+            DialogResult dlr = MessageBox.Show("Bạn muốn rời khỏi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                this.Close();
+                frmGiaoDien f = new frmGiaoDien();
+                f.Show();
+            }
         }
 
         private void frmQuanLyNV_FormClosed(object sender, FormClosedEventArgs e)
