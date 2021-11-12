@@ -77,7 +77,27 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            bool flag = true;
+            command = connection.CreateCommand();
+            command.CommandText = "Update NHANVIEN set TenNV=N'" + txtTenNV.Text + "', SDT_NV='" + txtSDT_NV.Text + "', DiaChiNV=N'" + txtDiaChiNV.Text + "' where MaNV = '" + txtMaNV.Text + "'";
+            command.ExecuteNonQuery();
+            if (flag == true)
+            {
+                var confirmResult = MessageBox.Show("Bạn muốn sửa thông tin?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Thông tin đã được sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Có lỗi đã xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    loaddata();
+                }
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
