@@ -56,12 +56,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.PassWord,
             this.TypeAcc});
             this.dtgvUser.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvUser.Location = new System.Drawing.Point(432, 70);
+            this.dtgvUser.Location = new System.Drawing.Point(470, 79);
             this.dtgvUser.MultiSelect = false;
             this.dtgvUser.Name = "dtgvUser";
             this.dtgvUser.ReadOnly = true;
             this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgvUser.Size = new System.Drawing.Size(342, 336);
+            this.dtgvUser.Size = new System.Drawing.Size(344, 336);
             this.dtgvUser.TabIndex = 0;
             this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
             // 
@@ -89,59 +89,59 @@ namespace QuanLyChoThueXe_Nhom08
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(178, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên Tài  Khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 125);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.label2.Location = new System.Drawing.Point(22, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(113, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật Khẩu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 193);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(175, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Loại Tài Khoản";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 195);
+            this.comboBox1.Location = new System.Drawing.Point(205, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // txtTenTaiKhoan
             // 
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(144, 70);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(205, 79);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(192, 20);
             this.txtTenTaiKhoan.TabIndex = 5;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(144, 125);
+            this.txtMatKhau.Location = new System.Drawing.Point(205, 134);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(192, 20);
             this.txtMatKhau.TabIndex = 6;
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(17, 276);
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnThem.Location = new System.Drawing.Point(27, 276);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 34);
             this.btnThem.TabIndex = 7;
@@ -150,8 +150,8 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnSua
             // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(144, 276);
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnSua.Location = new System.Drawing.Point(175, 276);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
             this.btnSua.TabIndex = 8;
@@ -160,8 +160,8 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(261, 276);
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnXoa.Location = new System.Drawing.Point(322, 276);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 34);
             this.btnXoa.TabIndex = 9;
@@ -170,7 +170,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnThoat.Location = new System.Drawing.Point(17, 372);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 34);
