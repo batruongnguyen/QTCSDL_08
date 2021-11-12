@@ -36,7 +36,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
@@ -116,13 +116,16 @@ namespace QuanLyChoThueXe_Nhom08
             this.label3.TabIndex = 3;
             this.label3.Text = "Loại Tài Khoản";
             // 
-            // comboBox1
+            // cbLoaiTaiKhoan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(205, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbLoaiTaiKhoan.FormattingEnabled = true;
+            this.cbLoaiTaiKhoan.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(205, 193);
+            this.cbLoaiTaiKhoan.Name = "cbLoaiTaiKhoan";
+            this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(192, 21);
+            this.cbLoaiTaiKhoan.TabIndex = 4;
             // 
             // txtTenTaiKhoan
             // 
@@ -147,6 +150,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -202,7 +206,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenTaiKhoan);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbLoaiTaiKhoan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -224,7 +228,7 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLoaiTaiKhoan;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnThem;

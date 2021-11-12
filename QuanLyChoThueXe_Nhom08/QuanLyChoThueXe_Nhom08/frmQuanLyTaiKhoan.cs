@@ -15,6 +15,7 @@ namespace QuanLyChoThueXe_Nhom08
     {
         bool isThoat = true;
         int index = -1;
+   
         public frmQuanLyTaiKhoan()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void ketnoicsdl()
         {
             cnn.Open();
-            string sql = "select * from TAIKHOAN";  // lay het du lieu trong bang sinh vien
+            string sql = "select * from TAIKHOAN";  // lay het du lieu trong bang tai khoan
             SqlCommand com = new SqlCommand(sql, cnn); //bat dau truy van
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com); //chuyen du lieu ve
@@ -38,6 +39,7 @@ namespace QuanLyChoThueXe_Nhom08
 
             txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
             txtMatKhau.Text = dtgvUser.Rows[index].Cells[1].Value.ToString();
+            cbLoaiTaiKhoan.Text = dtgvUser.Rows[index].Cells[2].Value.ToString();
         }
 
         private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace QuanLyChoThueXe_Nhom08
 
                 txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
                 txtMatKhau.Text = dtgvUser.Rows[index].Cells[1].Value.ToString();
+            cbLoaiTaiKhoan.Text = dtgvUser.Rows[index].Cells[2].Value.ToString();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -69,6 +72,11 @@ namespace QuanLyChoThueXe_Nhom08
         {
             if (isThoat)
                 Application.Exit();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+         
         }
     }
     }
