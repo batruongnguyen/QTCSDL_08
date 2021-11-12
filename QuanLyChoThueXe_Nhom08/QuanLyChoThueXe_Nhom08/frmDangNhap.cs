@@ -26,7 +26,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(@"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
             try
             {
                 conn.Open();
@@ -48,7 +48,7 @@ namespace QuanLyChoThueXe_Nhom08
                 }
             
            }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Lỗi kết nỗi");
             }

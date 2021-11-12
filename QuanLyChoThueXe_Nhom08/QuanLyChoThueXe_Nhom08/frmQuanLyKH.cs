@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmQuanLyKH()
@@ -42,11 +42,21 @@ namespace QuanLyChoThueXe_Nhom08
             dgvKH.Columns[1].HeaderText = "Tên khách hàng";
             dgvKH.Columns[2].HeaderText = "Số điện thoại";
             dgvKH.Columns[3].HeaderText = "Địa chỉ";
-            dgvKH.Columns[0].Width = 75;
-            dgvKH.Columns[1].Width = 150;
-            dgvKH.Columns[2].Width = 100;
-            dgvKH.Columns[3].Width = 370;
+            dgvKH.Columns[0].Width = 135;
+            dgvKH.Columns[1].Width = 230;
+            dgvKH.Columns[2].Width = 152;
+            dgvKH.Columns[3].Width = 460;
         }
+      
+        private void ResetValue()
+        {
+            txtMaKH.ReadOnly = false;
+            txtMaKH.Text = "";
+            txtTenKH.Text = "";
+            txtSDT_KH.Text = "";
+            txtDiaChiKH.Text = "";
+        }
+
         private void dgvKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaKH.ReadOnly = true;
@@ -57,14 +67,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtSDT_KH.Text = dgvKH.Rows[i].Cells[2].Value.ToString();
             txtDiaChiKH.Text = dgvKH.Rows[i].Cells[3].Value.ToString();
         }
-        private void ResetValue()
-        {
-            txtMaKH.ReadOnly = false;
-            txtMaKH.Text = "";
-            txtTenKH.Text = "";
-            txtSDT_KH.Text = "";
-            txtDiaChiKH.Text = "";
-        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
@@ -108,6 +111,7 @@ namespace QuanLyChoThueXe_Nhom08
                 loaddata();
             }
         }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             bool flag = true;
@@ -132,6 +136,7 @@ namespace QuanLyChoThueXe_Nhom08
                 }
             }
         }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             bool flag = true;
@@ -168,10 +173,12 @@ namespace QuanLyChoThueXe_Nhom08
                 }
             }
         }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetValue();
         }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             SqlConnection TKKH = new SqlConnection(str);
@@ -195,13 +202,12 @@ namespace QuanLyChoThueXe_Nhom08
             dgvKH.DataSource = ds.Tables["KHACHHANG"];
             TKKH.Close();
         }
+
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
             txtTimKiem.Text = "";
             loaddata();
         }
-
-
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -214,7 +220,6 @@ namespace QuanLyChoThueXe_Nhom08
                 f.Show();
             }
         }
-
         private void frmQuanLyKH_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (isThoat)
