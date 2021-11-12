@@ -35,13 +35,15 @@ namespace QuanLyChoThueXe_Nhom08
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 53);
+            this.label1.Location = new System.Drawing.Point(20, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 29);
             this.label1.TabIndex = 0;
@@ -51,7 +53,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 101);
+            this.label2.Location = new System.Drawing.Point(20, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 29);
             this.label2.TabIndex = 1;
@@ -59,7 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(174, 62);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(166, 50);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(231, 20);
             this.txtTaiKhoan.TabIndex = 2;
@@ -68,7 +70,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtMatKhau
             // 
             this.txtMatKhau.AcceptsTab = true;
-            this.txtMatKhau.Location = new System.Drawing.Point(174, 110);
+            this.txtMatKhau.Location = new System.Drawing.Point(167, 97);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(230, 20);
             this.txtMatKhau.TabIndex = 3;
@@ -77,7 +79,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnDangNhap
             // 
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(175, 155);
+            this.btnDangNhap.Location = new System.Drawing.Point(156, 150);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(134, 45);
             this.btnDangNhap.TabIndex = 4;
@@ -88,7 +90,7 @@ namespace QuanLyChoThueXe_Nhom08
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(328, 155);
+            this.btnThoat.Location = new System.Drawing.Point(324, 150);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(91, 45);
             this.btnThoat.TabIndex = 5;
@@ -96,22 +98,33 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtTaiKhoan);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnThoat);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnDangNhap);
+            this.groupBox1.Controls.Add(this.txtMatKhau);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(421, 211);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin đăng nhập";
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 225);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDangNhap";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -123,5 +136,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
