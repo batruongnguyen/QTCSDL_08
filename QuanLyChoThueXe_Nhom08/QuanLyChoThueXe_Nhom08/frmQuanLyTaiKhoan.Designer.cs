@@ -53,6 +53,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // dtgvUser
             // 
+            this.dtgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
