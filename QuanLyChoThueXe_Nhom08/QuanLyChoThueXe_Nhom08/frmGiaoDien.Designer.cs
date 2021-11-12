@@ -53,6 +53,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
@@ -60,7 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(881, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1175, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,75 +76,75 @@ namespace QuanLyChoThueXe_Nhom08
             this.tìnhTrạngToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // láiXeToolStripMenuItem
             // 
             this.láiXeToolStripMenuItem.Name = "láiXeToolStripMenuItem";
-            this.láiXeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.láiXeToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.láiXeToolStripMenuItem.Text = "Lái xe";
             this.láiXeToolStripMenuItem.Click += new System.EventHandler(this.láiXeToolStripMenuItem_Click);
             // 
             // xeToolStripMenuItem
             // 
             this.xeToolStripMenuItem.Name = "xeToolStripMenuItem";
-            this.xeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.xeToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.xeToolStripMenuItem.Text = "Xe";
             this.xeToolStripMenuItem.Click += new System.EventHandler(this.xeToolStripMenuItem_Click);
             // 
             // đơnThuêToolStripMenuItem
             // 
             this.đơnThuêToolStripMenuItem.Name = "đơnThuêToolStripMenuItem";
-            this.đơnThuêToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.đơnThuêToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.đơnThuêToolStripMenuItem.Text = "Đơn thuê";
             this.đơnThuêToolStripMenuItem.Click += new System.EventHandler(this.đơnThuêToolStripMenuItem_Click);
             // 
             // tìnhTrạngToolStripMenuItem
             // 
             this.tìnhTrạngToolStripMenuItem.Name = "tìnhTrạngToolStripMenuItem";
-            this.tìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.tìnhTrạngToolStripMenuItem.Text = "Tình trạng";
             this.tìnhTrạngToolStripMenuItem.Click += new System.EventHandler(this.tìnhTrạngToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -152,9 +153,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnKH.BackColor = System.Drawing.Color.SteelBlue;
             this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKH.Location = new System.Drawing.Point(161, 237);
+            this.btnKH.Location = new System.Drawing.Point(215, 292);
+            this.btnKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Size = new System.Drawing.Size(151, 66);
+            this.btnKH.Size = new System.Drawing.Size(201, 81);
             this.btnKH.TabIndex = 1;
             this.btnKH.Text = "Khách hàng";
             this.btnKH.UseVisualStyleBackColor = false;
@@ -165,9 +167,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnNV.BackColor = System.Drawing.Color.SteelBlue;
             this.btnNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNV.Location = new System.Drawing.Point(343, 237);
+            this.btnNV.Location = new System.Drawing.Point(457, 292);
+            this.btnNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnNV.Name = "btnNV";
-            this.btnNV.Size = new System.Drawing.Size(151, 66);
+            this.btnNV.Size = new System.Drawing.Size(201, 81);
             this.btnNV.TabIndex = 2;
             this.btnNV.Text = "Nhân viên";
             this.btnNV.UseVisualStyleBackColor = false;
@@ -178,9 +181,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnLaiXe.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaiXe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLaiXe.Location = new System.Drawing.Point(529, 237);
+            this.btnLaiXe.Location = new System.Drawing.Point(705, 292);
+            this.btnLaiXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnLaiXe.Name = "btnLaiXe";
-            this.btnLaiXe.Size = new System.Drawing.Size(151, 66);
+            this.btnLaiXe.Size = new System.Drawing.Size(201, 81);
             this.btnLaiXe.TabIndex = 3;
             this.btnLaiXe.Text = "Lái xe";
             this.btnLaiXe.UseVisualStyleBackColor = false;
@@ -191,9 +195,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXe.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnXe.Location = new System.Drawing.Point(161, 346);
+            this.btnXe.Location = new System.Drawing.Point(215, 426);
+            this.btnXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnXe.Name = "btnXe";
-            this.btnXe.Size = new System.Drawing.Size(151, 66);
+            this.btnXe.Size = new System.Drawing.Size(201, 81);
             this.btnXe.TabIndex = 4;
             this.btnXe.Text = "Xe";
             this.btnXe.UseVisualStyleBackColor = false;
@@ -204,9 +209,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnDonThue.BackColor = System.Drawing.Color.SteelBlue;
             this.btnDonThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonThue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDonThue.Location = new System.Drawing.Point(343, 346);
+            this.btnDonThue.Location = new System.Drawing.Point(457, 426);
+            this.btnDonThue.Margin = new System.Windows.Forms.Padding(4);
             this.btnDonThue.Name = "btnDonThue";
-            this.btnDonThue.Size = new System.Drawing.Size(151, 66);
+            this.btnDonThue.Size = new System.Drawing.Size(201, 81);
             this.btnDonThue.TabIndex = 5;
             this.btnDonThue.Text = "Đơn thuê";
             this.btnDonThue.UseVisualStyleBackColor = false;
@@ -217,9 +223,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTinhTrang.BackColor = System.Drawing.Color.SteelBlue;
             this.btnTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhTrang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTinhTrang.Location = new System.Drawing.Point(529, 346);
+            this.btnTinhTrang.Location = new System.Drawing.Point(705, 426);
+            this.btnTinhTrang.Margin = new System.Windows.Forms.Padding(4);
             this.btnTinhTrang.Name = "btnTinhTrang";
-            this.btnTinhTrang.Size = new System.Drawing.Size(151, 66);
+            this.btnTinhTrang.Size = new System.Drawing.Size(201, 81);
             this.btnTinhTrang.TabIndex = 6;
             this.btnTinhTrang.Text = "Tình trạng ";
             this.btnTinhTrang.UseVisualStyleBackColor = false;
@@ -230,18 +237,20 @@ namespace QuanLyChoThueXe_Nhom08
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 87);
+            this.label1.Location = new System.Drawing.Point(91, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(732, 38);
+            this.label1.Size = new System.Drawing.Size(913, 48);
             this.label1.TabIndex = 8;
             this.label1.Text = "PHẦN MỀM QUẢN LÝ VẬN CHUYỂN KHÁCH";
             // 
             // frmGiaoDien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(881, 554);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1175, 682);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLaiXe);
             this.Controls.Add(this.btnKH);
@@ -252,10 +261,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.btnXe);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGiaoDien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGiaoDien";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGiaoDien_FormClosed);
+            this.Load += new System.EventHandler(this.frmGiaoDien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

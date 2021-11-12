@@ -131,5 +131,10 @@ namespace QuanLyChoThueXe_Nhom08
             add.Show();
             this.Hide();
         }
+
+        private void frmGiaoDien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

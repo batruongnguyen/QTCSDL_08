@@ -185,6 +185,9 @@
     <EmbeddedResource Include="frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhTrang.resx">
+      <DependentUpon>frmTinhTrang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -267,6 +270,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\momo-upload-api-210510111514-637562421141377879.jpg" />
+    <None Include="Resources\1BBE2F0E-DB24-4B69-970B-3A96478F74BD.jpg" />
+    <None Include="Resources\du-khach-den-da-nang-do-mat-tim-cho-choi-dem.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

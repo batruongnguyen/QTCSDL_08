@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="du-khach-den-da-nang-do-mat-tim-cho-choi-dem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\du-khach-den-da-nang-do-mat-tim-cho-choi-dem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="159665849-1555051084-928-width660height440" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\159665849-1555051084-928-width660height440.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1BBE2F0E-DB24-4B69-970B-3A96478F74BD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1BBE2F0E-DB24-4B69-970B-3A96478F74BD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6937.jpg_wh860" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6937.jpg_wh860.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="momo-upload-api-210510111514-637562421141377879" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\momo-upload-api-210510111514-637562421141377879.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
