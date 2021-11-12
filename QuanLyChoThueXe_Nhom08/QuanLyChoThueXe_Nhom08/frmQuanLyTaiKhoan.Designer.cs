@@ -128,7 +128,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.cbLoaiTaiKhoan.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(298, 94);
+            this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(298, 144);
             this.cbLoaiTaiKhoan.Name = "cbLoaiTaiKhoan";
             this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(192, 21);
             this.cbLoaiTaiKhoan.TabIndex = 4;
@@ -142,7 +142,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(298, 146);
+            this.txtMatKhau.Location = new System.Drawing.Point(298, 94);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(192, 20);
             this.txtMatKhau.TabIndex = 6;
@@ -167,6 +167,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -177,6 +178,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
