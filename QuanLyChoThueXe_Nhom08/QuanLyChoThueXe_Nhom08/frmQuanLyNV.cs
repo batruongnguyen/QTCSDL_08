@@ -102,7 +102,39 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            bool flag = true;
+            try
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "Delete from NHANVIEN where MaNV = '" + txtMaNV.Text + "'";
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa nhân viên này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = false;
+            }
+            finally
+            {
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        loaddata();
+                        ResetValue();
+                    }
+                }
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -112,7 +144,26 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-
+            SqlConnection TKNV = new SqlConnection(str);
+            try
+            {
+                TKNV.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối");
+            }
+            if (txtTimKiem.Text == "")
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string sQuery = "Select MaNV,TenNV, SDT_NV, DiaChiNV from NHANVIEN where MaNV like N'%" + txtTimKiem.Text + "%' or TenNV like '%" + txtTimKiem.Text + "%'or SDT_NV like '%" + txtTimKiem.Text + "%'or DiaChiNV like '%" + txtTimKiem.Text + "%'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKNV);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "NHANVIEN");
+            dgvNV.DataSource = ds.Tables["NHANVIEN"];
+            TKNV.Close();
         }
 
         private void btnNhapLai_Click(object sender, EventArgs e)
