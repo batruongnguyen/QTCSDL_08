@@ -46,6 +46,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.QLTK = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,12 +63,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.TypeAcc});
             this.dtgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvUser.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvUser.Location = new System.Drawing.Point(3, 16);
+            this.dtgvUser.Location = new System.Drawing.Point(3, 18);
             this.dtgvUser.MultiSelect = false;
             this.dtgvUser.Name = "dtgvUser";
             this.dtgvUser.ReadOnly = true;
             this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgvUser.Size = new System.Drawing.Size(750, 173);
+            this.dtgvUser.Size = new System.Drawing.Size(750, 160);
             this.dtgvUser.TabIndex = 0;
             this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
             // 
@@ -151,9 +152,10 @@ namespace QuanLyChoThueXe_Nhom08
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnThem.Location = new System.Drawing.Point(663, 64);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 34);
+            this.btnThem.Size = new System.Drawing.Size(87, 34);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -162,9 +164,10 @@ namespace QuanLyChoThueXe_Nhom08
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnSua.Location = new System.Drawing.Point(663, 104);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 34);
+            this.btnSua.Size = new System.Drawing.Size(87, 34);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -173,9 +176,10 @@ namespace QuanLyChoThueXe_Nhom08
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnXoa.Location = new System.Drawing.Point(663, 144);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 34);
+            this.btnXoa.Size = new System.Drawing.Size(87, 34);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -184,9 +188,10 @@ namespace QuanLyChoThueXe_Nhom08
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnThoat.Location = new System.Drawing.Point(663, 185);
+            this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.btnThoat.Location = new System.Drawing.Point(748, 442);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 34);
+            this.btnThoat.Size = new System.Drawing.Size(75, 35);
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -195,44 +200,62 @@ namespace QuanLyChoThueXe_Nhom08
             // QLTK
             // 
             this.QLTK.AutoSize = true;
-            this.QLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLTK.Location = new System.Drawing.Point(237, 9);
             this.QLTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QLTK.Name = "QLTK";
-            this.QLTK.Size = new System.Drawing.Size(348, 38);
+            this.QLTK.Size = new System.Drawing.Size(324, 33);
             this.QLTK.TabIndex = 11;
             this.QLTK.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbLoaiTaiKhoan);
             this.groupBox1.Controls.Add(this.txtTenTaiKhoan);
             this.groupBox1.Controls.Add(this.txtMatKhau);
-            this.groupBox1.Location = new System.Drawing.Point(39, 50);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(36, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 186);
+            this.groupBox1.Size = new System.Drawing.Size(584, 186);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.groupBox2.Controls.Add(this.dtgvUser);
-            this.groupBox2.Location = new System.Drawing.Point(33, 242);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(36, 255);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(756, 192);
+            this.groupBox2.Size = new System.Drawing.Size(756, 181);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin chi tiết";
+            this.groupBox2.Text = "Danh sách";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.btnReset.Location = new System.Drawing.Point(663, 185);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(87, 38);
+            this.btnReset.TabIndex = 13;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.ClientSize = new System.Drawing.Size(835, 483);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.QLTK);
@@ -273,5 +296,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeAcc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnReset;
     }
 }

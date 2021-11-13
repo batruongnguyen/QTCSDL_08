@@ -28,7 +28,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             InitializeComponent();
         }
-        SqlConnection cnn = new SqlConnection(@"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection cnn = new SqlConnection(@"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         private void ketnoicsdl()
         {
             cnn.Open();
@@ -40,6 +40,17 @@ namespace QuanLyChoThueXe_Nhom08
             da.Fill(dt);  // đổ dữ liệu vào kho
             cnn.Close();  // đóng kết nối
             dtgvUser.DataSource = dt; //đổ dữ liệu vào datagridview
+            this.dtgvUser.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dtgvUser.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
+        }
+        private void ResetValue()
+        {
+            txtTenTaiKhoan.ReadOnly = false;
+            txtTenTaiKhoan.Text = "";
+            txtMatKhau.Text = "";
+            cbLoaiTaiKhoan.Text = "";
+            
         }
         private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
@@ -48,9 +59,10 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void dtgvUser_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-                index = e.RowIndex;
+            txtTenTaiKhoan.ReadOnly = true;
+            index = dtgvUser.CurrentRow.Index;
 
-                txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
+            txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
                 txtMatKhau.Text = dtgvUser.Rows[index].Cells[1].Value.ToString();
             cbLoaiTaiKhoan.Text = dtgvUser.Rows[index].Cells[2].Value.ToString();
         }
@@ -143,6 +155,11 @@ namespace QuanLyChoThueXe_Nhom08
         private void cbLoaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetValue();
         }
     }
     }

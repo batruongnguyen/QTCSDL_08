@@ -37,22 +37,22 @@ namespace QuanLyChoThueXe_Nhom08
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
-                    MessageBox.Show("Đăng nhập thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmGiaoDien frGD = new frmGiaoDien();
                     frGD.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            
-           }
+
+            }
             catch (Exception)
             {
                 MessageBox.Show("Lỗi kết nỗi");
             }
-            }
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -69,6 +69,18 @@ namespace QuanLyChoThueXe_Nhom08
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void chkShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShow.Checked)
+            {
+                txtMatKhau.PasswordChar = (char)0;
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*';
+            }
         }
     }
 }
