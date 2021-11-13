@@ -58,31 +58,6 @@ namespace QuanLyChoThueXe_Nhom08
             return dt;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             bool flag = true;
@@ -93,7 +68,7 @@ namespace QuanLyChoThueXe_Nhom08
                 {
                     try
                     {
-                        if (dgvXe.CurrentCell != null)
+                        if (dgvDichVu.CurrentCell != null)
                         {
                             string BienSoXe = dgvXe.CurrentRow.Cells[0].Value.ToString();
                             string query = "delete from XE where BienSoXe = '" + BienSoXe + "'";
@@ -111,21 +86,6 @@ namespace QuanLyChoThueXe_Nhom08
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmQuanLyXe_Load(object sender, EventArgs e)
         {
             loaddataXe();
@@ -135,9 +95,9 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string querry = "Update XE set BienSoXe = '" + txtBienSoXe.Text + "', SCN='" + cbbSCN.Text +"'";
-            try
-            {
+            string querry = "Update XE set SCN ='" + cbbSCN.Text + "'";
+                try
+                {
                 ExcuteDB(querry);
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
             }
@@ -201,10 +161,6 @@ namespace QuanLyChoThueXe_Nhom08
                 Application.Exit();
         }
 
-        private void dgvQLXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnThemDV_Click(object sender, EventArgs e)
         {
@@ -243,17 +199,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSuaDV_Click(object sender, EventArgs e)
         {
-            string querry = "Update DICHVU set MaDichVu = '" + txtMaDV.Text + "', TenDichVu ='" + cbbTenDV.Text + "'";
-            try
-            {
-                ExcuteDB(querry);
-                MessageBox.Show("Cập nhật thành công!", "Thông báo");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n" + ex.Message, "Thông báo");
-            }
-            loaddataDV();
+            
         }
 
         private void btnXoaDV_Click(object sender, EventArgs e)
@@ -299,7 +245,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             if (txtTimXe.Text != "" && txtTimXe.Text.Length <= 10 && txtTimXe.Text.Length > 0)
             {
-                string query_XE = "Select * from XE where BienSoXe like '%" + txtTimXe.Text + "%'";
+                string query_XE = "Select * from XE where BienSoXe like '%" + txtTimXe.Text + "%' or SCN like '%" + txtTimXe.Text + "%'";
                 dgvXe.DataSource = GetRecords(query_XE);
             }
         }
@@ -308,8 +254,8 @@ namespace QuanLyChoThueXe_Nhom08
         {
             if (txtTimDV.Text != "" && txtTimDV.Text.Length <= 10 && txtTimDV.Text.Length > 0)
             {
-                string query_DICHVU = "Select * from DICHVU where MaDichVu like '%" + txtTimDV.Text + "%'";
-                dgvDichVu.DataSource = GetRecords(query_DICHVU);
+                string query_DV = "Select * from DICHVU where MaDichVu like '%" + txtTimDV.Text + "%' or TenDichVu like '%" + txtTimDV.Text + "%'";
+                dgvDichVu.DataSource = GetRecords(query_DV);
             }
         }
     }

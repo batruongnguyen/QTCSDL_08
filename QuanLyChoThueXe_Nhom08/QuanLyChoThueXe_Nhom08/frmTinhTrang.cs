@@ -102,18 +102,14 @@ namespace QuanLyChoThueXe_Nhom08
             txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();
             cbbCuaXe.Text = dgvTinhTrang.Rows[i].Cells[5].Value.ToString();
             dtThoiGianCN.Text = dgvTinhTrang.Rows[i].Cells[6].Value.ToString();
-
-
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtMaTT.Text == "" || cbbDongCo.SelectedItem == null || txtBienSoXe.Text == "" || txtNguonDien.Text == "" || cbbMayLanh.SelectedItem == null || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
+            if (cbbDongCo.SelectedItem == null ||  txtNguonDien.Text == "" || cbbMayLanh.SelectedItem == null || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
@@ -131,6 +127,21 @@ namespace QuanLyChoThueXe_Nhom08
                 loaddataTT();
                 MessageBox.Show("Đã thêm thành công!", "Thông báo");
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtMaTT.Text = "";
+            txtBienSoXe.Text = "";
+            cbbDongCo.Text = "";
+            cbbMayLanh.Text = "";
+            txtNguonDien.Text = "";
+            cbbCuaXe.Text = "";
+            dtThoiGianCN.Text = "";
+            loaddataTT();
+            txtTimKiem.Text = "";
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
     }
 }
