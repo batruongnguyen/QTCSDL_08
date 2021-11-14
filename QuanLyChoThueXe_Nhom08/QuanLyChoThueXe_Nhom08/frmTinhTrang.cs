@@ -167,5 +167,29 @@ namespace QuanLyChoThueXe_Nhom08
             }
             loaddata();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            SqlConnection TK = new SqlConnection(str);
+            try
+            {
+                TK.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối DB");
+            }
+
+            string sQuery = "select * from TINHTRANG where MaTinhTrang like N'%" + txtTimKiem.Text + "%'or BienSoXe like '%" + txtTimKiem.Text + "%'or DongCo like N'%" + txtTimKiem.Text + "%' or MayLanh like N'%" + txtTimKiem.Text + "%' or NguonDien like N'%" + txtTimKiem.Text + "%'or CuaXe like N'%" + txtTimKiem.Text + "%'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TK);
+
+            DataSet ds = new DataSet();
+
+            adapter.Fill(ds, "KHACHHANG");
+
+            dgvTinhTrang.DataSource = ds.Tables["KHACHHANG"];
+
+            TK.Close();
+        }
     }
 }

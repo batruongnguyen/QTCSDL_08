@@ -102,6 +102,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
