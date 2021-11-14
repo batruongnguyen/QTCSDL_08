@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmTinhTrang()
@@ -54,20 +54,6 @@ namespace QuanLyChoThueXe_Nhom08
             }
         }
 
-        private void dgvTinhTrang_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaTT.Enabled = false;
-            int i;
-            i = dgvTinhTrang.CurrentRow.Index;
-            txtMaTT.Text = dgvTinhTrang.Rows[i].Cells[0].Value.ToString();
-            txtBienSoXe.Text = dgvTinhTrang.Rows[i].Cells[1].Value.ToString();
-            cbbDongCo.Text = dgvTinhTrang.Rows[i].Cells[2].Value.ToString();
-            cbbMayLanh.Text = dgvTinhTrang.Rows[i].Cells[3].Value.ToString();
-            txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();
-            cbbCuaXe.Text = dgvTinhTrang.Rows[i].Cells[5].Value.ToString();
-            dtThoiGianCN.Text = dgvTinhTrang.Rows[i].Cells[6].Value.ToString();
-
-        }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             bool flag = true;
@@ -190,6 +176,20 @@ namespace QuanLyChoThueXe_Nhom08
             dgvTinhTrang.DataSource = ds.Tables["KHACHHANG"];
 
             TK.Close();
+        }
+
+        private void dgvTinhTrang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaTT.Enabled = false;
+            int i;
+            i = dgvTinhTrang.CurrentRow.Index;
+            txtMaTT.Text = dgvTinhTrang.Rows[i].Cells[0].Value.ToString();
+            txtBienSoXe.Text = dgvTinhTrang.Rows[i].Cells[1].Value.ToString();
+            cbbDongCo.Text = dgvTinhTrang.Rows[i].Cells[2].Value.ToString();
+            cbbMayLanh.Text = dgvTinhTrang.Rows[i].Cells[3].Value.ToString();
+            txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();
+            cbbCuaXe.Text = dgvTinhTrang.Rows[i].Cells[5].Value.ToString();
+            dtThoiGianCN.Text = dgvTinhTrang.Rows[i].Cells[6].Value.ToString();
         }
     }
 }
