@@ -35,8 +35,8 @@ namespace QuanLyChoThueXe_Nhom08
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.checkbox = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.chkShow = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -108,19 +108,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // checkbox
-            // 
-            this.checkbox.AutoSize = true;
-            this.checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(86)))), ((int)(((byte)(115)))));
-            this.checkbox.Location = new System.Drawing.Point(265, 252);
-            this.checkbox.Name = "checkbox";
-            this.checkbox.Size = new System.Drawing.Size(151, 24);
-            this.checkbox.TabIndex = 3;
-            this.checkbox.TabStop = true;
-            this.checkbox.Text = "Hiển thị mật khẩu";
-            this.checkbox.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -132,14 +119,26 @@ namespace QuanLyChoThueXe_Nhom08
             this.label3.TabIndex = 6;
             this.label3.Text = "ĐĂNG NHẬP";
             // 
+            // chkShow
+            // 
+            this.chkShow.AutoSize = true;
+            this.chkShow.Location = new System.Drawing.Point(186, 253);
+            this.chkShow.Name = "chkShow";
+            this.chkShow.Size = new System.Drawing.Size(108, 17);
+            this.chkShow.TabIndex = 7;
+            this.chkShow.TabStop = true;
+            this.chkShow.Text = "Hiển thị mật khẩu";
+            this.chkShow.UseVisualStyleBackColor = true;
+            this.chkShow.CheckedChanged += new System.EventHandler(this.chkShow_CheckedChanged);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(478, 431);
+            this.Controls.Add(this.chkShow);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkbox);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
@@ -149,6 +148,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +162,7 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.RadioButton checkbox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton chkShow;
     }
 }

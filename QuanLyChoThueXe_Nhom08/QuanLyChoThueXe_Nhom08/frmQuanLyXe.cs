@@ -14,112 +14,129 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyXe : Form
     {
         bool isThoat = true;
-        SqlConnection connection;
-        SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=ChoThueXe;Integrated Security=True";
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmQuanLyXe()
         {
             InitializeComponent();
         }
-        void loaddata()
+        void loaddataXe()
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from XE";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dgvQLXe.DataSource = table;
+            string query = "select * from XE";
+            dgvXe.DataSource = GetRecords(query);
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        void loaddataDV()
         {
-
+            string query = "select * from DICHVU";
+            dgvDichVu.DataSource = GetRecords(query);
         }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        public void ExcuteDB(string sql)
         {
-
+            SqlCommand cmd = new SqlCommand(sql, con);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo");
+            }
+            con.Close();
         }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public DataTable GetRecords(string sql)
         {
-
-        }
-
-        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            con.Open();
+            da.Fill(dt);
+            con.Close();
+            return dt;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            bool flag = true;
+            if (flag == true)
+            {
+                var confirmResult = MessageBox.Show("Bạn muốn thực hiện xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                if (confirmResult == DialogResult.OK)
+                {
+                    try
+                    {
+                        if (dgvDichVu.CurrentCell != null)
+                        {
+                            string BienSoXe = dgvXe.CurrentRow.Cells[0].Value.ToString();
+                            string query = "delete from XE where BienSoXe = '" + BienSoXe + "'";
+                            ExcuteDB(query);
+                        }
+                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                        loaddataXe();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                    }
+                    loaddataXe();
+                }
+            }
         }
 
         private void frmQuanLyXe_Load(object sender, EventArgs e)
         {
+            loaddataXe();
+            loaddataDV();
 
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            string querry = "Update XE set SCN ='" + cbbSCN.Text + "'where BienSoXe = '" + txtBienSoXe.Text + "'";
+            try
+                {
+                ExcuteDB(querry);
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n" + ex.Message, "Thông báo");
+            }
+            loaddataXe();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            txtBienSoXe.Text = "";
+            loaddataXe();
+            cbbSCN.Text = "";
+            txtTimXe.Text = "";
+            txtBienSoXe.Enabled = true;
+            btnXoaXe.Enabled = true;
+            btnSuaXe.Enabled = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "Insert into XE values('" + txtBienSoXe.Text + "',N'" + cbbSCN.Text + "',N'" + txtMaDichVu.Text + "',N'" + cbbTenDichVu.Text +"')";
-            if (txtBienSoXe.Text == "" || cbbSCN.Text == "" || txtMaDichVu.Text == "" || cbbTenDichVu.Text == "")
+            if (cbbSCN.SelectedItem == null || txtBienSoXe.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
-         
             {
-                try
-                {
+                string BienSoXe = txtBienSoXe.Text;
+                string SCN = cbbSCN.Text;
 
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Thêm thành công!", "Thông báo");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
-                }
-                loaddata();
+                string query = "insert into XE values ('" + BienSoXe + "', '" + SCN + "')";
+                ExcuteDB(query);
+                loaddataXe();
+                MessageBox.Show("Đã thêm thành công!", "Thông báo");
             }
-        }
-       
 
-        
+        }
 
         private void txtBienSoXe_TextChanged(object sender, EventArgs e)
         {
@@ -142,6 +159,113 @@ namespace QuanLyChoThueXe_Nhom08
         {
             if (isThoat)
                 Application.Exit();
+        }
+
+
+        private void btnThemDV_Click(object sender, EventArgs e)
+        {
+            if (cbbTenDV.SelectedItem == null || txtMaDV.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
+            }
+            else
+            {
+                string MaDichVu = txtMaDV.Text;
+                string TenDichVu = cbbTenDV.Text;
+
+                string query = "insert into DICHVU values ('" + MaDichVu + "', N'" + TenDichVu + "')";
+                ExcuteDB(query);
+                loaddataDV();
+                MessageBox.Show("Đã thêm thành công!", "Thông báo");
+            }
+        }
+
+        private void btnSuaDV_Click(object sender, EventArgs e)
+        {
+            string querry = "Update DICHVU set TenDichVu =N'" + cbbTenDV.Text + "'where MaDichVu = '" + txtMaDV.Text + "'";
+            try
+            {
+                ExcuteDB(querry);
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n" + ex.Message, "Thông báo");
+            }
+            loaddataDV();
+        }
+
+        private void btnXoaDV_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+            if (flag == true)
+            {
+                var confirmResult = MessageBox.Show("Bạn muốn thực hiện xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                if (confirmResult == DialogResult.OK)
+                {
+                    try
+                    {
+                        if (dgvDichVu.CurrentCell != null)
+                        {
+                            string MaDichVu = dgvDichVu.CurrentRow.Cells[0].Value.ToString();
+                            string query = "delete from DICHVU where MaDichVu = '" + MaDichVu + "'";
+                            ExcuteDB(query);
+                        }
+                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                        loaddataDV();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                    }
+                    loaddataDV();
+                }
+            }
+        }
+
+        private void btnResetDv_Click(object sender, EventArgs e)
+        {
+            txtMaDV.Text = "";
+            loaddataDV();
+            cbbTenDV.Text = "";
+            txtTimDV.Text = "";
+            txtMaDV.Enabled = true;
+            btnXoaDV.Enabled = true;
+            btnSuaDV.Enabled = true;
+        }
+
+        private void btnTimXe_Click(object sender, EventArgs e)
+        {
+            if (txtTimXe.Text != "" && txtTimXe.Text.Length <= 10 && txtTimXe.Text.Length > 0)
+            {
+                string query_XE = "Select * from XE where BienSoXe like '%" + txtTimXe.Text + "%' or SCN like '%" + txtTimXe.Text + "%'";
+                dgvXe.DataSource = GetRecords(query_XE);
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (txtTimDV.Text != "" && txtTimDV.Text.Length <= 10 && txtTimDV.Text.Length > 0)
+            {
+                string query_DV = "Select * from DICHVU where MaDichVu like '%" + txtTimDV.Text + "%' or TenDichVu like '%" + txtTimDV.Text + "%'";
+                dgvDichVu.DataSource = GetRecords(query_DV);
+            }
+        }
+
+        private void dgvXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBienSoXe.Enabled = false;
+            int i = dgvXe.CurrentRow.Index;
+            txtBienSoXe.Text = dgvXe.Rows[i].Cells[0].Value.ToString();
+            cbbSCN.Text = dgvXe.Rows[i].Cells[1].Value.ToString();
+        }
+
+        private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaDV.Enabled = false;
+            int i = dgvDichVu.CurrentRow.Index;
+            txtMaDV.Text = dgvDichVu.Rows[i].Cells[0].Value.ToString();
+            cbbTenDV.Text = dgvDichVu.Rows[i].Cells[1].Value.ToString();
         }
     }
 }

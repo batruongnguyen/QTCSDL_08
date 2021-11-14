@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmQuanLyKH()
@@ -61,7 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtDiaChiKH.Text = "";
         }
 
-        private void dgvKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaKH.ReadOnly = true;
             int i;
@@ -120,7 +120,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             bool flag = true;
             command = connection.CreateCommand();
-            command.CommandText = "Update KHACHHANG set TenKH=N'" + txtSDT_KH.Text + "', SDT_KH='" + txtSDT_KH.Text + "', DiaChiKH=N'" + txtDiaChiKH.Text + "' where MaKH = '" + txtMaKH.Text + "'";
+            command.CommandText = "Update KHACHHANG set TenKH=N'" + txtTenKH.Text + "', SDT_KH='" + txtSDT_KH.Text + "', DiaChiKH=N'" + txtDiaChiKH.Text + "' where MaKH = '" + txtMaKH.Text + "'";
             command.ExecuteNonQuery();
             if (flag == true)
             {
@@ -199,7 +199,7 @@ namespace QuanLyChoThueXe_Nhom08
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string sQuery = "Select MaKH,TenKH, SDT_KH, DiaChiKH from KHACHHANG where MaKH like N'%" + txtTimKiem.Text + "%' or TenKH like '%" + txtTimKiem.Text + "%'or SDT_KH like '%" + txtTimKiem.Text + "%'or DiaChiKH like '%" + txtTimKiem.Text + "%'";
+            string sQuery = "Select MaKH,TenKH, SDT_KH, DiaChiKH from KHACHHANG where MaKH like N'%" + txtTimKiem.Text + "%' or TenKH like N'%" + txtTimKiem.Text + "%'or SDT_KH like N'%" + txtTimKiem.Text + "%'or DiaChiKH like N'%" + txtTimKiem.Text + "%'";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKKH);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "KHACHHANG");
@@ -224,10 +224,12 @@ namespace QuanLyChoThueXe_Nhom08
                 f.Show();
             }
         }
+
         private void frmQuanLyKH_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (isThoat)
                 Application.Exit();
         }
+
     }
 }

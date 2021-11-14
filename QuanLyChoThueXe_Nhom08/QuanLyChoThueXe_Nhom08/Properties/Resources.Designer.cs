@@ -73,6 +73,16 @@ namespace QuanLyChoThueXe_Nhom08.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1BBE2F0E_DB24_4B69_970B_3A96478F74BD {
+            get {
+                object obj = ResourceManager.GetObject("1BBE2F0E-DB24-4B69-970B-3A96478F74BD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6937_jpg_wh860 {
             get {
                 object obj = ResourceManager.GetObject("6937.jpg_wh860", resourceCulture);
@@ -96,6 +106,26 @@ namespace QuanLyChoThueXe_Nhom08.Properties {
         internal static System.Drawing.Bitmap dan_xe_caravan_passion_viet_nam_len_bao_nuoc_ngoai_0ef5d01 {
             get {
                 object obj = ResourceManager.GetObject("dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap du_khach_den_da_nang_do_mat_tim_cho_choi_dem {
+            get {
+                object obj = ResourceManager.GetObject("du-khach-den-da-nang-do-mat-tim-cho-choi-dem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap momo_upload_api_210510111514_637562421141377879 {
+            get {
+                object obj = ResourceManager.GetObject("momo-upload-api-210510111514-637562421141377879", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
