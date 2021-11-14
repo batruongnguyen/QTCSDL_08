@@ -114,7 +114,28 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            bool flag = true;
+            command = connection.CreateCommand();
+            command.CommandText = "Update LAIXE set TenLaiXe=N'" + txtTenLX.Text + "', SDT_LX='" + txtSDT_LX.Text + "', DiaChi_LX=N'" + txtDiaChiLX.Text + "' where MaLaiXe = '" + txtMaLX.Text + "'";
+            command.ExecuteNonQuery();
+            if (flag == true)
+            {
+                var confirmResult = MessageBox.Show("Bạn muốn sửa thông tin?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Thông tin đã được sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Có lỗi đã xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    loaddata();
+                }
+            }
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -129,7 +150,27 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection TK = new SqlConnection(str);
+            try
+            {
+                TK.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình kết nối");
+            }
+            if (txtTimKiem.Text == "")
+            {
+                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string sQuery = "Select MaLaiXe,TenLaiXe, SDT_LX, DiaChi_LX from LAIXE where MaLaiXe like N'%" + txtTimKiem.Text + "%' or TenLaiXe like '%" + txtTimKiem.Text + "%'or SDT_LX like '%" + txtTimKiem.Text + "'or DiaChi_LX like N'%" + txtTimKiem.Text + "%'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TK);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "LAIXE");
+            dgvLX.DataSource = ds.Tables["LAIXE"];
+            TK.Close();
+
         }
 
         private void btnNhapLai_Click(object sender, EventArgs e)
