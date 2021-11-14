@@ -71,7 +71,47 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
+            command = connection.CreateCommand();
+            command.CommandText = "insert into NHANVIEN values ('" + txtMaNV.Text + "', N'" + txtTenNV.Text + "', '" + txtSDT_NV.Text + "',N'" + txtDiaChiNV.Text + "')";
+
+            if (txtMaNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaNV.Focus();
+                return;
+            }
+            if (txtTenNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenNV.Focus();
+                return;
+            }
+            if (txtSDT_NV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập số điện thoai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaNV.Focus();
+                return;
+            }
+            if (txtDiaChiNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDiaChiNV.Focus();
+                return;
+            }
+            else
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Đã thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Mã nhân viên này đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                loaddata();
+            }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -157,7 +197,7 @@ namespace QuanLyChoThueXe_Nhom08
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string sQuery = "Select MaNV,TenNV, SDT_NV, DiaChiNV from NHANVIEN where MaNV like N'%" + txtTimKiem.Text + "%' or TenNV like '%" + txtTimKiem.Text + "%'or SDT_NV like '%" + txtTimKiem.Text + "%'or DiaChiNV like '%" + txtTimKiem.Text + "%'";
+            string sQuery = "Select MaNV,TenNV, SDT_NV, DiaChiNV from NHANVIEN where MaNV like N'%" + txtTimKiem.Text + "%' or TenNV like N'%" + txtTimKiem.Text + "%'or SDT_NV like '%" + txtTimKiem.Text + "%'or DiaChiNV like N'%" + txtTimKiem.Text + "%'";
             SqlDataAdapter adapter = new SqlDataAdapter(sQuery, TKNV);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "NHANVIEN");

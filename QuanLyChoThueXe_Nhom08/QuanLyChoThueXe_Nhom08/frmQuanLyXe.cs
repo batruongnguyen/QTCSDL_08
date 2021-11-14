@@ -14,7 +14,7 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyXe : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection(@"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -180,23 +180,6 @@ namespace QuanLyChoThueXe_Nhom08
             }
         }
 
-        private void dgvXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtBienSoXe.Enabled = false;
-            int i = dgvXe.CurrentRow.Index;
-            txtBienSoXe.Text = dgvXe.Rows[i].Cells[0].Value.ToString();
-            cbbSCN.Text = dgvXe.Rows[i].Cells[1].Value.ToString();
-
-        }
-
-        private void dgvDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaDV.Enabled = false;
-            int i = dgvDichVu.CurrentRow.Index;
-            txtMaDV.Text = dgvDichVu.Rows[i].Cells[0].Value.ToString();
-            cbbTenDV.Text = dgvDichVu.Rows[i].Cells[1].Value.ToString();
-        }
-
         private void btnSuaDV_Click(object sender, EventArgs e)
         {
             string querry = "Update DICHVU set TenDichVu =N'" + cbbTenDV.Text + "'where MaDichVu = '" + txtMaDV.Text + "'";
@@ -267,6 +250,22 @@ namespace QuanLyChoThueXe_Nhom08
                 string query_DV = "Select * from DICHVU where MaDichVu like '%" + txtTimDV.Text + "%' or TenDichVu like '%" + txtTimDV.Text + "%'";
                 dgvDichVu.DataSource = GetRecords(query_DV);
             }
+        }
+
+        private void dgvXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBienSoXe.Enabled = false;
+            int i = dgvXe.CurrentRow.Index;
+            txtBienSoXe.Text = dgvXe.Rows[i].Cells[0].Value.ToString();
+            cbbSCN.Text = dgvXe.Rows[i].Cells[1].Value.ToString();
+        }
+
+        private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaDV.Enabled = false;
+            int i = dgvDichVu.CurrentRow.Index;
+            txtMaDV.Text = dgvDichVu.Rows[i].Cells[0].Value.ToString();
+            cbbTenDV.Text = dgvDichVu.Rows[i].Cells[1].Value.ToString();
         }
     }
 }

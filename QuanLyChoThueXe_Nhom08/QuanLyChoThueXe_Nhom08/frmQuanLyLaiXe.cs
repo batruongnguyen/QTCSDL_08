@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -114,12 +114,12 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnNhapLai_Click(object sender, EventArgs e)
