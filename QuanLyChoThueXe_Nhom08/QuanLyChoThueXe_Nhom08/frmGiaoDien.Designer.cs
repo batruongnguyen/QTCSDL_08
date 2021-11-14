@@ -38,7 +38,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.đơnThuêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìnhTrạngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnKH = new System.Windows.Forms.Button();
@@ -55,7 +54,6 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -116,7 +114,7 @@ namespace QuanLyChoThueXe_Nhom08
             // tìnhTrạngToolStripMenuItem
             // 
             this.tìnhTrạngToolStripMenuItem.Name = "tìnhTrạngToolStripMenuItem";
-            this.tìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.tìnhTrạngToolStripMenuItem.Text = "Tình trạng";
             this.tìnhTrạngToolStripMenuItem.Click += new System.EventHandler(this.tìnhTrạngToolStripMenuItem_Click);
             // 
@@ -126,12 +124,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -272,7 +264,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.ToolStripMenuItem láiXeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đơnThuêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.Button btnKH;

@@ -131,5 +131,7 @@ namespace QuanLyChoThueXe_Nhom08
             add.Show();
             this.Hide();
         }
+
+
     }
 }
