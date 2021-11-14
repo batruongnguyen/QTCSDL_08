@@ -159,22 +159,24 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnNhapLai
             // 
+            this.btnNhapLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnNhapLai.Location = new System.Drawing.Point(240, 155);
             this.btnNhapLai.Name = "btnNhapLai";
             this.btnNhapLai.Size = new System.Drawing.Size(95, 33);
             this.btnNhapLai.TabIndex = 11;
             this.btnNhapLai.Text = "&Nhập lại";
-            this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.UseVisualStyleBackColor = false;
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnTimKiem.Location = new System.Drawing.Point(80, 155);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(95, 33);
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "&Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
@@ -235,7 +237,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvKH.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.dgvKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.dgvKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.dgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKH.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvKH.Location = new System.Drawing.Point(25, 37);
@@ -304,7 +306,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1141, 759);
+            this.ClientSize = new System.Drawing.Size(1141, 749);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
