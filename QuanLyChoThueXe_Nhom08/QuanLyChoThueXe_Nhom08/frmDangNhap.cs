@@ -61,15 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
                 Application.Exit();
         }
 
-        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void chkShow_CheckedChanged(object sender, EventArgs e)
         {
