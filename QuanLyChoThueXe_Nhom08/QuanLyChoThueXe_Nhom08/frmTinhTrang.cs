@@ -69,7 +69,8 @@ namespace QuanLyChoThueXe_Nhom08
 
         }
         private void btnXoa_Click(object sender, EventArgs e)
-        {bool flag = true;
+        {
+            bool flag = true;
             try
             {
                 command = connection.CreateCommand();
@@ -78,7 +79,7 @@ namespace QuanLyChoThueXe_Nhom08
             }
             catch
             {
-                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa khách hàng này!","Thông báo");
+                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa thông tin này!","Thông báo");
                 flag = false;
             }
             finally
@@ -144,6 +145,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtNguonDien.Text = "";
             cbbCuaXe.Text = "";
             dtThoiGianCN.Text = "";
+            txtTimKiem.Text = "";
             txtMaTT.Enabled = true;
             connection = new SqlConnection(str);
             connection.Open();
