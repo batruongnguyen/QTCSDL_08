@@ -135,7 +135,6 @@ namespace QuanLyChoThueXe_Nhom08
                     loaddata();
                 }
             }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -195,5 +194,7 @@ namespace QuanLyChoThueXe_Nhom08
             if (isThoat)
                 Application.Exit();
         }
+
+
     }
 }
