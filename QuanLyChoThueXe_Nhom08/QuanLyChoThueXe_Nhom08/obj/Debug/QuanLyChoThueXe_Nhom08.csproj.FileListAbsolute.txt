@@ -66,3 +66,4 @@ E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\git
 E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.xml
 E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.SqlServer.xml
 E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmTinhTrang.resources
+C:\Users\Admin\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.csproj.CopyComplete

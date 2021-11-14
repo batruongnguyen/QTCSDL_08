@@ -127,8 +127,8 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.cbLoaiTaiKhoan.FormattingEnabled = true;
             this.cbLoaiTaiKhoan.Items.AddRange(new object[] {
-            "0",
-            "1"});
+            "Admin",
+            "Nhân Viên"});
             this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(298, 144);
             this.cbLoaiTaiKhoan.Name = "cbLoaiTaiKhoan";
             this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(192, 21);
