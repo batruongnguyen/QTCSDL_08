@@ -111,7 +111,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(190, 36);
             this.txtTimKiem.TabIndex = 4;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // groupBox3
             // 
@@ -175,7 +174,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbbDongCo
             // 
@@ -336,6 +334,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
             // 

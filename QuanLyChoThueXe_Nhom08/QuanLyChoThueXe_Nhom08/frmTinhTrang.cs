@@ -14,70 +14,33 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmTinhTrang : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection(@"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
-        SqlCommand cmd;
+        SqlConnection connection;
+        SqlCommand command;
+        string str = @"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmTinhTrang()
         {
             InitializeComponent();
         }
-        void loaddataTT()
+        void loaddata()
         {
-            string query = "select * from TINHTRANG";
-            dgvTinhTrang.DataSource = GetRecords(query);
+            command = connection.CreateCommand();
+            command.CommandText = "select * from TINHTRANG";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dgvTinhTrang.DataSource = table;
         }
-
-        public void ExcuteDB(string sql)
-        {
-            SqlCommand cmd = new SqlCommand(sql, con);
-            try
-            {
-                con.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thông báo");
-            }
-            con.Close();
-        }
-        public DataTable GetRecords(string sql)
-        {
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            con.Open();
-            da.Fill(dt);
-            con.Close();
-            return dt;
-        }
-
-        private void btnThemXe_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void frmTinhTrang_Load(object sender, EventArgs e)
         {
-            loaddataTT();
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
         }
 
-        private void dtNgayDat_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -94,7 +57,8 @@ namespace QuanLyChoThueXe_Nhom08
         private void dgvTinhTrang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaTT.Enabled = false;
-            int i = dgvTinhTrang.CurrentRow.Index;
+            int i;
+            i = dgvTinhTrang.CurrentRow.Index;
             txtMaTT.Text = dgvTinhTrang.Rows[i].Cells[0].Value.ToString();
             txtBienSoXe.Text = dgvTinhTrang.Rows[i].Cells[1].Value.ToString();
             cbbDongCo.Text = dgvTinhTrang.Rows[i].Cells[2].Value.ToString();
@@ -102,30 +66,72 @@ namespace QuanLyChoThueXe_Nhom08
             txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();
             cbbCuaXe.Text = dgvTinhTrang.Rows[i].Cells[5].Value.ToString();
             dtThoiGianCN.Text = dgvTinhTrang.Rows[i].Cells[6].Value.ToString();
+
         }
         private void btnXoa_Click(object sender, EventArgs e)
-        {
+        {bool flag = true;
+            try
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "delete from TINHTRANG where MaTinhTrang='" + txtMaTT.Text + "'";
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa khách hàng này!","Thông báo");
+                flag = false;
+            }
+            finally
+            {
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                    if (confirmResult == DialogResult.OK)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                        }
+                        loaddata();
+                        txtMaTT.Text = "";
+                        txtBienSoXe.Text = "";
+                        cbbDongCo.Text = "";
+                        cbbMayLanh.Text = "";
+                        txtNguonDien.Text = "";
+                        cbbCuaXe.Text = "";
+                        dtThoiGianCN.Text = "";
+
+                        txtMaTT.Enabled = true;
+                    }
+                }
+            }   
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (cbbDongCo.SelectedItem == null ||  txtNguonDien.Text == "" || cbbMayLanh.SelectedItem == null || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
+            command = connection.CreateCommand();
+            command.CommandText = "Insert into TINHTRANG values('" + txtMaTT.Text + "','" + txtBienSoXe.Text + "',N'" + cbbDongCo.Text + "',N'" + cbbMayLanh.Text + "','" + txtNguonDien.Text + "',N'" + cbbCuaXe.Text + "','" + dtThoiGianCN.Text + "')";
+            if (cbbDongCo.SelectedItem == null || cbbMayLanh.SelectedItem == null || txtNguonDien.Text == "" || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
             else
             {
-                string MaTinhTrang = txtMaTT.Text;
-                string BienSoXe = txtBienSoXe.Text;
-                string DongCo = cbbDongCo.Text;
-                string MayLanh = cbbMayLanh.Text;
-                string NguonDien = txtNguonDien.Text;
-                string CuaXe = cbbCuaXe.Text;
-                string ThoiGianCapNhat = dtThoiGianCN.Text;
-                string query = "insert into TINHTRANG values ('" + MaTinhTrang + "', '" + BienSoXe + "', '" + DongCo + "', '" + MayLanh + "', '" + NguonDien + "', '" + CuaXe + "', '" + ThoiGianCapNhat + "')";
-                ExcuteDB(query);
-                loaddataTT();
-                MessageBox.Show("Đã thêm thành công!", "Thông báo");
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!", "Thông báo");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xảy ra lỗi trong quá trình thêm!", "Thông báo");
+                }
+                loaddata();
             }
         }
 
@@ -138,10 +144,26 @@ namespace QuanLyChoThueXe_Nhom08
             txtNguonDien.Text = "";
             cbbCuaXe.Text = "";
             dtThoiGianCN.Text = "";
-            loaddataTT();
-            txtTimKiem.Text = "";
-            btnXoa.Enabled = true;
-            btnSua.Enabled = true;
+            txtMaTT.Enabled = true;
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "update TINHTRANG set DongCo=N'" + cbbDongCo.Text + "',MayLanh=N'" + cbbMayLanh.Text + "',NguonDien=N'" + txtNguonDien.Text + "',CuaXe='" + cbbCuaXe.Text + "',ThoiGianCapNhat='" + dtThoiGianCN.Text + "' where MaTinhTrang='" + txtMaTT.Text + "'";
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
+            }
+            loaddata();
         }
     }
 }

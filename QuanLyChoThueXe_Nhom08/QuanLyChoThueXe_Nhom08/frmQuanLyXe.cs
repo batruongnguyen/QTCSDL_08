@@ -95,8 +95,8 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string querry = "Update XE set SCN ='" + cbbSCN.Text + "'";
-                try
+            string querry = "Update XE set SCN ='" + cbbSCN.Text + "'where BienSoXe = '" + txtBienSoXe.Text + "'";
+            try
                 {
                 ExcuteDB(querry);
                 MessageBox.Show("Cập nhật thành công!", "Thông báo");
@@ -173,7 +173,7 @@ namespace QuanLyChoThueXe_Nhom08
                 string MaDichVu = txtMaDV.Text;
                 string TenDichVu = cbbTenDV.Text;
 
-                string query = "insert into DICHVU values ('" + MaDichVu + "', '" + TenDichVu + "')";
+                string query = "insert into DICHVU values ('" + MaDichVu + "', N'" + TenDichVu + "')";
                 ExcuteDB(query);
                 loaddataDV();
                 MessageBox.Show("Đã thêm thành công!", "Thông báo");
@@ -199,7 +199,17 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnSuaDV_Click(object sender, EventArgs e)
         {
-            
+            string querry = "Update DICHVU set TenDichVu =N'" + cbbTenDV.Text + "'where MaDichVu = '" + txtMaDV.Text + "'";
+            try
+            {
+                ExcuteDB(querry);
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!\n" + ex.Message, "Thông báo");
+            }
+            loaddataDV();
         }
 
         private void btnXoaDV_Click(object sender, EventArgs e)
