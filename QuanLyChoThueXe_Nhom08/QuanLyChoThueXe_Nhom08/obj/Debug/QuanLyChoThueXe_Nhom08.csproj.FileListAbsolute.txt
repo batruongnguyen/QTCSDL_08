@@ -61,3 +61,8 @@ D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_
 D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.xml
 D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmTinhTrang.resources
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.dll
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.SqlServer.dll
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.xml
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\EntityFramework.SqlServer.xml
+E:\2BaoChau\hoc\dai_hoc\nam_3_ki_1\quản trị cơ sở dữ liệu\bt_nhom\github\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmTinhTrang.resources

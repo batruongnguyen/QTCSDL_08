@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=NGBATRUONG;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -58,8 +58,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtSDT_NV.Text = "";
             txtDiaChiNV.Text = "";
         }
-
-        private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaNV.ReadOnly = true;
             int i;
@@ -189,5 +188,6 @@ namespace QuanLyChoThueXe_Nhom08
             if (isThoat)
                 Application.Exit();
         }
+
     }
 }

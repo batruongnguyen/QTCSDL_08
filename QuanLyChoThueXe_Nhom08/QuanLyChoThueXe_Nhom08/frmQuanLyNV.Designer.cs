@@ -192,7 +192,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.Size = new System.Drawing.Size(1037, 234);
             this.dgvNV.TabIndex = 0;
-            this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
+            this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
             // 
             // groupBox3
             // 
