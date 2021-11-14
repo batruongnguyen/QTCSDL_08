@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLyKH());
+            Application.Run(new frmTinhTrang());
         }
     }
 }
