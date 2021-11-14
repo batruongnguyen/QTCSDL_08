@@ -14,32 +14,39 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyTaiKhoan : Form
     {
         bool isThoat = true;
-        int index = -1;
-        SqlCommand cmd;
+        SqlConnection connection;
+        SqlCommand command;
+        string str = @"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
-        public static Boolean save;
-        public static string TenTaiKhoan;
-        public static string LoaiTaiKhoan;
-        public static string MatKhau;
-
 
         public frmQuanLyTaiKhoan()
         {
             InitializeComponent();
         }
-        SqlConnection cnn = new SqlConnection(@"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
-        private void ketnoicsdl()
+        private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
-            cnn.Open();
-            string sql = "select * from TAIKHOAN";  // lay het du lieu trong bang tai khoan
-            SqlCommand com = new SqlCommand(sql, cnn); //bat dau truy van
-            com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com); //chuyen du lieu ve
-            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            cnn.Close();  // đóng kết nối
-            dtgvUser.DataSource = dt; //đổ dữ liệu vào datagridview
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
+        }
+        private void loaddata()
+
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "Select * from TAIKHOAN";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dtgvUser.DataSource = table;
+            dtgvUser.Columns[0].HeaderText = "Tên Tài Khoản";
+            dtgvUser.Columns[1].HeaderText = "Mật Khẩu";
+            dtgvUser.Columns[2].HeaderText = "Loại Tài Khoản";
+            dtgvUser.Columns[0].Width = 135;
+            dtgvUser.Columns[1].Width = 230;
+            dtgvUser.Columns[2].Width = 152;
+
+
             this.dtgvUser.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
             this.dtgvUser.AlternatingRowsDefaultCellStyle.BackColor =
                 Color.GhostWhite;
@@ -50,21 +57,17 @@ namespace QuanLyChoThueXe_Nhom08
             txtTenTaiKhoan.Text = "";
             txtMatKhau.Text = "";
             cbLoaiTaiKhoan.Text = "";
-            
-        }
-        private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
-        {
-            ketnoicsdl();
+
         }
 
         private void dtgvUser_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             txtTenTaiKhoan.ReadOnly = true;
-            index = dtgvUser.CurrentRow.Index;
-
-            txtTenTaiKhoan.Text = dtgvUser.Rows[index].Cells[0].Value.ToString();
-                txtMatKhau.Text = dtgvUser.Rows[index].Cells[1].Value.ToString();
-            cbLoaiTaiKhoan.Text = dtgvUser.Rows[index].Cells[2].Value.ToString();
+            int i;
+            i = dtgvUser.CurrentRow.Index;
+            txtTenTaiKhoan.Text = dtgvUser.Rows[i].Cells[0].Value.ToString();
+            txtMatKhau.Text = dtgvUser.Rows[i].Cells[1].Value.ToString();
+            cbLoaiTaiKhoan.Text = dtgvUser.Rows[i].Cells[2].Value.ToString();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -87,82 +90,102 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (cbLoaiTaiKhoan.SelectedItem == null || txtTenTaiKhoan.Text == "" || txtMatKhau.Text == "")
+            command = connection.CreateCommand();
+            command.CommandText = "Insert into TINHTRANG values('" + txtTenTaiKhoan.Text + "','" + txtMatKhau.Text + "',N'" + cbLoaiTaiKhoan.Text + "',N'" + "')";
+            if (txtTenTaiKhoan.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
+                MessageBox.Show("Bạn phải nhập tên tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenTaiKhoan.Focus();
+                return;
             }
+            if (txtMatKhau.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhau.Focus();
+                return;
+            }
+
             else
             {
-                string Username = txtTenTaiKhoan.Text;
-                string Password = txtMatKhau.Text;
-                string TypeAcc = cbLoaiTaiKhoan.Text;
-
-                string query = "insert into TAIKHOAN values ('" + Username + "', '" + Password + "', '" + TypeAcc + "')";
-                ketnoicsdl();
-                MessageBox.Show("Đã thêm thành công!", "Thông báo");
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Đã thêm tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tài khoản hàng này đã tồn tại, vui lòng nhập mã khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                loaddata();
             }
 
-                }
+        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dtgvUser.Rows.Count == 0)
+            bool flag = true;
+            try
             {
-                return;
+                command = connection.CreateCommand();
+                command.CommandText = "delete from TAIKHOAN where Username='" + txtTenTaiKhoan.Text + "'";
+                command.ExecuteNonQuery();
             }
-            if (dtgvUser.Rows[dtgvUser.CurrentCell.RowIndex].Cells[0].Value.ToString() == "0")
+            catch
             {
-                MessageBox.Show("Không được phép xóa tài khoản quản trị viên", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Bị lỗi ràng buộc! Không thể xóa thông tin này!", "Thông báo");
+                flag = false;
             }
-            DialogResult dr = MessageBox.Show("Có chắc chắn xóa dòng dữ liệu này không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            finally
             {
-                dtgvUser.Rows[dtgvUser.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                ketnoicsdl();
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.OKCancel);
+                    if (confirmResult == DialogResult.OK)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
+                        }
+                        loaddata();
+                        txtTenTaiKhoan.Text = "";
+                        txtMatKhau.Text = "";
+                        cbLoaiTaiKhoan.Text = "";
+
+
+                        txtTenTaiKhoan.Enabled = true;
+                    }
+                }
             }
-            else
-                return;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (dtgvUser.Rows.Count == 0)
+            command = connection.CreateCommand();
+            command.CommandText = "update TAIKHOAN set Username=N'" + txtTenTaiKhoan.Text + "',Password=N'" + txtMatKhau.Text + "',TypeAcc=N'" + cbLoaiTaiKhoan.Text + "'";
+            try
             {
-                return;
+                command.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật thành công!", "Thông báo");
             }
-            DataGridViewRow row = this.dtgvUser.Rows[dtgvUser.CurrentCell.RowIndex];
-            save = false;
-            frmQuanLyTaiKhoan frm = new frmQuanLyTaiKhoan();
-            frm.txtTenTaiKhoan.Text = row.Cells[0].Value.ToString();
-            TenTaiKhoan = row.Cells[0].Value.ToString();
-            if (row.Cells[0].Value.ToString() == "0")
+            catch (Exception ex)
             {
-                MessageBox.Show("Không được phép sửa tài khoản quản trị viên", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Xảy ra lỗi trong quá trình cập nhật!", "Thông báo");
             }
-            DataTable dt2 =  new DataTable(row.Cells[0].Value.ToString());
-            MatKhau = dt2.Rows[0]["MatKhau"].ToString();
-            frm.cbLoaiTaiKhoan.Text = row.Cells[1].Value.ToString();
-            frm.Text = "Sửa";
-            frm.ShowDialog();
-            ketnoicsdl();
-        }
-
-        private void cbLoaiTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            loaddata();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+
             ResetValue();
         }
     }
-    }
+}
     
     
 

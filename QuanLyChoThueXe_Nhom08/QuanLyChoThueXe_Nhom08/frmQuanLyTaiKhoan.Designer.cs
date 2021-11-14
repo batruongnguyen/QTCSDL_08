@@ -133,7 +133,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.cbLoaiTaiKhoan.Name = "cbLoaiTaiKhoan";
             this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(192, 21);
             this.cbLoaiTaiKhoan.TabIndex = 4;
-            this.cbLoaiTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.cbLoaiTaiKhoan_SelectedIndexChanged);
             // 
             // txtTenTaiKhoan
             // 
