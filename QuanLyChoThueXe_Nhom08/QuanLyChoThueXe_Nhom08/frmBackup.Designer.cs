@@ -32,13 +32,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtThuMuc = new System.Windows.Forms.TextBox();
-            this.btnbackup = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBrowser = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.txtDatabase = new System.Windows.Forms.TextBox();
-            this.txtserver = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtDatabasename = new System.Windows.Forms.TextBox();
+            this.txtServername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,19 +71,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.txtThuMuc.Size = new System.Drawing.Size(312, 35);
             this.txtThuMuc.TabIndex = 3;
             // 
-            // btnbackup
-            // 
-            this.btnbackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
-            this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnbackup.Location = new System.Drawing.Point(741, 238);
-            this.btnbackup.Name = "btnbackup";
-            this.btnbackup.Size = new System.Drawing.Size(110, 40);
-            this.btnbackup.TabIndex = 5;
-            this.btnbackup.Text = "Sao lưu";
-            this.btnbackup.UseVisualStyleBackColor = false;
-            this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -114,33 +100,13 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(151)))), ((int)(((byte)(171)))));
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.Location = new System.Drawing.Point(741, 301);
+            this.btnThoat.Location = new System.Drawing.Point(603, 294);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(110, 40);
+            this.btnThoat.Size = new System.Drawing.Size(119, 40);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // txtDatabase
-            // 
-            this.txtDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatabase.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtDatabase.Location = new System.Drawing.Point(259, 188);
-            this.txtDatabase.Name = "txtDatabase";
-            this.txtDatabase.Size = new System.Drawing.Size(312, 35);
-            this.txtDatabase.TabIndex = 2;
-            this.txtDatabase.Text = "VanChuyenKhach";
-            // 
-            // txtserver
-            // 
-            this.txtserver.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtserver.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtserver.Location = new System.Drawing.Point(259, 130);
-            this.txtserver.Name = "txtserver";
-            this.txtserver.Size = new System.Drawing.Size(312, 35);
-            this.txtserver.TabIndex = 1;
-            this.txtserver.Text = "NgBaTruong";
             // 
             // label4
             // 
@@ -153,19 +119,42 @@ namespace QuanLyChoThueXe_Nhom08
             this.label4.TabIndex = 10;
             this.label4.Text = "SAO LƯU DỮ LIỆU";
             // 
+            // txtDatabasename
+            // 
+            this.txtDatabasename.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDatabasename.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtDatabasename.Location = new System.Drawing.Point(259, 185);
+            this.txtDatabasename.Name = "txtDatabasename";
+            this.txtDatabasename.ReadOnly = true;
+            this.txtDatabasename.Size = new System.Drawing.Size(312, 35);
+            this.txtDatabasename.TabIndex = 13;
+            this.txtDatabasename.TabStop = false;
+            this.txtDatabasename.Text = "VanChuyenKhach";
+            // 
+            // txtServername
+            // 
+            this.txtServername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServername.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtServername.Location = new System.Drawing.Point(259, 127);
+            this.txtServername.Name = "txtServername";
+            this.txtServername.ReadOnly = true;
+            this.txtServername.Size = new System.Drawing.Size(312, 35);
+            this.txtServername.TabIndex = 14;
+            this.txtServername.TabStop = false;
+            this.txtServername.Text = "localhost";
+            // 
             // frmBackup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(887, 391);
+            this.ClientSize = new System.Drawing.Size(782, 351);
+            this.Controls.Add(this.txtServername);
+            this.Controls.Add(this.txtDatabasename);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtserver);
-            this.Controls.Add(this.txtDatabase);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnBrowser);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnbackup);
             this.Controls.Add(this.txtThuMuc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -183,12 +172,11 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtThuMuc;
-        private System.Windows.Forms.Button btnbackup;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBrowser;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.TextBox txtDatabase;
-        private System.Windows.Forms.TextBox txtserver;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDatabasename;
+        private System.Windows.Forms.TextBox txtServername;
     }
 }
