@@ -132,6 +132,11 @@ namespace QuanLyChoThueXe_Nhom08
             this.Hide();
         }
 
-
+        private void saoLưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackup add = new frmBackup();
+            add.Show();
+            this.Hide();
+        }
     }
 }
