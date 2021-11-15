@@ -10,7 +10,6 @@ D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_
 D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.pdb
 D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyDonThue.resources
 D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmQuanLyXe.resources
-D:\DUE TAI LIEU\DUE 1.2021\QUẢN TRỊ CSDL\BT NHÓM\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\obj\Debug\QuanLyChoThueXe_Nhom08.frmThongKe.resources
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe.config
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.exe
 C:\Users\ADMIN\Documents\GitHub\QTCSDL_08\QuanLyChoThueXe_Nhom08\QuanLyChoThueXe_Nhom08\bin\Debug\QuanLyChoThueXe_Nhom08.pdb

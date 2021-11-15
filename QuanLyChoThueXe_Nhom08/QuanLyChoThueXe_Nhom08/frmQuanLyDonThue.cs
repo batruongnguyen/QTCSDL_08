@@ -14,7 +14,7 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyDonThue : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection (@"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection (@"Data Source=ngbatruong;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -29,6 +29,10 @@ namespace QuanLyChoThueXe_Nhom08
         {
             string query = "select * from DAT";
             dgvDonThue.DataSource = GetRecords(query);
+
+            this.dgvDonThue.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvDonThue.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
 
         public void loaddataHDCT()
@@ -36,6 +40,9 @@ namespace QuanLyChoThueXe_Nhom08
             string HDCT = "select * from DAT_CHITIET";
             dgvHDCT.DataSource = GetRecords(HDCT);
 
+            this.dgvHDCT.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvHDCT.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;             
         }
 
 
@@ -340,5 +347,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtSoLuong.Text = dgvHDCT.Rows[i].Cells[3].Value.ToString();
             txtThanhTien.Text = dgvHDCT.Rows[i].Cells[4].Value.ToString();
         }
+
+
     }
 }
