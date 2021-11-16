@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -44,10 +44,14 @@ namespace QuanLyChoThueXe_Nhom08
             dgvNV.Columns[1].HeaderText = "Tên nhân viên";
             dgvNV.Columns[2].HeaderText = "Số điện thoại";
             dgvNV.Columns[3].HeaderText = "Địa chỉ";
-            dgvNV.Columns[0].Width = 153;
+            dgvNV.Columns[0].Width = 180;
             dgvNV.Columns[1].Width = 235;
-            dgvNV.Columns[2].Width = 155;
-            dgvNV.Columns[3].Width = 451;
+            dgvNV.Columns[2].Width = 170;
+            dgvNV.Columns[3].Width = 420;
+
+            this.dgvNV.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvNV.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
      
         private void ResetValue()

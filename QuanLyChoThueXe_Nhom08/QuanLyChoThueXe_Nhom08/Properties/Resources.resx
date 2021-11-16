@@ -121,6 +121,9 @@
   <data name="du-khach-den-da-nang-do-mat-tim-cho-choi-dem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\du-khach-den-da-nang-do-mat-tim-cho-choi-dem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="momo-upload-api-210510111514-637562421141377879" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\momo-upload-api-210510111514-637562421141377879.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="momo-upload-api-210510111514-637562421141377879" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\momo-upload-api-210510111514-637562421141377879.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Blue Landscape Positive Quote Desktop Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Landscape Positive Quote Desktop Wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
