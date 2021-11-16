@@ -240,22 +240,24 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnNhapLai
             // 
+            this.btnNhapLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnNhapLai.Location = new System.Drawing.Point(240, 151);
             this.btnNhapLai.Name = "btnNhapLai";
             this.btnNhapLai.Size = new System.Drawing.Size(95, 33);
             this.btnNhapLai.TabIndex = 11;
             this.btnNhapLai.Text = "&Nhập lại";
-            this.btnNhapLai.UseVisualStyleBackColor = true;
+            this.btnNhapLai.UseVisualStyleBackColor = false;
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnTimKiem.Location = new System.Drawing.Point(80, 151);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(95, 33);
             this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "&Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem

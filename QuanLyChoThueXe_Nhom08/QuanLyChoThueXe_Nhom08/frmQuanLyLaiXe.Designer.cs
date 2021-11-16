@@ -148,7 +148,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvLX.Name = "dgvLX";
             this.dgvLX.Size = new System.Drawing.Size(995, 300);
             this.dgvLX.TabIndex = 0;
-            this.dgvLX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLX_CellContentClick);
+            this.dgvLX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLX_CellClick);
             // 
             // btnThoat
             // 

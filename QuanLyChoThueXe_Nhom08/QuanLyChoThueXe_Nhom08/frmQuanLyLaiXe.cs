@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -45,8 +45,12 @@ namespace QuanLyChoThueXe_Nhom08
             dgvLX.Columns[3].HeaderText = "Địa chỉ";
             dgvLX.Columns[0].Width = 125;
             dgvLX.Columns[1].Width = 220;
-            dgvLX.Columns[2].Width = 152;
-            dgvLX.Columns[3].Width = 480;
+            dgvLX.Columns[2].Width = 180;
+            dgvLX.Columns[3].Width = 450;
+
+            this.dgvLX.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvLX.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
         private void ResetValue()
         {
@@ -57,7 +61,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtDiaChiLX.Text = "";
         }
 
-        private void dgvLX_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvLX_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaLX.ReadOnly = true;
             int i;
@@ -139,9 +143,40 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
+            bool flag = true;
+            try
+            {
+                command = connection.CreateCommand();
+                command.CommandText = "Delete from LAIXE where MaLaiXe = '" + txtMaLX.Text + "'";
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa lái xe này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = false;
+            }
+            finally
+            {
+                if (flag == true)
+                {
+                    var confirmResult = MessageBox.Show("Bạn có chắc chắn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        loaddata();
+                        ResetValue();
+                    }
+                }
+            }
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetValue();
@@ -194,7 +229,6 @@ namespace QuanLyChoThueXe_Nhom08
             if (isThoat)
                 Application.Exit();
         }
-
 
     }
 }
