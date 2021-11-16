@@ -93,6 +93,16 @@ namespace QuanLyChoThueXe_Nhom08.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Landscape_Positive_Quote_Desktop_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Blue Landscape Positive Quote Desktop Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dan_xe_caravan_passion_viet_nam_len_bao_nuoc_ngoai_0ef5d0 {
             get {
                 object obj = ResourceManager.GetObject("dan-xe-caravan-passion-viet-nam-len-bao-nuoc-ngoai-0ef5d0", resourceCulture);
