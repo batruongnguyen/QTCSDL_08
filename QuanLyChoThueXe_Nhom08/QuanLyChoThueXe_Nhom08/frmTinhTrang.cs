@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmTinhTrang()
@@ -103,7 +103,7 @@ namespace QuanLyChoThueXe_Nhom08
         {
             command = connection.CreateCommand();
             command.CommandText = "Insert into TINHTRANG values('" + txtMaTT.Text + "','" + txtBienSoXe.Text + "',N'" + cbbDongCo.Text + "',N'" + cbbMayLanh.Text + "','" + txtNguonDien.Text + "',N'" + cbbCuaXe.Text + "','" + dtThoiGianCN.Text + "')";
-            if (cbbDongCo.SelectedItem == null || cbbMayLanh.SelectedItem == null || txtNguonDien.Text == "" || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
+            if (txtBienSoXe.Text == "" || cbbDongCo.SelectedItem == null || cbbMayLanh.SelectedItem == null || txtNguonDien.Text == "" || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
@@ -120,6 +120,7 @@ namespace QuanLyChoThueXe_Nhom08
                 }
                 loaddata();
             }
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -141,7 +142,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnSua_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update TINHTRANG set DongCo=N'" + cbbDongCo.Text + "',MayLanh=N'" + cbbMayLanh.Text + "',NguonDien=N'" + txtNguonDien.Text + "',CuaXe='" + cbbCuaXe.Text + "',ThoiGianCapNhat='" + dtThoiGianCN.Text + "' where MaTinhTrang='" + txtMaTT.Text + "'";
+            command.CommandText = "update TINHTRANG set DongCo=N'" + cbbDongCo.Text + "',MayLanh=N'" + cbbMayLanh.Text + "',NguonDien=N'" + txtNguonDien.Text + "',CuaXe=N'" + cbbCuaXe.Text + "',ThoiGianCapNhap='" + dtThoiGianCN.Text + "' where MaTinhTrang='" + txtMaTT.Text + "'";
             try
             {
                 command.ExecuteNonQuery();

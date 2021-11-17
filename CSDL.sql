@@ -203,10 +203,10 @@ insert into TINHTRANG values ('TT008', '43A178.55', N'Tắt', N'Tắt', '12W', N
 insert into TINHTRANG values ('TT009', '92B893.78', N'Tắt', N'Tắt', '18W', N'Đóng', '12:00')
 insert into TINHTRANG values ('TT010', '43A953.85', N'Tắt', N'Tắt', '10W', N'Đóng', '15:45')
 
-insert into TAIKHOAN values ( 'Anh','123456','1')
-insert into TAIKHOAN values ( 'Chau','67890','1')
-insert into TAIKHOAN values ( 'Hoai','112233','0')
-insert into TAIKHOAN values ( 'Truong','556677','0')
+insert into TAIKHOAN values ( 'Anh','123456',N'Nhân Viên')
+insert into TAIKHOAN values ( 'Chau','67890',N'Nhân Viên')
+insert into TAIKHOAN values ( 'Hoai','112233',N'Admin')
+insert into TAIKHOAN values ( 'Truong','556677',N'Admin')
 
 insert into QUANLY values ('NV001', 'QL001', 'LX001','43A136.25','TT001','2021/10/19','2021/10/20','40',N'Ngô Quyền,Mẫn Thái, Sơn Trà, Đà Nẵng') 
 insert into QUANLY values ('NV002', 'QL002', 'LX002','43A569.32','TT002','2021/10/21','2021/10/25','40',N'Ngô Quyền, An Hải Bắc, Sơn Trà, Đà Nẵng') 
