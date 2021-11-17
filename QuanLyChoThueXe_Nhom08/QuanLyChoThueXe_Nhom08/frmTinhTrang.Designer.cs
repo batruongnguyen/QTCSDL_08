@@ -151,7 +151,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.CuaXe,
             this.ThoiGianCapNhap});
             this.dgvTinhTrang.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvTinhTrang.Location = new System.Drawing.Point(26, 37);
+            this.dgvTinhTrang.Location = new System.Drawing.Point(38, 37);
             this.dgvTinhTrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTinhTrang.Name = "dgvTinhTrang";
             this.dgvTinhTrang.RowHeadersWidth = 51;
@@ -238,7 +238,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dtThoiGianCN.Location = new System.Drawing.Point(248, 325);
             this.dtThoiGianCN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtThoiGianCN.Name = "dtThoiGianCN";
-            this.dtThoiGianCN.Size = new System.Drawing.Size(247, 36);
+            this.dtThoiGianCN.Size = new System.Drawing.Size(241, 36);
             this.dtThoiGianCN.TabIndex = 5;
             this.dtThoiGianCN.Value = new System.DateTime(2021, 11, 13, 0, 36, 20, 0);
             // 
@@ -423,6 +423,7 @@ namespace QuanLyChoThueXe_Nhom08
             // MaTinhTrang
             // 
             this.MaTinhTrang.DataPropertyName = "MaTinhTrang";
+            this.MaTinhTrang.FillWeight = 4.289774F;
             this.MaTinhTrang.HeaderText = "Mã tình trạng";
             this.MaTinhTrang.MinimumWidth = 6;
             this.MaTinhTrang.Name = "MaTinhTrang";
@@ -430,6 +431,7 @@ namespace QuanLyChoThueXe_Nhom08
             // BienSoXe
             // 
             this.BienSoXe.DataPropertyName = "BienSoXe";
+            this.BienSoXe.FillWeight = 6F;
             this.BienSoXe.HeaderText = "Biển số xe";
             this.BienSoXe.MinimumWidth = 6;
             this.BienSoXe.Name = "BienSoXe";
@@ -437,6 +439,7 @@ namespace QuanLyChoThueXe_Nhom08
             // DongCo
             // 
             this.DongCo.DataPropertyName = "DongCo";
+            this.DongCo.FillWeight = 2.5F;
             this.DongCo.HeaderText = "Động cơ";
             this.DongCo.MinimumWidth = 6;
             this.DongCo.Name = "DongCo";
@@ -444,6 +447,7 @@ namespace QuanLyChoThueXe_Nhom08
             // MayLanh
             // 
             this.MayLanh.DataPropertyName = "MayLanh";
+            this.MayLanh.FillWeight = 2.5F;
             this.MayLanh.HeaderText = "Máy Lạnh";
             this.MayLanh.MinimumWidth = 6;
             this.MayLanh.Name = "MayLanh";
@@ -451,6 +455,7 @@ namespace QuanLyChoThueXe_Nhom08
             // NguonDien
             // 
             this.NguonDien.DataPropertyName = "NguonDien";
+            this.NguonDien.FillWeight = 3F;
             this.NguonDien.HeaderText = "Nguồn điện";
             this.NguonDien.MinimumWidth = 6;
             this.NguonDien.Name = "NguonDien";
@@ -458,6 +463,7 @@ namespace QuanLyChoThueXe_Nhom08
             // CuaXe
             // 
             this.CuaXe.DataPropertyName = "CuaXe";
+            this.CuaXe.FillWeight = 2.5F;
             this.CuaXe.HeaderText = "Cửa xe";
             this.CuaXe.MinimumWidth = 6;
             this.CuaXe.Name = "CuaXe";
@@ -465,6 +471,7 @@ namespace QuanLyChoThueXe_Nhom08
             // ThoiGianCapNhap
             // 
             this.ThoiGianCapNhap.DataPropertyName = "ThoiGianCapNhap";
+            this.ThoiGianCapNhap.FillWeight = 4.313613F;
             this.ThoiGianCapNhap.HeaderText = "Thời gian";
             this.ThoiGianCapNhap.MinimumWidth = 6;
             this.ThoiGianCapNhap.Name = "ThoiGianCapNhap";

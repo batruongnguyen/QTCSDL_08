@@ -142,7 +142,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnSua_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update TINHTRANG set DongCo=N'" + cbbDongCo.Text + "',MayLanh=N'" + cbbMayLanh.Text + "',NguonDien=N'" + txtNguonDien.Text + "',CuaXe='" + cbbCuaXe.Text + "',ThoiGianCapNhap='" + dtThoiGianCN.Text + "' where MaTinhTrang='" + txtMaTT.Text + "'";
+            command.CommandText = "update TINHTRANG set DongCo=N'" + cbbDongCo.Text + "',MayLanh=N'" + cbbMayLanh.Text + "',NguonDien=N'" + txtNguonDien.Text + "',CuaXe=N'" + cbbCuaXe.Text + "',ThoiGianCapNhap='" + dtThoiGianCN.Text + "' where MaTinhTrang='" + txtMaTT.Text + "'";
             try
             {
                 command.ExecuteNonQuery();
