@@ -67,10 +67,15 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void chkShow_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkShow.Checked == true)
-                txtMatKhau.PasswordChar = (char)0;
+            if (chkShow.Checked)
+            {
+                txtMatKhau.UseSystemPasswordChar = false;
+            }
             else
-                txtMatKhau.PasswordChar = '*';
+            {
+                txtMatKhau.UseSystemPasswordChar = true;
+            }
+                
         }
     }
 }
