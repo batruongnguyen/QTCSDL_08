@@ -56,6 +56,13 @@ namespace QuanLyChoThueXe_Nhom08
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.MaTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BienSoXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DongCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MayLanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguonDien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianCapNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTinhTrang)).BeginInit();
@@ -135,12 +142,20 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvTinhTrang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTinhTrang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.dgvTinhTrang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTinhTrang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTinhTrang,
+            this.BienSoXe,
+            this.DongCo,
+            this.MayLanh,
+            this.NguonDien,
+            this.CuaXe,
+            this.ThoiGianCapNhap});
             this.dgvTinhTrang.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvTinhTrang.Location = new System.Drawing.Point(25, 53);
+            this.dgvTinhTrang.Location = new System.Drawing.Point(26, 37);
             this.dgvTinhTrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTinhTrang.Name = "dgvTinhTrang";
             this.dgvTinhTrang.RowHeadersWidth = 51;
-            this.dgvTinhTrang.Size = new System.Drawing.Size(919, 519);
+            this.dgvTinhTrang.Size = new System.Drawing.Size(904, 519);
             this.dgvTinhTrang.TabIndex = 0;
             this.dgvTinhTrang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTinhTrang_CellClick);
             // 
@@ -405,6 +420,55 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // MaTinhTrang
+            // 
+            this.MaTinhTrang.DataPropertyName = "MaTinhTrang";
+            this.MaTinhTrang.HeaderText = "Mã tình trạng";
+            this.MaTinhTrang.MinimumWidth = 6;
+            this.MaTinhTrang.Name = "MaTinhTrang";
+            // 
+            // BienSoXe
+            // 
+            this.BienSoXe.DataPropertyName = "BienSoXe";
+            this.BienSoXe.HeaderText = "Biển số xe";
+            this.BienSoXe.MinimumWidth = 6;
+            this.BienSoXe.Name = "BienSoXe";
+            // 
+            // DongCo
+            // 
+            this.DongCo.DataPropertyName = "DongCo";
+            this.DongCo.HeaderText = "Động cơ";
+            this.DongCo.MinimumWidth = 6;
+            this.DongCo.Name = "DongCo";
+            // 
+            // MayLanh
+            // 
+            this.MayLanh.DataPropertyName = "MayLanh";
+            this.MayLanh.HeaderText = "Máy Lạnh";
+            this.MayLanh.MinimumWidth = 6;
+            this.MayLanh.Name = "MayLanh";
+            // 
+            // NguonDien
+            // 
+            this.NguonDien.DataPropertyName = "NguonDien";
+            this.NguonDien.HeaderText = "Nguồn điện";
+            this.NguonDien.MinimumWidth = 6;
+            this.NguonDien.Name = "NguonDien";
+            // 
+            // CuaXe
+            // 
+            this.CuaXe.DataPropertyName = "CuaXe";
+            this.CuaXe.HeaderText = "Cửa xe";
+            this.CuaXe.MinimumWidth = 6;
+            this.CuaXe.Name = "CuaXe";
+            // 
+            // ThoiGianCapNhap
+            // 
+            this.ThoiGianCapNhap.DataPropertyName = "ThoiGianCapNhap";
+            this.ThoiGianCapNhap.HeaderText = "Thời gian";
+            this.ThoiGianCapNhap.MinimumWidth = 6;
+            this.ThoiGianCapNhap.Name = "ThoiGianCapNhap";
+            // 
             // frmTinhTrang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,5 +523,12 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.ComboBox cbbDongCo;
         private System.Windows.Forms.ComboBox cbbMayLanh;
         private System.Windows.Forms.ComboBox cbbCuaXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BienSoXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DongCo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MayLanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguonDien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CuaXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianCapNhap;
     }
 }

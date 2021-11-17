@@ -66,6 +66,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgvXe = new System.Windows.Forms.DataGridView();
+            this.BienSoXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -212,12 +216,12 @@ namespace QuanLyChoThueXe_Nhom08
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.btnThoat.Location = new System.Drawing.Point(1541, 46);
+            this.btnThoat.Location = new System.Drawing.Point(1527, 58);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(107, 50);
+            this.btnThoat.Size = new System.Drawing.Size(107, 39);
             this.btnThoat.TabIndex = 14;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -468,6 +472,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvDichVu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDichVu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDichVu,
+            this.TenDichVu});
             this.dgvDichVu.Location = new System.Drawing.Point(75, 37);
             this.dgvDichVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDichVu.Name = "dgvDichVu";
@@ -546,6 +553,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvXe.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvXe.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BienSoXe,
+            this.SCN});
             this.dgvXe.Location = new System.Drawing.Point(69, 37);
             this.dgvXe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvXe.Name = "dgvXe";
@@ -554,6 +564,34 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvXe.Size = new System.Drawing.Size(625, 311);
             this.dgvXe.TabIndex = 0;
             this.dgvXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXe_CellClick);
+            // 
+            // BienSoXe
+            // 
+            this.BienSoXe.DataPropertyName = "BienSoXe";
+            this.BienSoXe.HeaderText = "Biển số xe";
+            this.BienSoXe.MinimumWidth = 6;
+            this.BienSoXe.Name = "BienSoXe";
+            // 
+            // SCN
+            // 
+            this.SCN.DataPropertyName = "SCN";
+            this.SCN.HeaderText = "Số chỗ ngồi";
+            this.SCN.MinimumWidth = 6;
+            this.SCN.Name = "SCN";
+            // 
+            // MaDichVu
+            // 
+            this.MaDichVu.DataPropertyName = "MaDichVu";
+            this.MaDichVu.HeaderText = "Mã dịch vụ";
+            this.MaDichVu.MinimumWidth = 2;
+            this.MaDichVu.Name = "MaDichVu";
+            // 
+            // TenDichVu
+            // 
+            this.TenDichVu.DataPropertyName = "TenDichVu";
+            this.TenDichVu.HeaderText = "Tên dịch vụ";
+            this.TenDichVu.MinimumWidth = 8;
+            this.TenDichVu.Name = "TenDichVu";
             // 
             // frmQuanLyXe
             // 
@@ -636,5 +674,9 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.DataGridView dgvXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BienSoXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SCN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDichVu;
     }
 }
