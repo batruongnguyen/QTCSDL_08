@@ -26,7 +26,7 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=HOANGGIAPC\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
             try
             {
                 conn.Open();
@@ -45,6 +45,8 @@ namespace QuanLyChoThueXe_Nhom08
                 else
                 {
                     MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtTaiKhoan.Text = ""; //xóa pass trên textbox
+                    txtMatKhau.Text = ""; //xóa user trên textbox
                 }
 
             }
@@ -65,14 +67,10 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void chkShow_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkShow.Checked)
-            {
+            if (chkShow.Checked == true)
                 txtMatKhau.PasswordChar = (char)0;
-            }
             else
-            {
                 txtMatKhau.PasswordChar = '*';
-            }
         }
     }
 }
