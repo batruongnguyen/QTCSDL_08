@@ -36,7 +36,7 @@ create table XE
 	SCN int,
 	primary key(BienSoXe)
 )
-GO
+GO 
 -- Tạo bảng TINHTRANG
 create table TINHTRANG
 (
@@ -96,7 +96,6 @@ create table QUANLY
 	foreign key(BienSoXe) references XE ON DELETE CASCADE ON UPDATE CASCADE,
 	foreign key(MaTinhTrang) references TINHTRANG ON DELETE CASCADE ON UPDATE CASCADE,
 	foreign key(MaNV) references NHANVIEN ON DELETE CASCADE ON UPDATE CASCADE,
-
 )
 -- Tạo bảng DAT
 create table DAT
@@ -247,6 +246,14 @@ AS
 		UPDATE DAT
 		SET TongTien = DonGia + (DonGia*VAT/100)
 		WHERE MaHD = @hd
-	END
+END
+
+GO
+--Tạo index SCN thuộc bảng XE
+CREATE INDEX idx_SCN on XE(SCN)
+
+
+
+
 
 

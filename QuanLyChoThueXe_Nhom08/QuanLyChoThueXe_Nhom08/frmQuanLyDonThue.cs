@@ -57,7 +57,7 @@ namespace QuanLyChoThueXe_Nhom08
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Thông báo");
+                MessageBox.Show("Chưa tồn tại hoặc trùng Mã HD", "Thông báo");
             }
             con.Close();
         }
@@ -151,10 +151,10 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtMaHD.Text = "";
             loadCbbMaKH();
             loadCbbMaNV();
             loaddataHD();
+            txtMaHD.Text = "";
             txtKyHieuHD.Text = "";
             txtMauSoHD.Text = "";
             dtNgayDat.Text = "";
@@ -216,6 +216,15 @@ namespace QuanLyChoThueXe_Nhom08
                         MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
                     }
                     loaddataHD();
+                    txtMaHD.Text = "";
+                    txtKyHieuHD.Text = "";
+                    txtMauSoHD.Text = "";
+                    dtNgayDat.Text = "";
+                    dtNgayTra.Text = "";
+                    txtDonGia.Text = "";
+                    txtTongTien.Text = "";
+                    txtVAT.Text = "";
+                    txtTimKiem.Text = "";
                 }
             }
         }
@@ -334,6 +343,12 @@ namespace QuanLyChoThueXe_Nhom08
                         MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
                     }
                     loaddataHDCT();
+                    txtMaHDCT.Text = "";
+                    cbbMaDV.Text = "";
+                    txtTenDV.Text = "";
+                    txtDonVi.Text = "";
+                    txtThanhTien.Text = "";
+                    txtSoLuong.Text = "";
                 }
             }
         }

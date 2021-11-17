@@ -61,14 +61,13 @@ namespace QuanLyChoThueXe_Nhom08
             this.UserName,
             this.PassWord,
             this.TypeAcc});
-            this.dtgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvUser.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvUser.Location = new System.Drawing.Point(3, 18);
+            this.dtgvUser.Location = new System.Drawing.Point(21, 31);
             this.dtgvUser.MultiSelect = false;
             this.dtgvUser.Name = "dtgvUser";
             this.dtgvUser.ReadOnly = true;
             this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgvUser.Size = new System.Drawing.Size(750, 160);
+            this.dtgvUser.Size = new System.Drawing.Size(720, 132);
             this.dtgvUser.TabIndex = 0;
             this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
             // 
@@ -244,7 +243,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(87, 38);
             this.btnReset.TabIndex = 13;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Tải lại";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 

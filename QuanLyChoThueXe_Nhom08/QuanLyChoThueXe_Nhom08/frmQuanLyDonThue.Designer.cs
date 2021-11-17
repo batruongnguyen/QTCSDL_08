@@ -365,7 +365,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(101, 39);
             this.btnReset.TabIndex = 15;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Tải lại";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -587,7 +587,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnResetCT.Name = "btnResetCT";
             this.btnResetCT.Size = new System.Drawing.Size(92, 36);
             this.btnResetCT.TabIndex = 23;
-            this.btnResetCT.Text = "Reset";
+            this.btnResetCT.Text = "Tải lại";
             this.btnResetCT.UseVisualStyleBackColor = false;
             this.btnResetCT.Click += new System.EventHandler(this.btnResetCT_Click);
             // 

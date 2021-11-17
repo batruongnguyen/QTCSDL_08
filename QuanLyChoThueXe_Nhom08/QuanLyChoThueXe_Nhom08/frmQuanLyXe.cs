@@ -14,7 +14,7 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyXe : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection(@"Data Source=DIEUHOAI\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -82,6 +82,8 @@ namespace QuanLyChoThueXe_Nhom08
                         MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
                     }
                     loaddataXe();
+                    txtBienSoXe.Text = "";
+                    cbbSCN.Text = "";
                 }
             }
         }
@@ -219,6 +221,8 @@ namespace QuanLyChoThueXe_Nhom08
                         MessageBox.Show("Xảy ra lỗi trong quá trình xóa!", "Thông báo");
                     }
                     loaddataDV();
+                    txtMaDV.Text = "";
+                    cbbTenDV.Text = "";
                 }
             }
         }
