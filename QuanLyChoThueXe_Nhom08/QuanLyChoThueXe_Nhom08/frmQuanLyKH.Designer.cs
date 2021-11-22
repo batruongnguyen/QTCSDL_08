@@ -324,7 +324,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.groupBox3);
             this.Name = "frmQuanLyKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý khách hàng";
+            this.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyKH_FormClosed);
             this.Load += new System.EventHandler(this.frmQuanLyKH_Load);
             this.groupBox2.ResumeLayout(false);

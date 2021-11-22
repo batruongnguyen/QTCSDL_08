@@ -317,7 +317,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.Name = "frmQuanLyNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý nhân viên";
+            this.Text = "QUẢN LÝ NHÂN VIÊN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyNV_FormClosed);
             this.Load += new System.EventHandler(this.frmQuanLyNV_Load);
             this.groupBox1.ResumeLayout(false);

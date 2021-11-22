@@ -244,7 +244,7 @@ namespace QuanLyChoThueXe_Nhom08
             "Tắt",
             "Nổ"});
             this.cbbDongCo.Location = new System.Drawing.Point(186, 117);
-            this.cbbDongCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbDongCo.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDongCo.Name = "cbbDongCo";
             this.cbbDongCo.Size = new System.Drawing.Size(182, 33);
             this.cbbDongCo.TabIndex = 2;
@@ -256,7 +256,7 @@ namespace QuanLyChoThueXe_Nhom08
             "Bật ",
             "Tắt"});
             this.cbbMayLanh.Location = new System.Drawing.Point(186, 154);
-            this.cbbMayLanh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbMayLanh.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMayLanh.Name = "cbbMayLanh";
             this.cbbMayLanh.Size = new System.Drawing.Size(182, 33);
             this.cbbMayLanh.TabIndex = 3;
@@ -268,7 +268,7 @@ namespace QuanLyChoThueXe_Nhom08
             "Đóng ",
             "Mở"});
             this.cbbCuaXe.Location = new System.Drawing.Point(186, 228);
-            this.cbbCuaXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbCuaXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCuaXe.Name = "cbbCuaXe";
             this.cbbCuaXe.Size = new System.Drawing.Size(182, 33);
             this.cbbCuaXe.TabIndex = 4;
@@ -442,7 +442,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnThoat.Location = new System.Drawing.Point(1124, 50);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 41);
             this.btnThoat.TabIndex = 16;
@@ -461,10 +461,10 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTinhTrang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTinhTrang";
+            this.Text = "QUẢN LÝ TÌNH TRẠNG";
             this.Load += new System.EventHandler(this.frmTinhTrang_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

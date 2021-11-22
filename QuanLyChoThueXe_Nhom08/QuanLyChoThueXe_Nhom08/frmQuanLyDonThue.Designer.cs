@@ -702,7 +702,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.groupBox1);
             this.Name = "frmQuanLyDonThue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmQuanLyDonThue";
+            this.Text = "QUẢN LÝ ĐƠN THUÊ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyDonThue_FormClosed);
             this.Load += new System.EventHandler(this.frmQuanLyDonThue_Load);
             this.groupBox1.ResumeLayout(false);

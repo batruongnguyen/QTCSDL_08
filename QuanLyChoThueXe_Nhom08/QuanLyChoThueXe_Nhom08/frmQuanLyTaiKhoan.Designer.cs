@@ -270,7 +270,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.btnThem);
             this.Name = "frmQuanLyTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmQuanLyTaiKhoan";
+            this.Text = "QUẢN LÝ TÀI KHOẢN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyTaiKhoan_FormClosed);
             this.Load += new System.EventHandler(this.frmQuanLyTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).EndInit();
