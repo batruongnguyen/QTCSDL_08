@@ -67,7 +67,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dtgvUser.Name = "dtgvUser";
             this.dtgvUser.ReadOnly = true;
             this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgvUser.Size = new System.Drawing.Size(720, 132);
+            this.dtgvUser.Size = new System.Drawing.Size(720, 181);
             this.dtgvUser.TabIndex = 0;
             this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
             // 
@@ -191,7 +191,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnThoat.Location = new System.Drawing.Point(740, 452);
+            this.btnThoat.Location = new System.Drawing.Point(717, 490);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 35);
             this.btnThoat.TabIndex = 10;
@@ -236,7 +236,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox2.Location = new System.Drawing.Point(36, 255);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(756, 181);
+            this.groupBox2.Size = new System.Drawing.Size(756, 229);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
@@ -259,7 +259,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(842, 512);
+            this.ClientSize = new System.Drawing.Size(842, 539);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
