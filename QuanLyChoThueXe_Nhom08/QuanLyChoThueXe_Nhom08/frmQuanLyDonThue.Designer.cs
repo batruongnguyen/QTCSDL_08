@@ -229,7 +229,7 @@ namespace QuanLyChoThueXe_Nhom08
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(41, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
@@ -696,7 +696,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1370, 730);
+            this.ClientSize = new System.Drawing.Size(1660, 730);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnReset);
