@@ -14,7 +14,7 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyXe : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
@@ -262,6 +262,10 @@ namespace QuanLyChoThueXe_Nhom08
             int i = dgvXe.CurrentRow.Index;
             txtBienSoXe.Text = dgvXe.Rows[i].Cells[0].Value.ToString();
             cbbSCN.Text = dgvXe.Rows[i].Cells[1].Value.ToString();
+
+            this.dgvXe.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvXe.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
 
         private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -270,6 +274,10 @@ namespace QuanLyChoThueXe_Nhom08
             int i = dgvDichVu.CurrentRow.Index;
             txtMaDV.Text = dgvDichVu.Rows[i].Cells[0].Value.ToString();
             cbbTenDV.Text = dgvDichVu.Rows[i].Cells[1].Value.ToString();
+
+            this.dgvDichVu.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvDichVu.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
     }
 }

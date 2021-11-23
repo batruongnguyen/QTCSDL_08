@@ -26,14 +26,16 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
             try
             {
                 conn.Open();
                 string tk = txtTaiKhoan.Text;
                 string mk = txtMatKhau.Text;
-                string sql = "select * from TAIKHOAN where Username='" + tk + "' and Password = '" + mk + "'";
+                string sql = "select * from TAIKHOAN where Username=@UserName and Password = @PassWord";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("UserName", tk);
+                cmd.Parameters.AddWithValue("PassWord", mk);
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {

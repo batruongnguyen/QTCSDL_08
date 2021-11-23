@@ -17,7 +17,7 @@ namespace QuanLyChoThueXe_Nhom08
         SqlConnection connection;
         SqlCommand command;
 
-        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmQuanLyKH()
