@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
@@ -89,7 +89,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into TAIKHOAN values('" + txtTenTaiKhoan.Text + "'N'" + txtMatKhau.Text + "',N'" + cbLoaiTaiKhoan.Text + "',N'" + "')";
+            command.CommandText = "Insert into TAIKHOAN values('" + txtTenTaiKhoan.Text + "','" + txtMatKhau.Text + "','" + cbLoaiTaiKhoan.Text + "')";
             if (txtTenTaiKhoan.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -179,7 +179,6 @@ namespace QuanLyChoThueXe_Nhom08
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
             ResetValue();
         }
     }

@@ -174,6 +174,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbSCN
             // 
+            this.cbbSCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSCN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbSCN.FormattingEnabled = true;
             this.cbbSCN.Items.AddRange(new object[] {
@@ -258,6 +259,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbTenDV
             // 
+            this.cbbTenDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTenDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbTenDV.FormattingEnabled = true;
             this.cbbTenDV.Items.AddRange(new object[] {

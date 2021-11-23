@@ -253,7 +253,3 @@ GO
 CREATE INDEX idx_SCN on XE(SCN)
 
 
-
-
-
-

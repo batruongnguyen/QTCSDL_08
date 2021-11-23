@@ -14,7 +14,7 @@ namespace QuanLyChoThueXe_Nhom08
     public partial class frmQuanLyDonThue : Form
     {
         bool isThoat = true;
-        SqlConnection con = new SqlConnection (@"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True");
+        SqlConnection con = new SqlConnection (@"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();

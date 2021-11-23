@@ -53,7 +53,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtBienSoXe = new System.Windows.Forms.TextBox();
             this.txtMaTT = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -64,6 +63,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.cbbBienSoXe = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTinhTrang)).BeginInit();
@@ -211,6 +211,7 @@ namespace QuanLyChoThueXe_Nhom08
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.groupBox1.Controls.Add(this.cbbBienSoXe);
             this.groupBox1.Controls.Add(this.cbbDongCo);
             this.groupBox1.Controls.Add(this.cbbMayLanh);
             this.groupBox1.Controls.Add(this.cbbCuaXe);
@@ -220,7 +221,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.txtBienSoXe);
             this.groupBox1.Controls.Add(this.txtMaTT);
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -240,6 +240,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbDongCo
             // 
+            this.cbbDongCo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDongCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbDongCo.FormattingEnabled = true;
             this.cbbDongCo.Items.AddRange(new object[] {
@@ -253,6 +254,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbMayLanh
             // 
+            this.cbbMayLanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMayLanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbMayLanh.FormattingEnabled = true;
             this.cbbMayLanh.Items.AddRange(new object[] {
@@ -266,6 +268,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbCuaXe
             // 
+            this.cbbCuaXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCuaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbCuaXe.FormattingEnabled = true;
             this.cbbCuaXe.Items.AddRange(new object[] {
@@ -338,14 +341,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtBienSoXe
-            // 
-            this.txtBienSoXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.txtBienSoXe.Location = new System.Drawing.Point(186, 80);
-            this.txtBienSoXe.Name = "txtBienSoXe";
-            this.txtBienSoXe.Size = new System.Drawing.Size(182, 30);
-            this.txtBienSoXe.TabIndex = 1;
             // 
             // txtMaTT
             // 
@@ -458,6 +453,15 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // cbbBienSoXe
+            // 
+            this.cbbBienSoXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbBienSoXe.FormattingEnabled = true;
+            this.cbbBienSoXe.Location = new System.Drawing.Point(186, 79);
+            this.cbbBienSoXe.Name = "cbbBienSoXe";
+            this.cbbBienSoXe.Size = new System.Drawing.Size(182, 33);
+            this.cbbBienSoXe.TabIndex = 1;
+            // 
             // frmTinhTrang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,7 +498,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.DataGridView dgvTinhTrang;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtBienSoXe;
         private System.Windows.Forms.TextBox txtMaTT;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnXoa;
@@ -521,5 +524,6 @@ namespace QuanLyChoThueXe_Nhom08
         private System.Windows.Forms.DataGridViewTextBoxColumn NguonDien;
         private System.Windows.Forms.DataGridViewTextBoxColumn CuaXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianCapNhap;
+        private System.Windows.Forms.ComboBox cbbBienSoXe;
     }
 }

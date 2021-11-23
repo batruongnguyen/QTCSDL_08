@@ -126,6 +126,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbLoaiTaiKhoan
             // 
+            this.cbLoaiTaiKhoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbLoaiTaiKhoan.FormattingEnabled = true;
             this.cbLoaiTaiKhoan.Items.AddRange(new object[] {

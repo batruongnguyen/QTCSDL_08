@@ -16,7 +16,7 @@ namespace QuanLyChoThueXe_Nhom08
         bool isThoat = true;
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=DESKTOP-FBHSS47\SQLEXPRESS;Initial Catalog=VanChuyenKhach;Integrated Security=True";
+        string str = @"Data Source=localhost;Initial Catalog=VanChuyenKhach;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         public frmTinhTrang()
@@ -31,6 +31,13 @@ namespace QuanLyChoThueXe_Nhom08
             table.Clear();
             adapter.Fill(table);
             dgvTinhTrang.DataSource = table;
+
+            //Loadcombobox biensoxe
+            SqlDataAdapter da = new SqlDataAdapter("select * from XE", str);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cbbBienSoXe.DisplayMember = "BienSoXE";
+            cbbBienSoXe.DataSource = dt;
 
             this.dgvTinhTrang.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
             this.dgvTinhTrang.AlternatingRowsDefaultCellStyle.BackColor =
@@ -90,7 +97,7 @@ namespace QuanLyChoThueXe_Nhom08
                         }
                         loaddata();
                         txtMaTT.Text = "";
-                        txtBienSoXe.Text = "";
+                        cbbBienSoXe.Text = "";
                         cbbDongCo.Text = "";
                         cbbMayLanh.Text = "";
                         txtNguonDien.Text = "";
@@ -106,8 +113,8 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnThem_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "Insert into TINHTRANG values('" + txtMaTT.Text + "','" + txtBienSoXe.Text + "',N'" + cbbDongCo.Text + "',N'" + cbbMayLanh.Text + "','" + txtNguonDien.Text + "',N'" + cbbCuaXe.Text + "','" + dtThoiGianCN.Text + "')";
-            if (txtBienSoXe.Text == "" || cbbDongCo.SelectedItem == null || cbbMayLanh.SelectedItem == null || txtNguonDien.Text == "" || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
+            command.CommandText = "Insert into TINHTRANG values('" + txtMaTT.Text + "','" + cbbBienSoXe.Text + "',N'" + cbbDongCo.Text + "',N'" + cbbMayLanh.Text + "','" + txtNguonDien.Text + "',N'" + cbbCuaXe.Text + "','" + dtThoiGianCN.Text + "')";
+            if (cbbBienSoXe.Text == "" || cbbDongCo.SelectedItem == null || cbbMayLanh.SelectedItem == null || txtNguonDien.Text == "" || cbbCuaXe.SelectedItem == null || dtThoiGianCN.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ!", "Thông báo");
             }
@@ -130,7 +137,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtMaTT.Text = "";
-            txtBienSoXe.Text = "";
+            cbbBienSoXe.Text = "";
             cbbDongCo.Text = "";
             cbbMayLanh.Text = "";
             txtNguonDien.Text = "";
@@ -189,7 +196,7 @@ namespace QuanLyChoThueXe_Nhom08
             int i;
             i = dgvTinhTrang.CurrentRow.Index;
             txtMaTT.Text = dgvTinhTrang.Rows[i].Cells[0].Value.ToString();
-            txtBienSoXe.Text = dgvTinhTrang.Rows[i].Cells[1].Value.ToString();
+            cbbBienSoXe.Text = dgvTinhTrang.Rows[i].Cells[1].Value.ToString();
             cbbDongCo.Text = dgvTinhTrang.Rows[i].Cells[2].Value.ToString();
             cbbMayLanh.Text = dgvTinhTrang.Rows[i].Cells[3].Value.ToString();
             txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();

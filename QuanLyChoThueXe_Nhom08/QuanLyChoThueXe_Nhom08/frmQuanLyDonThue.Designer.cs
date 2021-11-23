@@ -195,6 +195,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbNV
             // 
+            this.cbbNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbNV.FormattingEnabled = true;
             this.cbbNV.Location = new System.Drawing.Point(185, 119);
@@ -204,6 +205,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbKH
             // 
+            this.cbbKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbKH.FormattingEnabled = true;
             this.cbbKH.Location = new System.Drawing.Point(185, 76);
@@ -526,6 +528,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbMaDV
             // 
+            this.cbbMaDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaDV.FormattingEnabled = true;
             this.cbbMaDV.Location = new System.Drawing.Point(161, 103);
