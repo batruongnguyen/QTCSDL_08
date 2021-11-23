@@ -306,9 +306,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnThoat.Location = new System.Drawing.Point(1012, 41);
+            this.btnThoat.Location = new System.Drawing.Point(1012, 40);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(63, 47);
+            this.btnThoat.Size = new System.Drawing.Size(63, 50);
             this.btnThoat.TabIndex = 13;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);

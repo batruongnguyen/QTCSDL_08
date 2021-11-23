@@ -106,7 +106,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(35, 80);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -219,15 +219,16 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.btnThoat.BackgroundImage = global::QuanLyChoThueXe_Nhom08.Properties.Resources.q;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.btnThoat.Location = new System.Drawing.Point(1145, 47);
+            this.btnThoat.Location = new System.Drawing.Point(1163, 24);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(80, 32);
+            this.btnThoat.Size = new System.Drawing.Size(63, 50);
             this.btnThoat.TabIndex = 14;
-            this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -243,7 +244,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox4.Controls.Add(this.btnSuaDV);
             this.groupBox4.Controls.Add(this.btnXoaDV);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Location = new System.Drawing.Point(649, 82);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
@@ -422,7 +423,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(572, 89);
+            this.groupBox2.Size = new System.Drawing.Size(577, 89);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -470,7 +471,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(572, 297);
+            this.groupBox6.Size = new System.Drawing.Size(577, 297);
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thông tin chung";
@@ -489,7 +490,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
             this.dgvDichVu.RowTemplate.Height = 24;
-            this.dgvDichVu.Size = new System.Drawing.Size(458, 253);
+            this.dgvDichVu.Size = new System.Drawing.Size(463, 253);
             this.dgvDichVu.TabIndex = 0;
             this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
             // 

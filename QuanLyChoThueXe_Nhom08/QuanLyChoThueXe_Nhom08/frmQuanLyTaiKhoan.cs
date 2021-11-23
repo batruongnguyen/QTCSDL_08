@@ -182,8 +182,6 @@ namespace QuanLyChoThueXe_Nhom08
 
             ResetValue();
         }
-
-
     }
 }
     
