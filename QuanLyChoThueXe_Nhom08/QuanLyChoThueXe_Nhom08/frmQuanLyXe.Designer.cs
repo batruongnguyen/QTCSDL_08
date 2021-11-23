@@ -174,6 +174,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbSCN
             // 
+            this.cbbSCN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbSCN.FormattingEnabled = true;
             this.cbbSCN.Items.AddRange(new object[] {
             "4",
@@ -188,6 +189,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtBienSoXe
             // 
+            this.txtBienSoXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtBienSoXe.Location = new System.Drawing.Point(159, 43);
             this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtBienSoXe.Name = "txtBienSoXe";
@@ -256,6 +258,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbTenDV
             // 
+            this.cbbTenDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbTenDV.FormattingEnabled = true;
             this.cbbTenDV.Items.AddRange(new object[] {
             "Dịch vụ xe 4 chỗ",
@@ -270,6 +273,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtMaDV
             // 
+            this.txtMaDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtMaDV.Location = new System.Drawing.Point(175, 41);
             this.txtMaDV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaDV.Name = "txtMaDV";
