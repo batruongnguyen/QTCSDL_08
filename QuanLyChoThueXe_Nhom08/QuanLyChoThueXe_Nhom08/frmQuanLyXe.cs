@@ -26,11 +26,17 @@ namespace QuanLyChoThueXe_Nhom08
         {
             string query = "select * from XE";
             dgvXe.DataSource = GetRecords(query);
+            this.dgvXe.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvXe.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
         void loaddataDV()
         {
             string query = "select * from DICHVU";
             dgvDichVu.DataSource = GetRecords(query);
+            this.dgvDichVu.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvDichVu.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
         public void ExcuteDB(string sql)
         {
@@ -262,10 +268,6 @@ namespace QuanLyChoThueXe_Nhom08
             int i = dgvXe.CurrentRow.Index;
             txtBienSoXe.Text = dgvXe.Rows[i].Cells[0].Value.ToString();
             cbbSCN.Text = dgvXe.Rows[i].Cells[1].Value.ToString();
-
-            this.dgvXe.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
-            this.dgvXe.AlternatingRowsDefaultCellStyle.BackColor =
-                Color.GhostWhite;
         }
 
         private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -274,10 +276,6 @@ namespace QuanLyChoThueXe_Nhom08
             int i = dgvDichVu.CurrentRow.Index;
             txtMaDV.Text = dgvDichVu.Rows[i].Cells[0].Value.ToString();
             cbbTenDV.Text = dgvDichVu.Rows[i].Cells[1].Value.ToString();
-
-            this.dgvDichVu.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
-            this.dgvDichVu.AlternatingRowsDefaultCellStyle.BackColor =
-                Color.GhostWhite;
         }
     }
 }

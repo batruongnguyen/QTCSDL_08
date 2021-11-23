@@ -31,6 +31,10 @@ namespace QuanLyChoThueXe_Nhom08
             table.Clear();
             adapter.Fill(table);
             dgvTinhTrang.DataSource = table;
+
+            this.dgvTinhTrang.RowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.dgvTinhTrang.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.GhostWhite;
         }
        
 
@@ -191,6 +195,7 @@ namespace QuanLyChoThueXe_Nhom08
             txtNguonDien.Text = dgvTinhTrang.Rows[i].Cells[4].Value.ToString();
             cbbCuaXe.Text = dgvTinhTrang.Rows[i].Cells[5].Value.ToString();
             dtThoiGianCN.Text = dgvTinhTrang.Rows[i].Cells[6].Value.ToString();
+   
         }
     }
 }
