@@ -442,6 +442,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtTimDV
             // 
+            this.txtTimDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtTimDV.Location = new System.Drawing.Point(194, 35);
             this.txtTimDV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimDV.Name = "txtTimDV";
@@ -538,6 +539,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtTimXe
             // 
+            this.txtTimXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtTimXe.Location = new System.Drawing.Point(176, 35);
             this.txtTimXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimXe.Name = "txtTimXe";

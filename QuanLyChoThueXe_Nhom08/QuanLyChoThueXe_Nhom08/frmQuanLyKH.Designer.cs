@@ -65,7 +65,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnNhapLai.Name = "btnNhapLai";
             this.btnNhapLai.Size = new System.Drawing.Size(95, 33);
             this.btnNhapLai.TabIndex = 11;
-            this.btnNhapLai.Text = "&Nhập lại";
+            this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = false;
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
             // 
@@ -76,7 +76,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(95, 33);
             this.btnTimKiem.TabIndex = 10;
-            this.btnTimKiem.Text = "&Tìm kiếm";
+            this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -201,7 +201,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 33);
             this.btnThem.TabIndex = 10;
-            this.btnThem.Text = "&Thêm";
+            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -246,7 +246,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(95, 33);
             this.btnReset.TabIndex = 9;
-            this.btnReset.Text = "&Tải lại";
+            this.btnReset.Text = "Tải lại";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -259,7 +259,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 33);
             this.btnXoa.TabIndex = 8;
-            this.btnXoa.Text = "&Xóa";
+            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -272,7 +272,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(95, 33);
             this.btnSua.TabIndex = 7;
-            this.btnSua.Text = "&Sửa";
+            this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 

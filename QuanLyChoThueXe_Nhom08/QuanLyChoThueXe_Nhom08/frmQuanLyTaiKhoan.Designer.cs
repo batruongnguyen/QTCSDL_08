@@ -56,6 +56,7 @@ namespace QuanLyChoThueXe_Nhom08
             // dtgvUser
             // 
             this.dtgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -63,12 +64,12 @@ namespace QuanLyChoThueXe_Nhom08
             this.PassWord,
             this.TypeAcc});
             this.dtgvUser.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvUser.Location = new System.Drawing.Point(21, 31);
+            this.dtgvUser.Location = new System.Drawing.Point(19, 32);
             this.dtgvUser.MultiSelect = false;
             this.dtgvUser.Name = "dtgvUser";
             this.dtgvUser.ReadOnly = true;
             this.dtgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgvUser.Size = new System.Drawing.Size(720, 181);
+            this.dtgvUser.Size = new System.Drawing.Size(720, 189);
             this.dtgvUser.TabIndex = 0;
             this.dtgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUser_CellClick_1);
             // 
@@ -97,7 +98,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 39);
+            this.label1.Location = new System.Drawing.Point(73, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 25);
             this.label1.TabIndex = 1;
@@ -107,7 +108,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 84);
+            this.label2.Location = new System.Drawing.Point(73, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 2;
@@ -117,7 +118,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 132);
+            this.label3.Location = new System.Drawing.Point(73, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 25);
             this.label3.TabIndex = 3;
@@ -125,37 +126,40 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbLoaiTaiKhoan
             // 
+            this.cbLoaiTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbLoaiTaiKhoan.FormattingEnabled = true;
             this.cbLoaiTaiKhoan.Items.AddRange(new object[] {
             "Admin",
             "Nhân Viên"});
-            this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(283, 129);
+            this.cbLoaiTaiKhoan.Location = new System.Drawing.Point(283, 135);
             this.cbLoaiTaiKhoan.Name = "cbLoaiTaiKhoan";
-            this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(192, 33);
+            this.cbLoaiTaiKhoan.Size = new System.Drawing.Size(213, 33);
             this.cbLoaiTaiKhoan.TabIndex = 4;
             // 
             // txtTenTaiKhoan
             // 
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(283, 36);
+            this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(283, 42);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            this.txtTenTaiKhoan.Size = new System.Drawing.Size(192, 30);
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(213, 30);
             this.txtTenTaiKhoan.TabIndex = 5;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(283, 81);
+            this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.txtMatKhau.Location = new System.Drawing.Point(283, 87);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(192, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(213, 30);
             this.txtMatKhau.TabIndex = 6;
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnThem.Location = new System.Drawing.Point(663, 64);
+            this.btnThem.Location = new System.Drawing.Point(705, 70);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(87, 34);
+            this.btnThem.Size = new System.Drawing.Size(87, 38);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -163,12 +167,12 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnSua.Location = new System.Drawing.Point(663, 104);
+            this.btnSua.Location = new System.Drawing.Point(705, 117);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(87, 34);
+            this.btnSua.Size = new System.Drawing.Size(87, 38);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -176,12 +180,12 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnXoa.Location = new System.Drawing.Point(663, 144);
+            this.btnXoa.Location = new System.Drawing.Point(705, 163);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(87, 34);
+            this.btnXoa.Size = new System.Drawing.Size(87, 38);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -192,7 +196,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnThoat.Location = new System.Drawing.Point(717, 490);
+            this.btnThoat.Location = new System.Drawing.Point(717, 513);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 35);
             this.btnThoat.TabIndex = 10;
@@ -202,14 +206,16 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // QLTK
             // 
-            this.QLTK.AutoSize = true;
+            this.QLTK.Dock = System.Windows.Forms.DockStyle.Top;
             this.QLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLTK.Location = new System.Drawing.Point(237, 9);
+            this.QLTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.QLTK.Location = new System.Drawing.Point(0, 0);
             this.QLTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QLTK.Name = "QLTK";
-            this.QLTK.Size = new System.Drawing.Size(324, 33);
+            this.QLTK.Size = new System.Drawing.Size(842, 66);
             this.QLTK.TabIndex = 11;
             this.QLTK.Text = "QUẢN LÝ TÀI KHOẢN";
+            this.QLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
@@ -222,9 +228,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(36, 50);
+            this.groupBox1.Location = new System.Drawing.Point(36, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(584, 186);
+            this.groupBox1.Size = new System.Drawing.Size(636, 190);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -235,19 +241,19 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox2.Controls.Add(this.dtgvUser);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.groupBox2.Location = new System.Drawing.Point(36, 255);
+            this.groupBox2.Location = new System.Drawing.Point(36, 270);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(756, 229);
+            this.groupBox2.Size = new System.Drawing.Size(756, 238);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(219)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
-            this.btnReset.Location = new System.Drawing.Point(663, 185);
+            this.btnReset.Location = new System.Drawing.Point(705, 208);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(87, 38);
             this.btnReset.TabIndex = 13;
@@ -260,7 +266,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(842, 539);
+            this.ClientSize = new System.Drawing.Size(842, 554);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -280,7 +286,6 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
