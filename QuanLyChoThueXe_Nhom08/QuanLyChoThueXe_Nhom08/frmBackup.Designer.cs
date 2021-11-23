@@ -29,6 +29,7 @@ namespace QuanLyChoThueXe_Nhom08
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBackup));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtThuMuc = new System.Windows.Forms.TextBox();
@@ -65,7 +66,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtThuMuc
             // 
             this.txtThuMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThuMuc.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtThuMuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtThuMuc.Location = new System.Drawing.Point(259, 241);
             this.txtThuMuc.Name = "txtThuMuc";
             this.txtThuMuc.Size = new System.Drawing.Size(312, 35);
@@ -158,6 +159,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.txtThuMuc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBackup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SAO LƯU DỮ LIỆU";

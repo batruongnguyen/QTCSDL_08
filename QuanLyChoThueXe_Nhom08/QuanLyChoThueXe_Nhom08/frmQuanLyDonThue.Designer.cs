@@ -99,6 +99,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.dgvDonThue);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox1.Location = new System.Drawing.Point(792, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(833, 359);
@@ -166,6 +167,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtMaHD
             // 
+            this.txtMaHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtMaHD.Location = new System.Drawing.Point(185, 35);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(198, 27);
@@ -183,6 +185,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtMauSoHD
             // 
+            this.txtMauSoHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtMauSoHD.Location = new System.Drawing.Point(511, 76);
             this.txtMauSoHD.Name = "txtMauSoHD";
             this.txtMauSoHD.Size = new System.Drawing.Size(182, 27);
@@ -190,6 +193,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbNV
             // 
+            this.cbbNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbNV.FormattingEnabled = true;
             this.cbbNV.Location = new System.Drawing.Point(185, 119);
             this.cbbNV.Name = "cbbNV";
@@ -198,6 +202,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // cbbKH
             // 
+            this.cbbKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.cbbKH.FormattingEnabled = true;
             this.cbbKH.Location = new System.Drawing.Point(185, 76);
             this.cbbKH.Name = "cbbKH";
@@ -206,6 +211,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtKyHieuHD
             // 
+            this.txtKyHieuHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtKyHieuHD.Location = new System.Drawing.Point(511, 35);
             this.txtKyHieuHD.Name = "txtKyHieuHD";
             this.txtKyHieuHD.Size = new System.Drawing.Size(182, 27);
@@ -223,6 +229,7 @@ namespace QuanLyChoThueXe_Nhom08
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.label2.Location = new System.Drawing.Point(41, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
@@ -267,6 +274,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtDonGia
             // 
+            this.txtDonGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtDonGia.Location = new System.Drawing.Point(140, 137);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(151, 27);
@@ -387,6 +395,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             // txtVAT
             // 
+            this.txtVAT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtVAT.Location = new System.Drawing.Point(129, 93);
             this.txtVAT.Name = "txtVAT";
             this.txtVAT.Size = new System.Drawing.Size(129, 27);
@@ -469,6 +478,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtTenDV
             // 
             this.txtTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtTenDV.Location = new System.Drawing.Point(161, 150);
             this.txtTenDV.Name = "txtTenDV";
             this.txtTenDV.Size = new System.Drawing.Size(173, 27);
@@ -488,6 +498,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtThanhTien
             // 
             this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtThanhTien.Location = new System.Drawing.Point(501, 150);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(173, 27);
@@ -496,7 +507,8 @@ namespace QuanLyChoThueXe_Nhom08
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(501, 108);
+            this.txtSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
+            this.txtSoLuong.Location = new System.Drawing.Point(501, 103);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(173, 27);
             this.txtSoLuong.TabIndex = 18;
@@ -504,6 +516,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtDonVi
             // 
             this.txtDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonVi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtDonVi.Location = new System.Drawing.Point(501, 57);
             this.txtDonVi.Name = "txtDonVi";
             this.txtDonVi.Size = new System.Drawing.Size(173, 27);
@@ -522,6 +535,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtMaHDCT
             // 
             this.txtMaHDCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHDCT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.txtMaHDCT.Location = new System.Drawing.Point(161, 57);
             this.txtMaHDCT.Name = "txtMaHDCT";
             this.txtMaHDCT.Size = new System.Drawing.Size(173, 27);
@@ -552,7 +566,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(378, 111);
+            this.label16.Location = new System.Drawing.Point(376, 106);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 20);
             this.label16.TabIndex = 2;
@@ -636,6 +650,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.dgvHDCT);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox6.Location = new System.Drawing.Point(856, 466);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(769, 253);
@@ -681,7 +696,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1639, 730);
+            this.ClientSize = new System.Drawing.Size(1370, 730);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnReset);

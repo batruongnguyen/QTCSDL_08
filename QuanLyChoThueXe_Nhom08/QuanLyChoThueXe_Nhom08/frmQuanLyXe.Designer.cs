@@ -29,6 +29,7 @@ namespace QuanLyChoThueXe_Nhom08
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyXe));
             this.QLXE = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnResetXe = new System.Windows.Forms.Button();
@@ -107,9 +108,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.groupBox1.Location = new System.Drawing.Point(35, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(577, 154);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -121,7 +122,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnResetXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnResetXe.Location = new System.Drawing.Point(476, 89);
-            this.btnResetXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetXe.Name = "btnResetXe";
             this.btnResetXe.Size = new System.Drawing.Size(80, 35);
             this.btnResetXe.TabIndex = 14;
@@ -135,7 +136,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThemXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnThemXe.Location = new System.Drawing.Point(388, 43);
-            this.btnThemXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemXe.Name = "btnThemXe";
             this.btnThemXe.Size = new System.Drawing.Size(76, 35);
             this.btnThemXe.TabIndex = 11;
@@ -149,7 +150,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSuaXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnSuaXe.Location = new System.Drawing.Point(476, 43);
-            this.btnSuaXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaXe.Name = "btnSuaXe";
             this.btnSuaXe.Size = new System.Drawing.Size(80, 35);
             this.btnSuaXe.TabIndex = 12;
@@ -163,7 +164,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoaXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnXoaXe.Location = new System.Drawing.Point(388, 89);
-            this.btnXoaXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaXe.Name = "btnXoaXe";
             this.btnXoaXe.Size = new System.Drawing.Size(76, 35);
             this.btnXoaXe.TabIndex = 13;
@@ -180,7 +181,7 @@ namespace QuanLyChoThueXe_Nhom08
             "16",
             "21"});
             this.cbbSCN.Location = new System.Drawing.Point(159, 93);
-            this.cbbSCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbSCN.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSCN.Name = "cbbSCN";
             this.cbbSCN.Size = new System.Drawing.Size(195, 33);
             this.cbbSCN.TabIndex = 1;
@@ -188,7 +189,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtBienSoXe
             // 
             this.txtBienSoXe.Location = new System.Drawing.Point(159, 43);
-            this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtBienSoXe.Name = "txtBienSoXe";
             this.txtBienSoXe.Size = new System.Drawing.Size(195, 30);
             this.txtBienSoXe.TabIndex = 0;
@@ -222,7 +223,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnThoat.Location = new System.Drawing.Point(1145, 47);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 32);
             this.btnThoat.TabIndex = 14;
@@ -244,9 +245,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.groupBox4.Location = new System.Drawing.Point(649, 82);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(577, 152);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
@@ -261,7 +262,7 @@ namespace QuanLyChoThueXe_Nhom08
             "Dịch vụ xe 16 chỗ",
             "Dịch vụ xe 21 chỗ"});
             this.cbbTenDV.Location = new System.Drawing.Point(175, 98);
-            this.cbbTenDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbTenDV.Margin = new System.Windows.Forms.Padding(2);
             this.cbbTenDV.Name = "cbbTenDV";
             this.cbbTenDV.Size = new System.Drawing.Size(193, 33);
             this.cbbTenDV.TabIndex = 4;
@@ -269,7 +270,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtMaDV
             // 
             this.txtMaDV.Location = new System.Drawing.Point(175, 41);
-            this.txtMaDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaDV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaDV.Name = "txtMaDV";
             this.txtMaDV.Size = new System.Drawing.Size(194, 30);
             this.txtMaDV.TabIndex = 3;
@@ -302,7 +303,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnResetDv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetDv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnResetDv.Location = new System.Drawing.Point(476, 89);
-            this.btnResetDv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetDv.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetDv.Name = "btnResetDv";
             this.btnResetDv.Size = new System.Drawing.Size(80, 35);
             this.btnResetDv.TabIndex = 14;
@@ -316,7 +317,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnThemDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnThemDV.Location = new System.Drawing.Point(388, 44);
-            this.btnThemDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemDV.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemDV.Name = "btnThemDV";
             this.btnThemDV.Size = new System.Drawing.Size(76, 35);
             this.btnThemDV.TabIndex = 11;
@@ -330,7 +331,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnSuaDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnSuaDV.Location = new System.Drawing.Point(476, 44);
-            this.btnSuaDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaDV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaDV.Name = "btnSuaDV";
             this.btnSuaDV.Size = new System.Drawing.Size(80, 35);
             this.btnSuaDV.TabIndex = 12;
@@ -344,7 +345,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnXoaDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.btnXoaDV.Location = new System.Drawing.Point(388, 89);
-            this.btnXoaDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaDV.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaDV.Name = "btnXoaDV";
             this.btnXoaDV.Size = new System.Drawing.Size(76, 35);
             this.btnXoaDV.TabIndex = 13;
@@ -360,9 +361,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(649, 242);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(572, 89);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
@@ -372,7 +373,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(497, 23);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(68, 43);
             this.btnReset.TabIndex = 15;
@@ -383,7 +384,7 @@ namespace QuanLyChoThueXe_Nhom08
             // 
             this.btnTimDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimDV.Location = new System.Drawing.Point(382, 24);
-            this.btnTimDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimDV.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimDV.Name = "btnTimDV";
             this.btnTimDV.Size = new System.Drawing.Size(103, 43);
             this.btnTimDV.TabIndex = 15;
@@ -393,7 +394,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtTimDichVu
             // 
             this.txtTimDichVu.Location = new System.Drawing.Point(176, 35);
-            this.txtTimDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimDichVu.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimDichVu.Name = "txtTimDichVu";
             this.txtTimDichVu.Size = new System.Drawing.Size(194, 30);
             this.txtTimDichVu.TabIndex = 13;
@@ -418,9 +419,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox2.Location = new System.Drawing.Point(649, 242);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(572, 89);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
@@ -431,7 +432,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimKiemDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnTimKiemDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemDV.Location = new System.Drawing.Point(453, 28);
-            this.btnTimKiemDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemDV.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemDV.Name = "btnTimKiemDV";
             this.btnTimKiemDV.Size = new System.Drawing.Size(103, 43);
             this.btnTimKiemDV.TabIndex = 15;
@@ -442,7 +443,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtTimDV
             // 
             this.txtTimDV.Location = new System.Drawing.Point(194, 35);
-            this.txtTimDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimDV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimDV.Name = "txtTimDV";
             this.txtTimDV.Size = new System.Drawing.Size(219, 30);
             this.txtTimDV.TabIndex = 5;
@@ -465,9 +466,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox6.Location = new System.Drawing.Point(649, 349);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(572, 297);
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
@@ -483,7 +484,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.MaDichVu,
             this.TenDichVu});
             this.dgvDichVu.Location = new System.Drawing.Point(56, 30);
-            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDichVu.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 51;
             this.dgvDichVu.RowTemplate.Height = 24;
@@ -514,9 +515,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox3.Location = new System.Drawing.Point(35, 242);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(577, 89);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
@@ -527,7 +528,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTimXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.btnTimXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimXe.Location = new System.Drawing.Point(453, 28);
-            this.btnTimXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimXe.Name = "btnTimXe";
             this.btnTimXe.Size = new System.Drawing.Size(103, 43);
             this.btnTimXe.TabIndex = 15;
@@ -538,7 +539,7 @@ namespace QuanLyChoThueXe_Nhom08
             // txtTimXe
             // 
             this.txtTimXe.Location = new System.Drawing.Point(176, 35);
-            this.txtTimXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimXe.Name = "txtTimXe";
             this.txtTimXe.Size = new System.Drawing.Size(231, 30);
             this.txtTimXe.TabIndex = 2;
@@ -561,9 +562,9 @@ namespace QuanLyChoThueXe_Nhom08
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(108)))), ((int)(((byte)(133)))));
             this.groupBox7.Location = new System.Drawing.Point(35, 349);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(577, 297);
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
@@ -579,7 +580,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.BienSoXe,
             this.SCN});
             this.dgvXe.Location = new System.Drawing.Point(52, 30);
-            this.dgvXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvXe.Margin = new System.Windows.Forms.Padding(2);
             this.dgvXe.Name = "dgvXe";
             this.dgvXe.RowHeadersWidth = 51;
             this.dgvXe.RowTemplate.Height = 24;
@@ -618,7 +619,8 @@ namespace QuanLyChoThueXe_Nhom08
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLyXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ XE";
