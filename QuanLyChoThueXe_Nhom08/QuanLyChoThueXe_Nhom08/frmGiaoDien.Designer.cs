@@ -224,7 +224,7 @@ namespace QuanLyChoThueXe_Nhom08
             this.btnTinhTrang.Name = "btnTinhTrang";
             this.btnTinhTrang.Size = new System.Drawing.Size(151, 66);
             this.btnTinhTrang.TabIndex = 6;
-            this.btnTinhTrang.Text = "Tình trạng ";
+            this.btnTinhTrang.Text = "Tình trạng";
             this.btnTinhTrang.UseVisualStyleBackColor = false;
             this.btnTinhTrang.Click += new System.EventHandler(this.btnTinhTrang_Click);
             // 
