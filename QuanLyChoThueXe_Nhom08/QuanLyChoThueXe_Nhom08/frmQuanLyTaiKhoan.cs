@@ -164,7 +164,7 @@ namespace QuanLyChoThueXe_Nhom08
         private void btnSua_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
-            command.CommandText = "update TAIKHOAN set Username=N'" + txtTenTaiKhoan.Text + "',Password=N'" + txtMatKhau.Text + "',TypeAcc=N'" + cbLoaiTaiKhoan.Text + "'";
+            command.CommandText = "update TAIKHOAN set Password='" + txtMatKhau.Text + "',TypeAcc='" + cbLoaiTaiKhoan.Text + "'where Username='" + txtTenTaiKhoan.Text + "'";
             try
             {
                 command.ExecuteNonQuery();
